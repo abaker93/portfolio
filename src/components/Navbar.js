@@ -2,7 +2,9 @@ const Navbar = () => {
 	return (
 		<nav className="navbar sticky-top navbar-expand-md">
 			<div className="container-fluid">
-				<a className="navbar-brand" href="/">anna baker</a>
+				<a className="navbar-brand" href="/">
+					<h1 className="h4">anna baker</h1>
+				</a>
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -17,10 +19,19 @@ const Navbar = () => {
 				<div className="collapse navbar-collapse" id="navbarNav">
 					<ul className="navbar-nav">
 						<li className="nav-item">
-							<a className="nav-link" href="#info">Info</a>
+							<a className="nav-link" href="#info">
+								<span>Info</span>
+								<span>about me</span>
+							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#portfolio">Portfolio</a>
+							<a className="nav-link" href="#portfolio">
+								<span>Portfolio</span>
+								<span>some cases</span>
+							</a>
+						</li>
+						<li className="nav-item">
+							<a className="btn btn-outline-primary" href="#contact">Contact</a>
 						</li>
 					</ul>
 				</div>
@@ -30,26 +41,3 @@ const Navbar = () => {
 }
 
 export default Navbar;
-
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>

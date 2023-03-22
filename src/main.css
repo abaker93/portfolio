@@ -11615,7 +11615,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-large, .large {
+.large {
   font-size: 1.25em;
 }
 

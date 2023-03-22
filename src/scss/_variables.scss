@@ -1,0 +1,22 @@
+//*		font variables
+$font-family-sans-serif:				zeitung-pro-variable, sans-serif;
+$font-family-serif:							swear-display, serif;
+$font-family-serif-decoration:	swear-display-cilati, sans-serif;
+$font-family-monospace:					input-mono, monospace;
+
+$font-size-root:								20px;
+
+//*		headings variables
+$headings-font-family:	$font-family-serif;
+
+//*		display headings variables
+$display-font-sizes: (
+  1: 9.75rem,
+  2: 8.5rem,
+  3: 7.25rem,
+  4: 6rem,
+  5: 4.75rem,
+  6: 3.5rem
+);
+
+$display-font-family:	$font-family-serif;

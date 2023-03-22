@@ -1,10 +1,6 @@
-import Navbar from '../components/Navbar';
-
 const Home = () => {
 	return (
 		<>
-			<Navbar />
-
 			<Hero />
 
 			<About />
@@ -23,7 +19,7 @@ const Home = () => {
 
 const Hero = () => {
 	return (
-		<div className="container">
+		<div id="Hero" className="container-lg">
 			<div className="row">
 				<h1 className="display-1">
 					<span>Digital</span>
@@ -40,7 +36,7 @@ const Hero = () => {
 
 const About = (props) => {
 	return (
-		<div className="container">
+		<div id="about" className="container-md">
 			<div className="row">
 				<div className="col-4">
 					<h2>Anna</h2>
@@ -64,7 +60,7 @@ const About = (props) => {
 
 const Portfolio = (props) => {
 	return (
-		<div id="Portfolio" className="container-fluid">
+		<div id="portfolio" className="container-fluid">
 			{props.children}
 		</div>
 	)
@@ -72,7 +68,7 @@ const Portfolio = (props) => {
 
 const PortfolioItem = (props) => {
 	return (
-		<div className="container">
+		<div className="container-lg">
 			<div className="row">
 				<div className="col">
 					Image
@@ -80,13 +76,13 @@ const PortfolioItem = (props) => {
 				<div className="col">
 					<h2>Howard Hanna Relocation Services</h2>
 					<div className="tags">
-						<button type="button" class="btn btn-sm btn-outline-primary">Design</button>
-						<button type="button" class="btn btn-sm btn-outline-primary">Development</button>
-						<button type="button" class="btn btn-sm btn-outline-primary">Figma</button>
-						<button type="button" class="btn btn-sm btn-outline-primary">.NET</button>
-						<button type="button" class="btn btn-sm btn-outline-primary">HTML</button>
-						<button type="button" class="btn btn-sm btn-outline-primary">CSS</button>
-						<button type="button" class="btn btn-sm btn-outline-primary">JavaScript</button>
+						<button type="button" className="btn btn-sm btn-outline-primary">Design</button>
+						<button type="button" className="btn btn-sm btn-outline-primary">Development</button>
+						<button type="button" className="btn btn-sm btn-outline-primary">Figma</button>
+						<button type="button" className="btn btn-sm btn-outline-primary">.NET</button>
+						<button type="button" className="btn btn-sm btn-outline-primary">HTML</button>
+						<button type="button" className="btn btn-sm btn-outline-primary">CSS</button>
+						<button type="button" className="btn btn-sm btn-outline-primary">JavaScript</button>
 					</div>
 				</div>
 			</div>
@@ -96,30 +92,37 @@ const PortfolioItem = (props) => {
 
 const Contact = (props) => {
 	return (
-		<form>
-			<div className='mb-3'>
-				<label for="nameInput">Your Name</label>
-				<input type="text" className="form-control" id="nameInput" />
+		<div className="container-lg">
+			<div className="row">
+				<div className="col">
+					<form>
+						<div className='mb-3'>
+							<label htmlFor="nameInput">Your Name</label>
+							<input type="text" className="form-control" id="nameInput" />
+						</div>
+						<div className='mb-3'>
+							<label htmlFor="emailInput">Your Email</label>
+							<input type="email" className="form-control" id="emailInput" />
+						</div>
+						<div className='mb-3'>
+							<label htmlFor="subjectSelect">Message Subject</label>
+							<select className="form-select" defaultValue={0} aria-label="Select the subject of your message">
+								<option value="0">Open this select menu</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+						<div className='mb-3'>
+							<label htmlFor="messageTextarea" className="form-label">Your Message</label>
+							<textarea className="form-control" id="messageTextarea" rows="4"></textarea>
+						</div>
+						<button type="submit" className="btn btn-outline-primary">Submit</button>
+					</form>
+				</div>
 			</div>
-			<div className='mb-3'>
-				<label for="emailInput">Your Email</label>
-				<input type="email" className="form-control" id="emailInput" />
-			</div>
-			<div className='mb-3'>
-				<label for="subjectSelect">Message Subject</label>
-				<select class="form-select" aria-label="Select the subject of your message">
-					<option selected>Open this select menu</option>
-					<option value="1">One</option>
-					<option value="2">Two</option>
-					<option value="3">Three</option>
-				</select>
-			</div>
-			<div className='mb-3'>
-				<label for="messageTextarea" class="form-label">Your Message</label>
-				<textarea class="form-control" id="messageTextarea" rows="4"></textarea>
-			</div>
-			<button type="submit" class="btn btn-outline-primary">Submit</button>
-		</form>
+		</div>
+		
 	)
 }
 

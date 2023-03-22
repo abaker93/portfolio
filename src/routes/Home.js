@@ -92,7 +92,7 @@ const PortfolioItem = (props) => {
 
 const Contact = (props) => {
 	return (
-		<div className="container-lg">
+		<div id="contact" className="container-lg">
 			<div className="row">
 				<div className="col">
 					<form>

@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 	const handleClick = (event, id) => {
@@ -8,8 +8,8 @@ const Navbar = () => {
 	return (
 		<nav className="navbar sticky-top navbar-expand-sm">
 			<div className="container-fluid">
-				<Link to="/" className="navbar-brand me-auto">
-					<h1 className="h4">anna baker</h1>
+				<Link to="/" className="navbar-brand">
+					<h1 className="h4 mb-0">anna baker</h1>
 				</Link>
 				<button
 					className="navbar-toggler"
@@ -27,9 +27,9 @@ const Navbar = () => {
 						<button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>
 					<div className="offcanvas-body">
-						<ul className="navbar-nav">
-							<li className="nav-item">
-								<NavLink
+						<ul className="navbar-nav align-items-center ms-auto">
+							<li className="nav-item mx-sm-2">
+								<Link
 									className="nav-link"
 									data-bs-dismiss="offcanvas"
 									data-bs-target="#navbarNav"
@@ -38,10 +38,10 @@ const Navbar = () => {
 								>
 									<span>Info</span>
 									<span>about me</span>
-								</NavLink>
+								</Link>
 							</li>
-							<li className="nav-item">
-								<NavLink
+							<li className="nav-item mx-sm-2">
+								<Link
 									className="nav-link"
 									data-bs-dismiss="offcanvas"
 									data-bs-target="#navbarNav"
@@ -50,10 +50,10 @@ const Navbar = () => {
 								>
 									<span>Portfolio</span>
 									<span>some cases</span>
-								</NavLink>
+								</Link>
 							</li>
-							<li className="nav-item">
-								<a className="btn btn-outline-primary" href="/#contact">Contact</a>
+							<li className="nav-item mx-sm-2">
+								<button type="button" className="btn btn-outline-dark" onClick={e => handleClick(e, "contact")}>Contact</button>
 							</li>
 						</ul>
 					</div>

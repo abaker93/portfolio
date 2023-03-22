@@ -1,1 +1,10 @@
-.large { font-size: 1.25em; }
+.large { font-size: $font-size-lg; }
+
+//*		buttons
+//		base styles
+.btn {
+	@extend .btn;
+
+	padding: 0 var(--#{$prefix}btn-padding-x) var(--#{$prefix}btn-padding-y);
+	text-transform: lowercase;
+}

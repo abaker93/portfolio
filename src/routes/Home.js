@@ -1,4 +1,9 @@
+import portfolioData from "../data/portfolio.json";
+
 const Home = () => {
+	const portfolio = portfolioData.portfolio;
+
+	//console.log(portfolio)
 	return (
 		<>
 			<Hero />
@@ -6,10 +11,9 @@ const Home = () => {
 			<About />
 
 			<Portfolio>
-				<PortfolioItem />
-				<PortfolioItem />
-				<PortfolioItem />
-				<PortfolioItem />
+				{portfolio.map(p => (
+					<PortfolioItem key={p.id} {...p} />
+				))}
 			</Portfolio>
 
 			<Contact />
@@ -67,6 +71,7 @@ const Portfolio = (props) => {
 }
 
 const PortfolioItem = (props) => {
+	//console.log(props)
 	return (
 		<div className="container-lg">
 			<div className="row">
@@ -74,15 +79,11 @@ const PortfolioItem = (props) => {
 					Image
 				</div>
 				<div className="col">
-					<h2>Howard Hanna Relocation Services</h2>
+					<h2>{props.title}</h2>
 					<div className="tags">
-						<span className="chip chip-sm chip-outline-dark">Design</span>
-						<span className="chip chip-sm chip-outline-dark">Development</span>
-						<span className="chip chip-sm chip-outline-dark">Figma</span>
-						<span className="chip chip-sm chip-outline-dark">.NET</span>
-						<span className="chip chip-sm chip-outline-dark">HTML</span>
-						<span className="chip chip-sm chip-outline-dark">CSS</span>
-						<span className="chip chip-sm chip-outline-dark">JavaScript</span>
+						{props.tags.map((t, index) => (
+							<span key={index} className="chip chip-sm chip-outline-dark">{t}</span>
+						))}
 					</div>
 				</div>
 			</div>
@@ -117,7 +118,7 @@ const Contact = (props) => {
 							<textarea className="form-control" id="messageTextarea" placeholder="Your message..."></textarea>
 							<label htmlFor="messageTextarea" className="form-label">Your Message</label>
 						</div>
-						<button type="submit" className="btn btn-outline-primary">Submit</button>
+						<button type="submit" className="btn btn-outline-dark">Submit</button>
 					</form>
 				</div>
 			</div>

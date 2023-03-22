@@ -112,6 +112,7 @@ $btn-font-size:					$input-btn-font-size;
 
 $btn-border-radius:			$border-radius-pill;
 $btn-border-radius-sm:	$border-radius-pill;
+$btn-border-radius-lg:	$border-radius-pill;
 
 
 
@@ -125,3 +126,21 @@ $navbar-light-color:							$gray-900;
 $navbar-light-hover-color:				rgba($gray-900, 0.7);
 $navbar-light-brand-color:				$gray-900;
 $navbar-light-brand-hover-color:	rgba($gray-900, 0.7);
+
+
+
+//*		form input variables
+$input-border-radius:							$border-radius-pill;
+$input-border-radius-sm:					$border-radius-pill;
+$input-border-radius-lg:					$border-radius-pill;
+
+$form-textarea-border-radius:     $border-radius-2xl;
+$form-textarea-border-radius-sm:  $border-radius-2xl;
+$form-textarea-border-radius-lg:  $border-radius-2xl;
+
+
+
+//*		form select variables
+$form-select-border-radius:			$border-radius-pill;
+$form-select-border-radius-sm:	$border-radius-pill;
+$form-select-border-radius-lg:	$border-radius-pill;

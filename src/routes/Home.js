@@ -96,26 +96,26 @@ const Contact = (props) => {
 			<div className="row">
 				<div className="col">
 					<form>
-						<div className='mb-3'>
+						<div className='form-floating mb-3'>
+							<input type="text" className="form-control" id="nameInput" placeholder="John Smith" />
 							<label htmlFor="nameInput">Your Name</label>
-							<input type="text" className="form-control" id="nameInput" />
 						</div>
-						<div className='mb-3'>
+						<div className='form-floating mb-3'>
+							<input type="email" className="form-control" id="emailInput" placeholder="john.smith@email.com" />
 							<label htmlFor="emailInput">Your Email</label>
-							<input type="email" className="form-control" id="emailInput" />
 						</div>
-						<div className='mb-3'>
-							<label htmlFor="subjectSelect">Message Subject</label>
+						<div className='form-floating mb-3'>
 							<select className="form-select" defaultValue={0} aria-label="Select the subject of your message">
 								<option value="0">Open this select menu</option>
 								<option value="1">One</option>
 								<option value="2">Two</option>
 								<option value="3">Three</option>
 							</select>
+							<label htmlFor="subjectSelect">Message Subject</label>
 						</div>
-						<div className='mb-3'>
+						<div className='form-floating mb-3'>
+							<textarea className="form-control" id="messageTextarea" placeholder="Your message..."></textarea>
 							<label htmlFor="messageTextarea" className="form-label">Your Message</label>
-							<textarea className="form-control" id="messageTextarea" rows="4"></textarea>
 						</div>
 						<button type="submit" className="btn btn-outline-primary">Submit</button>
 					</form>

@@ -3,9 +3,7 @@
 //*		buttons
 //		base styles
 .btn {
-	@extend .btn;
-
-	padding: 0 var(--#{$prefix}btn-padding-x) var(--#{$prefix}btn-padding-y);
+	padding: calc(var(--#{$prefix}btn-padding-y) / 2) var(--#{$prefix}btn-padding-x) var(--#{$prefix}btn-padding-y);
 	text-transform: lowercase;
 }
 

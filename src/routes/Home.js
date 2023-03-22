@@ -48,9 +48,9 @@ const About = (props) => {
 					<p>As a developer, I have expertise in HTML, CSS, JavaScript, and frameworks such as React. I create dynamic and responsive user interfaces that are optimized for performance and accessibility. I stay up-to-date with the latest design and development trends to ensure my solutions are scalable and meet industry standards.</p>
 					<p>Currently, I'm also a proud professor of Graphic Design at Mercyhurst University in Erie, Pennsylvania.</p>
 					<div>
-						<a className="btn btn-outline-primary" href="/resume">Resume</a>
-						<a className="btn btn-outline-primary" href="https://www.linkedin.com/in/annabakerdesign/">LinkedIn</a>
-						<a className="btn btn-outline-primary" href="https://github.com/abaker93/">GitHub</a>
+						<a className="btn btn-outline-dark" href="/resume">Resume</a>
+						<a className="btn btn-outline-dark" href="https://www.linkedin.com/in/annabakerdesign/">LinkedIn</a>
+						<a className="btn btn-outline-dark" href="https://github.com/abaker93/">GitHub</a>
 					</div>
 				</div>
 			</div>
@@ -76,13 +76,13 @@ const PortfolioItem = (props) => {
 				<div className="col">
 					<h2>Howard Hanna Relocation Services</h2>
 					<div className="tags">
-						<button type="button" className="btn btn-sm btn-outline-primary">Design</button>
-						<button type="button" className="btn btn-sm btn-outline-primary">Development</button>
-						<button type="button" className="btn btn-sm btn-outline-primary">Figma</button>
-						<button type="button" className="btn btn-sm btn-outline-primary">.NET</button>
-						<button type="button" className="btn btn-sm btn-outline-primary">HTML</button>
-						<button type="button" className="btn btn-sm btn-outline-primary">CSS</button>
-						<button type="button" className="btn btn-sm btn-outline-primary">JavaScript</button>
+						<span className="chip chip-sm chip-outline-dark">Design</span>
+						<span className="chip chip-sm chip-outline-dark">Development</span>
+						<span className="chip chip-sm chip-outline-dark">Figma</span>
+						<span className="chip chip-sm chip-outline-dark">.NET</span>
+						<span className="chip chip-sm chip-outline-dark">HTML</span>
+						<span className="chip chip-sm chip-outline-dark">CSS</span>
+						<span className="chip chip-sm chip-outline-dark">JavaScript</span>
 					</div>
 				</div>
 			</div>

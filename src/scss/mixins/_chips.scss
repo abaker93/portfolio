@@ -1,0 +1,44 @@
+// Chip variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all chips
+
+// scss-docs-start chip-variant-mixin
+@mixin chip-variant(
+  $background,
+  $border,
+  $color: color-contrast($background, $gray-900, $cream),
+  $disabled-background: $background,
+  $disabled-border: $border,
+  $disabled-color: color-contrast($disabled-background)
+) {
+  --#{$prefix}chip-color: #{$color};
+  --#{$prefix}chip-bg: #{$background};
+  --#{$prefix}chip-border-color: #{$border};
+  --#{$prefix}chip-disabled-color: #{$disabled-color};
+  --#{$prefix}chip-disabled-bg: #{$disabled-background};
+  --#{$prefix}chip-disabled-border-color: #{$disabled-border};
+}
+// scss-docs-end chip-variant-mixin
+
+// scss-docs-start chip-outline-variant-mixin
+@mixin chip-outline-variant(
+  $color,
+) {
+  --#{$prefix}chip-color: #{$color};
+  --#{$prefix}chip-border-color: #{$color};
+  --#{$prefix}chip-disabled-color: #{$color};
+  --#{$prefix}chip-disabled-bg: transparent;
+  --#{$prefix}chip-disabled-border-color: #{$color};
+  --#{$prefix}gradient: none;
+}
+// scss-docs-end chip-outline-variant-mixin
+
+// scss-docs-start chip-size-mixin
+@mixin chip-size($padding-y, $padding-x, $font-size, $border-radius) {
+  --#{$prefix}chip-padding-y: #{$padding-y};
+  --#{$prefix}chip-padding-x: #{$padding-x};
+  @include rfs($font-size, --#{$prefix}chip-font-size);
+  --#{$prefix}chip-border-radius: #{$border-radius};
+}
+// scss-docs-end chip-size-mixin

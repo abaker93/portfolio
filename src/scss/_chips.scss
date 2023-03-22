@@ -1,0 +1,102 @@
+//
+// Base styles
+//
+
+.chip {
+  // scss-docs-start chip-css-vars
+  --#{$prefix}chip-padding-x: #{$chip-padding-x};
+  --#{$prefix}chip-padding-y: #{$chip-padding-y};
+  --#{$prefix}chip-font-family: #{$chip-font-family};
+  @include rfs($chip-font-size, --#{$prefix}chip-font-size);
+  --#{$prefix}chip-font-weight: #{$chip-font-weight};
+  --#{$prefix}chip-line-height: #{$chip-line-height};
+  --#{$prefix}chip-color: #{$body-color};
+  --#{$prefix}chip-bg: transparent;
+  --#{$prefix}chip-border-width: #{$chip-border-width};
+  --#{$prefix}chip-border-color: transparent;
+  --#{$prefix}chip-border-radius: #{$chip-border-radius};
+  --#{$prefix}chip-disabled-opacity: #{$chip-disabled-opacity};
+  // scss-docs-end chip-css-vars
+
+  display: inline-block;
+  padding: calc(var(--#{$prefix}chip-padding-y) / 2) var(--#{$prefix}chip-padding-x) var(--#{$prefix}chip-padding-y);
+  font-family: var(--#{$prefix}chip-font-family);
+  @include font-size(var(--#{$prefix}chip-font-size));
+  font-weight: var(--#{$prefix}chip-font-weight);
+  line-height: var(--#{$prefix}chip-line-height);
+  color: var(--#{$prefix}chip-color);
+  text-align: center;
+  text-decoration: if($link-decoration == none, null, none);
+	text-transform: lowercase;
+  white-space: $chip-white-space;
+  vertical-align: middle;
+  user-select: none;
+  border: var(--#{$prefix}chip-border-width) solid var(--#{$prefix}chip-border-color);
+  @include border-radius(var(--#{$prefix}chip-border-radius));
+  @include gradient-bg(var(--#{$prefix}chip-bg));
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    color: var(--#{$prefix}chip-disabled-color);
+    pointer-events: none;
+    background-color: var(--#{$prefix}chip-disabled-bg);
+    background-image: if($enable-gradients, none, null);
+    border-color: var(--#{$prefix}chip-disabled-border-color);
+    opacity: var(--#{$prefix}chip-disabled-opacity);
+  }
+}
+
+
+//
+// Alternate chips
+//
+
+// scss-docs-start chip-variant-loops
+@each $color, $value in $theme-colors {
+  .chip-#{$color} {
+    @include chip-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .chip-outline-#{$color} {
+    @include chip-outline-variant($value);
+  }
+}
+// scss-docs-end chip-variant-loops
+
+
+//
+// Link chips
+//
+
+// Make a chip look and behave like a link
+.chip-link {
+  --#{$prefix}chip-font-weight: #{$font-weight-normal};
+  --#{$prefix}chip-color: #{$chip-link-color};
+  --#{$prefix}chip-bg: transparent;
+  --#{$prefix}chip-border-color: transparent;
+  --#{$prefix}chip-disabled-color: #{$chip-link-disabled-color};
+  --#{$prefix}chip-disabled-border-color: transparent;
+
+  text-decoration: $link-decoration;
+  @if $enable-gradients {
+    background-image: none;
+  }
+
+  // No need for an active state here
+}
+
+
+//
+// chip Sizes
+//
+
+.chip-lg {
+  @include chip-size($chip-padding-y-lg, $chip-padding-x-lg, $chip-font-size-lg, $chip-border-radius-lg);
+}
+
+.chip-sm {
+  @include chip-size($chip-padding-y-sm, $chip-padding-x-sm, $chip-font-size-sm, $chip-border-radius-sm);
+}

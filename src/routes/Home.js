@@ -26,10 +26,11 @@ const Hero = () => {
 		<div id="Hero" className="container-lg">
 			<div className="row">
 				<h1 className="display-1">
-					<span>Digital</span>
-					<span>Designer.</span>
 					<span>Creative</span>
-					<span>Developer.</span>
+					<span>Developer</span>
+					<span>&</span>
+					<span>Logical</span>
+					<span>Designer</span>
 				</h1>
 				<p>Passionate about creating amazing web experiences.</p>
 				<p>scroll</p>
@@ -82,7 +83,7 @@ const PortfolioItem = (props) => {
 					<h2>{props.title}</h2>
 					<div className="tags">
 						{props.tags.map((t, index) => (
-							<span key={index} className="chip chip-sm chip-outline-dark">{t}</span>
+							<span key={index} className="chip chip-sm chip-light">{t}</span>
 						))}
 					</div>
 				</div>

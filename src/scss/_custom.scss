@@ -31,3 +31,22 @@ textarea {
 		@include border-radius($form-textarea-border-radius-lg);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+//*		animated gradient background
+#gradient-canvas {
+  width:100%;
+  height:100%;
+  --gradient-color-1: #f6f4ef; 
+  --gradient-color-2: #5b3a73; 
+  --gradient-color-3: #fe5f55;  
+  --gradient-color-4: #f6f4ef;
+}

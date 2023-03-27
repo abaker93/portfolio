@@ -38,7 +38,7 @@ $color-contrast-light:  $cream-500;
 $primary:		$purple;
 $secondary:	$red;
 $danger:		$orange;
-$light:			$gray-100;
+$light:			shade-color($cream-500, 5%);
 $dark:			$gray-900;
 
 

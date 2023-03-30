@@ -12382,7 +12382,14 @@ textarea.form-control-lg {
 }
 
 .large {
-  font-size: 1.25rem;
+  font-size: 1.25rem !important;
+}
+
+.p {
+  font-family: zeitung-pro-variable, sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 300 !important;
+  line-height: 1.5 !important;
 }
 
 #Background {
@@ -12509,9 +12516,31 @@ textarea.form-control-lg {
   border-radius: 2rem;
 }
 
-[template=home] #Hero {
+#Hero {
   height: 100vh;
 }
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 3.25rem;
+  right: 3.25rem;
+}
+.scroll-indicator .arrow.down {
+  position: absolute;
+  bottom: 0.25rem;
+  right: 1.25rem;
+  width: 2.75rem;
+  transform: rotate(-14deg);
+}
+.scroll-indicator .arrow.down path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: scroll 8s linear 5s infinite;
+}
+.scroll-indicator:hover .arrow.down path {
+  animation: scroll-quick 1s linear forwards;
+}
+
 [template=home] h1, [template=home] .h1 {
   height: 100%;
   line-height: 0.9;
@@ -12520,12 +12549,12 @@ textarea.form-control-lg {
   align-content: center;
   font-size: 20vh;
 }
-[template=home] h1 .row, [template=home] .h1 .row {
+[template=home] h1 > .row, [template=home] .h1 > .row {
   position: relative;
   align-content: center;
   padding-bottom: 2rem;
 }
-[template=home] h1 .row::before, [template=home] .h1 .row::before {
+[template=home] h1 > .row::before, [template=home] .h1 > .row::before {
   content: "&";
   position: absolute;
   bottom: 0;
@@ -12645,6 +12674,25 @@ textarea.form-control-lg {
   100% {
     transform: scale(1, 1);
     opacity: 1;
+  }
+}
+@keyframes scroll {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  15%, 60% {
+    stroke-dashoffset: 0;
+  }
+  75%, 100% {
+    stroke-dashoffset: -1;
+  }
+}
+@keyframes scroll-quick {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
   }
 }
 

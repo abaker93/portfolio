@@ -1,16 +1,16 @@
 const Background = () => {
 	return (
 		<div id="Background">
-			<div class="bg-noise">
+			<div className="bg-noise">
 				{/* <Noise /> */}
 			</div>
-			<div class="bg-circles">
-				<div class="bg-circle _1"></div>
-				<div class="bg-circle _2"></div>
-				<div class="bg-circle _3"></div>
-				<div class="bg-circle _4"></div>
-				<div class="bg-circle _5"></div>
-				<div class="bg-circle _6"></div>
+			<div className="bg-circles">
+				<div className="bg-circle _1"></div>
+				<div className="bg-circle _2"></div>
+				<div className="bg-circle _3"></div>
+				<div className="bg-circle _4"></div>
+				<div className="bg-circle _5"></div>
+				<div className="bg-circle _6"></div>
 			</div>
 		</div>
 	)

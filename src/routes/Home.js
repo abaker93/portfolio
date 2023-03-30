@@ -1,3 +1,4 @@
+import Arrow from "../assets/Arrow";
 import portfolioData from "../data/portfolio.json";
 
 const Home = () => {
@@ -27,14 +28,25 @@ const Hero = () => {
 				<div className="row">
 					<div className="col-auto offset-md-1">Creative</div>
 					<div className="col-auto ms-auto">Developer</div>
-					<div className="col-auto offset-md-2">Logical</div>
+					<div className="col-auto offset-md-2">
+						<div className="row">
+							<div className="col-auto">Digital</div>
+							<div className="col-auto d-flex align-items-end">
+								<span className="p text-uppercase pb-5">Crafting amazing web experiences.</span>
+							</div>
+						</div>
+					</div>
 					<div className="col-auto offset-md-3">Designer</div>
 
 				</div>
 			</h1>
-			<div className="row">
-					{/*<p>Passionate about creating amazing web experiences.</p>
-	<p>scroll</p>*/}
+			{/*<div className="row">
+				<p>Passionate about creating amazing web experiences.</p>
+				<p>scroll</p>
+			</div>*/}
+			<div className="scroll-indicator">
+				<Arrow direction="down" stroke="#302927" />
+				<span className="h5">scroll</span>
 			</div>
 		</div>
 	)
@@ -93,7 +105,7 @@ const PortfolioItem = (props) => {
 	)
 }
 
-const Contact = (props) => {
+const Contact = () => {
 	return (
 		<div id="contact" className="container-lg">
 			<div className="row">

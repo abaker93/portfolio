@@ -11845,6 +11845,157 @@ textarea.form-control-lg {
   font-size: 1.25rem;
 }
 
+#Background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+  opacity: 0.7;
+  filter: blur(150px);
+}
+#Background .bg-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 100%;
+  opacity: 1;
+}
+#Background .bg-circle._1 {
+  width: 35vw;
+  height: 35vw;
+  margin-top: -16%;
+  margin-left: -16%;
+  border-radius: 20%;
+  background-color: #5B3A73;
+  animation: bg-circle-1 16s linear 0s infinite;
+}
+#Background .bg-circle._2 {
+  margin-top: 40%;
+  border-radius: 30%;
+  background-color: #372345;
+  opacity: 0.5;
+  animation: bg-circle-2 16s linear 0s infinite;
+}
+#Background .bg-circle._3 {
+  width: 60vw;
+  height: 60vw;
+  margin-top: -2%;
+  margin-left: 52%;
+  background-color: #faf8f5;
+  animation: bg-circle-3 16s linear 0s infinite;
+}
+#Background .bg-circle._4 {
+  left: auto;
+  right: 0;
+  width: 50vw;
+  height: 50vw;
+  margin-top: -20%;
+  margin-right: -10%;
+  background-color: #FE5F55;
+  opacity: 0.8;
+  animation: bg-circle-4 16s linear 0s infinite;
+}
+#Background .bg-circle._5 {
+  margin-top: 25%;
+  margin-left: 30%;
+  border-radius: 20%;
+  background-color: #9d89ab;
+  animation: bg-circle-5 16s linear 0s infinite;
+}
+#Background .bg-circle._6 {
+  left: auto;
+  right: 0;
+  bottom: 0;
+  width: 40vw;
+  height: 40vw;
+  margin-top: 35%;
+  margin-right: -16%;
+  margin-bottom: -20%;
+  background-color: #fe9f99;
+  animation: bg-circle-6 16s linear 0s infinite;
+}
+
+@keyframes bg-circle-1 {
+  0% {
+    transform: scale(2, 2);
+  }
+  25%, 50% {
+    transform: scale(1, 1);
+  }
+  75%, 100% {
+    transform: scale(2, 2);
+  }
+}
+@keyframes bg-circle-2 {
+  0% {
+    transform: scale(1, 1);
+  }
+  25%, 50%, 75% {
+    transform: scale(2, 2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes bg-circle-3 {
+  0% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+  25%, 50%, 75% {
+    transform: scale(2, 2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+@keyframes bg-circle-4 {
+  0%, 25% {
+    transform: scale(2, 2);
+  }
+  50%, 75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(2, 2);
+  }
+}
+@keyframes bg-circle-5 {
+  0% {
+    transform: scale(2, 2);
+    opacity: 0.8;
+  }
+  25%, 50% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+  75%, 100% {
+    transform: scale(2, 2);
+    opacity: 0.8;
+  }
+}
+@keyframes bg-circle-6 {
+  0%, 25% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  50%, 75% {
+    transform: scale(2, 2);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
 .btn {
   padding: calc(var(--bs-btn-padding-y) / 2) var(--bs-btn-padding-x) var(--bs-btn-padding-y);
   text-transform: lowercase;
@@ -11858,15 +12009,6 @@ textarea.form-control-sm {
 }
 textarea.form-control-lg {
   border-radius: 2rem;
-}
-
-#gradient-canvas {
-  width: 100%;
-  height: 100%;
-  --gradient-color-1: #f6f4ef;
-  --gradient-color-2: #5b3a73;
-  --gradient-color-3: #fe5f55;
-  --gradient-color-4: #f6f4ef;
 }
 
 /*# sourceMappingURL=main.css.map */

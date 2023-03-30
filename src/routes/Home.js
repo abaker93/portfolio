@@ -39,7 +39,7 @@ const Hero = () => {
 	)
 }
 
-const About = (props) => {
+const About = () => {
 	return (
 		<div id="about" className="container-md">
 			<div className="row">

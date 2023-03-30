@@ -11852,6 +11852,19 @@ textarea.form-control-lg {
   height: 100%;
   width: 100%;
   z-index: -100;
+}
+#Background .noise {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  height: 200%;
+  width: 200%;
+  z-index: 1;
+  mix-blend-mode: overlay;
+  filter: grayscale(1);
+  animation: noise 0.09s infinite;
+}
+#Background .bg-circles {
   opacity: 0.7;
   filter: blur(150px);
 }
@@ -11921,6 +11934,67 @@ textarea.form-control-lg {
   animation: bg-circle-6 16s linear 0s infinite;
 }
 
+.btn {
+  padding: calc(var(--bs-btn-padding-y) / 2) var(--bs-btn-padding-x) var(--bs-btn-padding-y);
+  text-transform: lowercase;
+}
+
+textarea.form-control {
+  border-radius: 2rem;
+}
+textarea.form-control-sm {
+  border-radius: 2rem;
+}
+textarea.form-control-lg {
+  border-radius: 2rem;
+}
+
+@keyframes noise {
+  0% {
+    top: -50%;
+    left: -50%;
+  }
+  10% {
+    top: -55%;
+    left: -60%;
+  }
+  20% {
+    top: -55%;
+    left: -45%;
+  }
+  30% {
+    top: -43%;
+    left: -75%;
+  }
+  40% {
+    top: -30%;
+    left: -25%;
+  }
+  50% {
+    top: -75%;
+    left: -40%;
+  }
+  60% {
+    top: -35%;
+    left: -45%;
+  }
+  70% {
+    top: 0;
+    left: -35%;
+  }
+  80% {
+    top: -25%;
+    left: -15%;
+  }
+  90% {
+    top: -60%;
+    left: -40%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
 @keyframes bg-circle-1 {
   0% {
     transform: scale(2, 2);
@@ -11995,20 +12069,6 @@ textarea.form-control-lg {
     transform: scale(1, 1);
     opacity: 1;
   }
-}
-.btn {
-  padding: calc(var(--bs-btn-padding-y) / 2) var(--bs-btn-padding-x) var(--bs-btn-padding-y);
-  text-transform: lowercase;
-}
-
-textarea.form-control {
-  border-radius: 2rem;
-}
-textarea.form-control-sm {
-  border-radius: 2rem;
-}
-textarea.form-control-lg {
-  border-radius: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */

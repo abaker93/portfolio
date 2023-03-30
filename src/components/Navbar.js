@@ -6,7 +6,7 @@ const Navbar = () => {
 	}
 
 	return (
-		<nav className="navbar sticky-top navbar-expand-sm">
+		<nav className="navbar navbar-expand-sm">
 			<div className="container-fluid">
 				<Link to="/" className="navbar-brand">
 					<h1 className="h4 mb-0">anna baker</h1>
@@ -48,7 +48,7 @@ const Navbar = () => {
 									onClick={e => handleClick(e, "portfolio")}
 									to="/#portfolio"
 								>
-									<span>Portfolio</span>
+									<span>Work</span>
 									<span>some cases</span>
 								</Link>
 							</li>

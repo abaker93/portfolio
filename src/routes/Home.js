@@ -3,9 +3,8 @@ import portfolioData from "../data/portfolio.json";
 const Home = () => {
 	const portfolio = portfolioData.portfolio;
 
-	//console.log(portfolio)
 	return (
-		<>
+		<main template="home">
 			<Hero />
 
 			<About />
@@ -17,23 +16,25 @@ const Home = () => {
 			</Portfolio>
 
 			<Contact />
-		</>
+		</main>
 	)
 }
 
 const Hero = () => {
 	return (
 		<div id="Hero" className="container-lg">
+			<h1 className="display-1">
+				<div className="row">
+					<div className="col-auto offset-md-1">Creative</div>
+					<div className="col-auto ms-auto">Developer</div>
+					<div className="col-auto offset-md-2">Logical</div>
+					<div className="col-auto offset-md-3">Designer</div>
+
+				</div>
+			</h1>
 			<div className="row">
-				<h1 className="display-1">
-					<span>Creative</span>
-					<span>Developer</span>
-					<span>&</span>
-					<span>Logical</span>
-					<span>Designer</span>
-				</h1>
-				<p>Passionate about creating amazing web experiences.</p>
-				<p>scroll</p>
+					{/*<p>Passionate about creating amazing web experiences.</p>
+	<p>scroll</p>*/}
 			</div>
 		</div>
 	)

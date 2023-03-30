@@ -11939,6 +11939,26 @@ textarea.form-control-lg {
   text-transform: lowercase;
 }
 
+.navbar {
+  position: fixed;
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+}
+.nav-link span {
+  line-height: 1.1;
+}
+.nav-link span:first-child {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+.nav-link span:last-child {
+  font-family: swear-display, serif;
+}
+
 textarea.form-control {
   border-radius: 2rem;
 }
@@ -11947,6 +11967,33 @@ textarea.form-control-sm {
 }
 textarea.form-control-lg {
   border-radius: 2rem;
+}
+
+[template=home] #Hero {
+  height: 100vh;
+}
+[template=home] h1, [template=home] .h1 {
+  height: 100%;
+  line-height: 0.9;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  font-size: 20vh;
+}
+[template=home] h1 .row, [template=home] .h1 .row {
+  position: relative;
+  align-content: center;
+  padding-bottom: 2rem;
+}
+[template=home] h1 .row::before, [template=home] .h1 .row::before {
+  content: "&";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 70vh;
+  font-family: swear-display-cilati, sans-serif;
+  mix-blend-mode: multiply;
+  opacity: 0.2;
 }
 
 @keyframes noise {

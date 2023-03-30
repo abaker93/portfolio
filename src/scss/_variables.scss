@@ -16,15 +16,15 @@ $purple:  #5B3A73;
 $red:     #FE5F55;
 $cream:   #F6F4EF;
 
-$cream-100: tint-color($cream, 80%);
-$cream-200: tint-color($cream, 60%);
-$cream-300: tint-color($cream, 40%);
-$cream-400: tint-color($cream, 20%);
-$cream-500: $cream;
-$cream-600: shade-color($cream, 20%);
-$cream-700: shade-color($cream, 40%);
-$cream-800: shade-color($cream, 60%);
-$cream-900: shade-color($cream, 80%);
+$cream-100: #FDFDFC;
+$cream-200: #FAF8F5;
+$cream-300: $cream;
+$cream-400: #E6E3DF;
+$cream-500: #D6D2CF;
+$cream-600: #C6C2BF;
+$cream-700: #B5B1AE;
+$cream-800: #A5A09E;
+$cream-900: #958F8E;
 
 
 
@@ -36,7 +36,8 @@ $font-family-monospace:					input-mono, monospace;
 
 $font-size-root:								20px;
 
-
+$font-weight-lighter:           200;
+$font-weight-bolder:            600;
 
 //*   headings variables
 $headings-font-weight:  400;

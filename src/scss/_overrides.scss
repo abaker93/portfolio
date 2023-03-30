@@ -30,7 +30,7 @@ $creams: (
 );
 
 $color-contrast-dark:   $gray-900;
-$color-contrast-light:  $cream-500;
+$color-contrast-light:  $cream-300;
 
 
 
@@ -38,7 +38,7 @@ $color-contrast-light:  $cream-500;
 $primary:		$purple;
 $secondary:	$red;
 $danger:		$orange;
-$light:			shade-color($cream-500, 5%);
+$light:			shade-color($cream-300, 5%);
 $dark:			$gray-900;
 
 
@@ -71,7 +71,7 @@ $danger-border-subtle:    $orange-200;
 
 //*		body settings
 $body-color:	        $gray-900;
-$body-bg:			        $cream-500;
+$body-bg:			        $cream-300;
 
 $component-active-bg: $primary;
 

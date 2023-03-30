@@ -1,6 +1,7 @@
 .large { font-size: $font-size-lg; }
 
-//*		background
+////																							
+//~		background
 #Background {
 	position: fixed;
 	top: 0;
@@ -19,7 +20,7 @@
 		z-index: 1;
 		opacity: 0.75;
 		mix-blend-mode: hard-light;
-		animation: noise 0.09s steps(10) infinite;
+		animation: noise 0.09s infinite;
 	}
 
 	.bg-circles {
@@ -60,7 +61,7 @@
 			height: 60vw;
 			margin-top: -2%;
 			margin-left: 52%;
-			background-color: $cream-300;
+			background-color: $cream-100;
 			animation: bg-circle-3 16s linear 0s infinite;
 		}
 
@@ -98,18 +99,22 @@
 		}
 	}
 }
+////																							
 
 
 
-//*		buttons
+////																							
+//~		buttons
 //		base styles
 .btn {
 	padding: calc(var(--#{$prefix}btn-padding-y) / 2) var(--#{$prefix}btn-padding-x) var(--#{$prefix}btn-padding-y);
 	text-transform: lowercase;
 }
+////																							
 
 
-//*		nav
+////																							
+//~		nav
 .navbar {
 	position: fixed;
 	width: 100%;
@@ -132,10 +137,12 @@
 		}
 	}
 }
+////																							
 
 
 
-//*		forms
+////																							
+//~		forms
 //		form control
 //		textarea
 textarea {
@@ -157,10 +164,12 @@ textarea {
 		@include border-radius($form-textarea-border-radius-lg);
 	}
 }
+////																							
 
 
 
-//*		templates
+////																							
+//~		templates
 //		home
 [template=home] {
 	#Hero {
@@ -194,10 +203,12 @@ textarea {
 		}
 	}
 }
+////																							
 
 
 
-//*		animations
+////																							
+//~		animations
 //		bg-noise
 @keyframes noise {
 	0%		{ background-position:  0%	 0%;	}
@@ -306,3 +317,4 @@ textarea {
 		opacity: 1;
 	}
 }
+////																							

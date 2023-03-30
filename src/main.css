@@ -11853,19 +11853,19 @@ textarea.form-control-lg {
   width: 100%;
   z-index: -100;
 }
-#Background .noise {
+#Background .bg-noise {
   position: absolute;
-  top: -50%;
-  left: -50%;
-  height: 200%;
-  width: 200%;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: url("assets/noise.png");
   z-index: 1;
-  mix-blend-mode: overlay;
-  filter: grayscale(1);
-  animation: noise 0.09s infinite;
+  opacity: 0.75;
+  mix-blend-mode: hard-light;
+  animation: noise 0.09s steps(10) infinite;
 }
 #Background .bg-circles {
-  opacity: 0.7;
   filter: blur(150px);
 }
 #Background .bg-circle {
@@ -11990,6 +11990,7 @@ textarea.form-control-lg {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: -1;
   font-size: 70vh;
   font-family: swear-display-cilati, sans-serif;
   mix-blend-mode: multiply;
@@ -11998,48 +11999,37 @@ textarea.form-control-lg {
 
 @keyframes noise {
   0% {
-    top: -50%;
-    left: -50%;
+    background-position: 0% 0%;
   }
   10% {
-    top: -55%;
-    left: -60%;
+    background-position: -5% -10%;
   }
   20% {
-    top: -55%;
-    left: -45%;
+    background-position: -15% -5%;
   }
   30% {
-    top: -43%;
-    left: -75%;
+    background-position: -7% -25%;
   }
   40% {
-    top: -30%;
-    left: -25%;
+    background-position: -20% -25%;
   }
   50% {
-    top: -75%;
-    left: -40%;
+    background-position: -25% 10%;
   }
   60% {
-    top: -35%;
-    left: -45%;
+    background-position: -15% -5%;
   }
   70% {
-    top: 0;
-    left: -35%;
+    background-position: 0% 15%;
   }
   80% {
-    top: -25%;
-    left: -15%;
+    background-position: 25% 35%;
   }
   90% {
-    top: -60%;
-    left: -40%;
+    background-position: -10% 10%;
   }
   100% {
-    top: 0;
-    left: 0;
+    background-position: 0% 0%;
   }
 }
 @keyframes bg-circle-1 {

@@ -1,8 +1,8 @@
 const Background = () => {
 	return (
 		<div id="Background">
-			<div class="noise">
-				<Noise />
+			<div class="bg-noise">
+				{/* <Noise /> */}
 			</div>
 			<div class="bg-circles">
 				<div class="bg-circle _1"></div>

@@ -1,7 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import Error from "./routes/Error";
 import Home from "./routes/Home";
 import Root from "./routes/Root";
+import Styles from "./routes/Styles";
 
 const router = createBrowserRouter([
 	{
@@ -9,7 +11,8 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <Error />,
     children: [
-      { index: true, element: <Home />},
+      { index: true, element: <Home /> },
+      { path: '/styles', element: <Styles /> },
     ]
 	}
 ])

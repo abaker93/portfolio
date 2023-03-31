@@ -9,7 +9,7 @@ const Navbar = () => {
 		<nav className="navbar navbar-expand-sm">
 			<div className="container-fluid">
 				<Link to="/" className="navbar-brand">
-					<h1 className="h4 mb-0">anna baker</h1>
+					<span className="h4 mb-0">anna baker</span>
 				</Link>
 				<button
 					className="navbar-toggler"

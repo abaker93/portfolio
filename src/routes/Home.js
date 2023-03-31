@@ -32,7 +32,7 @@ const Hero = () => {
 						<div className="row">
 							<div className="col-auto">Digital</div>
 							<div className="col-auto d-flex align-items-end">
-								<span className="p text-uppercase pb-5">Crafting amazing web experiences.</span>
+								<span className="p text-uppercase pb-4">Crafting amazing web experiences.</span>
 							</div>
 						</div>
 					</div>
@@ -40,10 +40,6 @@ const Hero = () => {
 
 				</div>
 			</h1>
-			{/*<div className="row">
-				<p>Passionate about creating amazing web experiences.</p>
-				<p>scroll</p>
-			</div>*/}
 			<div className="scroll-indicator">
 				<Arrow direction="down" stroke="#302927" />
 				<span className="h5">scroll</span>
@@ -54,10 +50,10 @@ const Hero = () => {
 
 const About = () => {
 	return (
-		<div id="about" className="container-md">
+		<div id="About" className="container-md py-10">
 			<div className="row">
-				<div className="col-4">
-					<h2>Anna</h2>
+				<div className="col-4 title">
+					<h2 className="display-5 text-lowercase">Anna</h2>
 					<p>(n) /ˈänə/</p>
 				</div>
 				<div className="col-8">
@@ -65,9 +61,9 @@ const About = () => {
 					<p>I use design programs such as Figma, Adobe XD, Photoshop, and Illustrator to create visually appealing and functional designs.</p>
 					<p>As a developer, I have expertise in HTML, CSS, JavaScript, and frameworks such as React. I create dynamic and responsive user interfaces that are optimized for performance and accessibility. I stay up-to-date with the latest design and development trends to ensure my solutions are scalable and meet industry standards.</p>
 					<p>Currently, I'm also a proud professor of Graphic Design at Mercyhurst University in Erie, Pennsylvania.</p>
-					<div>
-						<a className="btn btn-outline-dark" href="/resume">Resume</a>
-						<a className="btn btn-outline-dark" href="https://www.linkedin.com/in/annabakerdesign/">LinkedIn</a>
+					<div className="mt-5">
+						<a className="btn btn-outline-dark me-3" href="/resume">Resume</a>
+						<a className="btn btn-outline-dark me-3" href="https://www.linkedin.com/in/annabakerdesign/">LinkedIn</a>
 						<a className="btn btn-outline-dark" href="https://github.com/abaker93/">GitHub</a>
 					</div>
 				</div>
@@ -78,7 +74,7 @@ const About = () => {
 
 const Portfolio = (props) => {
 	return (
-		<div id="portfolio" className="container-fluid">
+		<div id="Portfolio" className="container-fluid">
 			{props.children}
 		</div>
 	)
@@ -87,7 +83,7 @@ const Portfolio = (props) => {
 const PortfolioItem = (props) => {
 	//console.log(props)
 	return (
-		<div className="container-lg">
+		<div className="PortfolioItem container-lg">
 			<div className="row">
 				<div className="col">
 					Image
@@ -107,7 +103,7 @@ const PortfolioItem = (props) => {
 
 const Contact = () => {
 	return (
-		<div id="contact" className="container-lg">
+		<div id="Contact" className="container-lg">
 			<div className="row">
 				<div className="col">
 					<form>

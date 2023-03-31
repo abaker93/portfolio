@@ -1,0 +1,81 @@
+//~~	gray colors map  ~~~~~~~~~~~~~~~~~~~~~~~~~//
+$grays: (
+	"100": $gray-100,
+	"200": $gray-200,
+	"300": $gray-300,
+	"400": $gray-400,
+	"500": $gray-500,
+	"600": $gray-600,
+	"700": $gray-700,
+	"800": $gray-800,
+	"900": $gray-900
+);
+////																							
+
+
+
+//~~	color maps  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+$custom-colors: (
+	"cream":  $cream
+);
+
+$colors: map-merge($colors, $custom-colors);
+
+$creams: (
+	"cream-100": $cream-100,
+	"cream-200": $cream-200,
+	"cream-300": $cream-300,
+	"cream-400": $cream-400,
+	"cream-500": $cream-500,
+	"cream-600": $cream-600,
+	"cream-700": $cream-700,
+	"cream-800": $cream-800,
+	"cream-900": $cream-900
+);
+////																							
+
+
+
+//~~	theme color map  ~~~~~~~~~~~~~~~~~~~~~~~~~//
+$custom-theme-colors: (
+	"primary":    $primary,
+	"secondary":  $secondary,
+	"danger":     $danger,
+	"light":      $light,
+	"dark":       $dark
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+////																							
+
+
+
+//~~	spacer variables  ~~~~~~~~~~~~~~~~~~~~~~~~//
+$custom-spacers: (
+  10:	$spacer * 7,
+);
+
+$spacers:	map-merge($spacers, $custom-spacers);
+////																							
+
+
+//~~	form validation states map  ~~~~~~~~~~~~~~//
+$form-validation-states: (
+  "valid": (
+    "color": var(--#{$prefix}success-text),
+    "icon": $form-feedback-icon-valid,
+    "tooltip-color": #fff,
+    "tooltip-bg-color": var(--#{$prefix}success),
+    "focus-box-shadow": 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}success-rgb), $input-btn-focus-color-opacity),
+    "border-color": var(--#{$prefix}success),
+  ),
+  "invalid": (
+    "color": var(--#{$prefix}danger-text),
+    "icon": $form-feedback-icon-invalid,
+    "tooltip-color": #fff,
+    "tooltip-bg-color": var(--#{$prefix}danger),
+    "focus-box-shadow": 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}danger-rgb), $input-btn-focus-color-opacity),
+    "border-color": var(--#{$prefix}danger),
+  )
+);
+////																							

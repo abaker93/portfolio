@@ -1,59 +1,16 @@
-//*		gray colors map
-$grays: (
-	"100": $gray-100,
-	"200": $gray-200,
-	"300": $gray-300,
-	"400": $gray-400,
-	"500": $gray-500,
-	"600": $gray-600,
-	"700": $gray-700,
-	"800": $gray-800,
-	"900": $gray-900
-);
-
-$custom-colors: (
-	"cream":  $cream
-);
-
-$colors: map-merge($colors, $custom-colors);
-
-$creams: (
-	"cream-100": $cream-100,
-	"cream-200": $cream-200,
-	"cream-300": $cream-300,
-	"cream-400": $cream-400,
-	"cream-500": $cream-500,
-	"cream-600": $cream-600,
-	"cream-700": $cream-700,
-	"cream-800": $cream-800,
-	"cream-900": $cream-900
-);
-
+//~~	color variables  ~~~~~~~~~~~~~~~~~~~~~~~~~//
 $color-contrast-dark:   $gray-900;
 $color-contrast-light:  $cream-300;
+////																							
 
 
 
-//*		theme color variables
+//~~	theme color variables  ~~~~~~~~~~~~~~~~~~~//
 $primary:		$purple;
 $secondary:	$red;
 $danger:		$orange;
 $light:			shade-color($cream-300, 5%);
 $dark:			$gray-900;
-
-
-
-//*		theme color map
-$theme-colors: (
-	"primary":    $primary,
-	"secondary":  $secondary,
-	"success":    $success,
-	"info":       $info,
-	"warning":    $warning,
-	"danger":     $danger,
-	"light":      $light,
-	"dark":       $dark
-);
 
 $primary-text:            $purple-600;
 $secondary-text:          $red-600;
@@ -66,65 +23,72 @@ $danger-bg-subtle:        $orange-100;
 $primary-border-subtle:   $purple-200;
 $secondary-border-subtle: $red-200;
 $danger-border-subtle:    $orange-200;
+////																							
 
 
 
-//*		body settings
+//~~	body variables  ~~~~~~~~~~~~~~~~~~~~~~~~~~//
 $body-color:	        $gray-900;
 $body-bg:			        $cream-300;
 
 $component-active-bg: $primary;
+////																							
 
 
 
-//*		anchor settings
+//~~	anchor variables  ~~~~~~~~~~~~~~~~~~~~~~~~//
 $link-color:						$secondary;
 $link-decoration:				null;
 $link-hover-decoration:	underline;
+////																							
 
 
 
-//*		font variables
+//~~	font variables  ~~~~~~~~~~~~~~~~~~~~~~~~~~//
 $font-weight-base:	$font-weight-light;
 
 $h1-font-size:			$font-size-base * 3;
 $h2-font-size:			$font-size-base * 2.5;
 $h3-font-size:			$font-size-base * 2;
+////																							
 
 
 
-//*		headings variables
+//~~	headings variables  ~~~~~~~~~~~~~~~~~~~~~~//
 $headings-font-family:	$font-family-serif;
 $headings-font-weight:	$font-weight-normal;
+////																							
 
 
 
-//*		display headings variables
+//~~	display headings variables  ~~~~~~~~~~~~~~//
 $display-font-family:	$font-family-serif;
 $display-font-weight:	$font-weight-normal;
+////																							
 
 
 
-//*		input button variables
+//~~	input button variables  ~~~~~~~~~~~~~~~~~~//
 $input-btn-font-family:       $font-family-serif;
 $input-btn-font-size:         $h4-font-size;
 $input-btn-focus-color:       rgba($component-active-bg, $input-btn-focus-color-opacity);
 $input-btn-focus-box-shadow:  0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color;
+////																							
 
 
 
-
-//*		button variables
+//~~	button variables  ~~~~~~~~~~~~~~~~~~~~~~~~//
 $btn-font-family:				$input-btn-font-family;
 $btn-font-size:					$input-btn-font-size;
 
 $btn-border-radius:			$border-radius-pill;
 $btn-border-radius-sm:	$border-radius-pill;
 $btn-border-radius-lg:	$border-radius-pill;
+////																							
 
 
 
-//*		chip variables
+//~~	chip variables  ~~~~~~~~~~~~~~~~~~~~~~~~~~//
 $chip-padding-y:						$input-btn-padding-y !default;
 $chip-padding-x:						$input-btn-padding-x !default;
 $chip-font-family:					$input-btn-font-family !default;
@@ -151,23 +115,26 @@ $chip-link-color:						var(--#{$prefix}link-color) !default;
 $chip-border-radius:				$border-radius-pill !default;
 $chip-border-radius-sm:			$border-radius-pill !default;
 $chip-border-radius-lg:			$border-radius-pill !default;
+////																							
 
 
 
-//*		nav variables
+//~~	nav variables  ~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 $nav-link-color:	$gray-900;
+////																							
 
 
 
-//*		navbar variables
+//~~	navbar variables  ~~~~~~~~~~~~~~~~~~~~~~~~//
 $navbar-light-color:							$gray-900;
 $navbar-light-hover-color:				rgba($gray-900, 0.7);
 $navbar-light-brand-color:				$gray-900;
 $navbar-light-brand-hover-color:	rgba($gray-900, 0.7);
+////																							
 
 
 
-//*		form variables
+//~~	form variables  ~~~~~~~~~~~~~~~~~~~~~~~~~~//
 //		form input
 $input-border-radius:								$border-radius-pill;
 $input-border-radius-sm:						$border-radius-pill;
@@ -198,25 +165,4 @@ $form-select-focus-box-shadow:			0 0 0 $form-select-focus-width $input-btn-focus
 
 //		form range
 $form-range-thumb-focus-box-shadow:	0 0 0 1px $body-bg, $input-focus-box-shadow !default;
-
-
-
-//*		form validation states
-$form-validation-states: (
-  "valid": (
-    "color": var(--#{$prefix}success-text),
-    "icon": $form-feedback-icon-valid,
-    "tooltip-color": #fff,
-    "tooltip-bg-color": var(--#{$prefix}success),
-    "focus-box-shadow": 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}success-rgb), $input-btn-focus-color-opacity),
-    "border-color": var(--#{$prefix}success),
-  ),
-  "invalid": (
-    "color": var(--#{$prefix}danger-text),
-    "icon": $form-feedback-icon-invalid,
-    "tooltip-color": #fff,
-    "tooltip-bg-color": var(--#{$prefix}danger),
-    "focus-box-shadow": 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}danger-rgb), $input-btn-focus-color-opacity),
-    "border-color": var(--#{$prefix}danger),
-  )
-);
+////																							

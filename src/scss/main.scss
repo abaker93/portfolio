@@ -1,20 +1,21 @@
-//?		fonts
+//-		fonts
 @import url("https://use.typekit.net/nqk0kzw.css");
 
 //*		bootstrap default functions
 @import "../../node_modules/bootstrap/scss/functions";
 
-//?		variable overrides
+//-		variable overrides
 @import "variables";
 
 //*		bootstrap default variables
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/variables-dark";
 
-//?		variables overrides based on bootstrap variables
+//-		variables overrides based on bootstrap variables
 @import "overrides";
 
-//?		map overrides
+//-		map overrides
+@import "maps";
 
 //*		bootstrap default configuration
 @import "../../node_modules/bootstrap/scss/maps";
@@ -56,23 +57,23 @@
 @import "../../node_modules/bootstrap/scss/transitions";
 @import "../../node_modules/bootstrap/scss/type";
 
-//?		custom helpers
+//-		custom helpers
 @import "helpers";
 
 //*		bootstrap default helpers
 @import "../../node_modules/bootstrap/scss/helpers";
 
-//?		custom utilities
+//-		custom utilities
 @import "utilities";
 
 //*		bootstrap default utilities
 @import "../../node_modules/bootstrap/scss/utilities/api";
 
-//?		custom mixins
+//-		custom mixins
 @import 'mixins';
 
-//?		custom components
+//-		custom components
 @import "chips";
 
-//?		additional styles
+//-		additional styles
 @import "custom";

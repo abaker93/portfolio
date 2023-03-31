@@ -12883,6 +12883,15 @@ textarea.form-control-lg {
   text-transform: lowercase;
 }
 
+.btn-icon {
+  display: inline-flex;
+  column-gap: 0.35rem;
+  align-items: baseline;
+}
+.btn-icon svg {
+  width: 0.7em;
+}
+
 .navbar {
   position: fixed;
   width: 100%;

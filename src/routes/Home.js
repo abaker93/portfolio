@@ -1,4 +1,5 @@
 import Arrow from "../assets/Arrow";
+import { GitHub, LinkedIn } from "../assets/icons";
 import portfolioData from "../data/portfolio.json";
 
 const Home = () => {
@@ -61,10 +62,16 @@ const About = () => {
 					<p>I use design programs such as Figma, Adobe XD, Photoshop, and Illustrator to create visually appealing and functional designs.</p>
 					<p>As a developer, I have expertise in HTML, CSS, JavaScript, and frameworks such as React. I create dynamic and responsive user interfaces that are optimized for performance and accessibility. I stay up-to-date with the latest design and development trends to ensure my solutions are scalable and meet industry standards.</p>
 					<p>Currently, I'm also a proud professor of Graphic Design at Mercyhurst University in Erie, Pennsylvania.</p>
-					<div className="mt-5">
-						<a className="btn btn-outline-dark me-3" href="/resume">Resume</a>
-						<a className="btn btn-outline-dark me-3" href="https://www.linkedin.com/in/annabakerdesign/">LinkedIn</a>
-						<a className="btn btn-outline-dark" href="https://github.com/abaker93/">GitHub</a>
+					<div className="mt-5 d-flex justify-content-end">
+						<a className="btn btn-outline-dark me-4" href="/resume">Resume</a>
+						<a className="btn btn-icon btn-outline-dark me-4" href="https://www.linkedin.com/in/annabakerdesign/">
+							<LinkedIn />
+							LinkedIn
+						</a>
+						<a className="btn btn-icon btn-outline-dark" href="https://github.com/abaker93/">
+							<GitHub />
+							GitHub
+						</a>
 					</div>
 				</div>
 			</div>

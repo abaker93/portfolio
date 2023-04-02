@@ -1,5 +1,5 @@
 import Arrow from "../assets/Arrow";
-import { GitHub, LinkedIn } from "../assets/icons";
+import { GitHubBI, LinkedInBI } from "../assets/icons";
 import portfolioData from "../data/portfolio.json";
 
 const Home = () => {
@@ -65,11 +65,11 @@ const About = () => {
 					<div className="mt-5 d-flex justify-content-end">
 						<a className="btn btn-outline-dark me-4" href="/resume">Resume</a>
 						<a className="btn btn-icon btn-outline-dark me-4" href="https://www.linkedin.com/in/annabakerdesign/">
-							<LinkedIn />
+							<LinkedInBI />
 							LinkedIn
 						</a>
 						<a className="btn btn-icon btn-outline-dark" href="https://github.com/abaker93/">
-							<GitHub />
+							<GitHubBI />
 							GitHub
 						</a>
 					</div>
@@ -90,10 +90,10 @@ const Portfolio = (props) => {
 const PortfolioItem = (props) => {
 	//console.log(props)
 	return (
-		<div className="PortfolioItem container-lg">
-			<div className="row">
+		<div className="PortfolioItem container-lg mb-5">
+			<div className="row gx-5">
 				<div className="col">
-					Image
+					<img src={props.featured_img} alt={props.title} />
 				</div>
 				<div className="col">
 					<h2>{props.title}</h2>

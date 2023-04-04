@@ -6,7 +6,7 @@ const Home = () => {
 	const portfolio = portfolioData.portfolio;
 
 	return (
-		<main template="home">
+		<main data-template="home">
 			<Hero />
 
 			<About />

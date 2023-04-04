@@ -6,6 +6,29 @@
 	font-weight:	$font-weight-base !important;
 	line-height:	$line-height-base !important;
 }
+////																							
+
+
+
+
+//~~	headings  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//		heading lines
+.heading-line {
+	position: relative;
+	width: fit-content;
+
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		height: calc(100% - 9px);
+		width: 100vw;
+		border-bottom: 1px solid $body-color;
+	}
+
+	&::before { left: calc(-100vw + -10px); }
+	&::after { right: calc(-100vw + -10px); }
+}
+////																							
 
 
 
@@ -182,7 +205,7 @@ textarea {
 
 
 //~~	hero	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-#Hero { height: 100vh; }
+[data-template=home] #Hero { height: 100vh; }
 
 .scroll-indicator {
 	position: absolute;
@@ -213,7 +236,7 @@ textarea {
 
 //~~	home	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 //		home
-[template=home] {
+[data-template=home] {
 	h1 {
 		height: 100%;
 		line-height: 0.9;
@@ -259,6 +282,23 @@ textarea {
 			aspect-ratio: 3 / 2;
 			object-fit: cover;
 			object-position: center;
+		}
+	}
+}
+////																							
+
+
+
+//~~	resume	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+[data-template=resume] {
+	.experience {
+		img {
+			height: 2rem;
+			width: 2rem;
+			padding: 5px;
+			object-fit: contain;
+			object-position: center center;
+			border-radius: $border-radius-sm;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 const Styles = () => {
 	return (
-		<main template="styles" className="py-5">
+		<main data-template="styles" className="py-5">
 			<div className="container">
 				<div className="row mt-5 mb-2">
 					<div className="col">

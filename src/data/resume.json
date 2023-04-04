@@ -1,0 +1,137 @@
+{
+	"experience": [
+		{
+			"id": 1,
+			"type": "industry",
+			"logo": "https://img.logoipsum.com/293.svg",
+			"color": "#0C6539",
+			"company": "Howard Hanna Real Estate Services",
+			"start_date": [{
+				"month": 1,
+				"year": 2021
+			}],
+			"end_date": [{
+				"month": "",
+				"year": ""
+			}],
+			"present": true,
+			"location": "Remote - Pennsylvania, USA",
+			"positions": [
+				{
+					"title": "UI/UX Developer",
+					"start_date": [{
+						"month": 8,
+						"year": 2022
+					}],
+					"end_date": [{
+						"month": "",
+						"year": ""
+					}],
+					"present": true,
+					"details": [
+						"Gather and evaluate user requirements in collaboration with product managers",
+						"Design user interface elements, such as menus, tabs, and buttons",
+						"Prepare and present mockups and prototypes to internal teams and key stakeholders",
+						"Identify and troubleshoot UX problems",
+						"Manage brand identity and standards across website"
+					]
+				},
+				{
+					"title": "UI/UX Designer",
+					"start_date": [{
+						"month": 1,
+						"year": 2021
+					}],
+					"end_date": [{
+						"month": 8,
+						"year": 2022
+					}],
+					"present": false,
+					"details": [
+						"Gather and evaluate user requirements in collaboration with product managers",
+						"Design user interface elements, such as menus, tabs, and buttons",
+						"Prepare and present mockups and prototypes to internal teams and key stakeholders",
+						"Identify and troubleshoot UX problems",
+						"Manage brand identity and standards across website"
+					]
+				}
+			]
+		},
+		{
+			"id": 2,
+			"type": "industry",
+			"logo": "https://img.logoipsum.com/293.svg",
+			"color": "#444444",
+			"company": "Epic Web Studios",
+			"start_date": [{
+				"month": 8,
+				"year": 2019
+			}],
+			"end_date": [{
+				"month": 8,
+				"year": 2020
+			}],
+			"present": false,
+			"location": "Erie, Pennsylvania, USA",
+			"positions": [
+				{
+					"title": "Web Designer",
+					"start_date": [{
+						"month": "",
+						"year": ""
+					}],
+					"end_date": [{
+						"month": "",
+						"year": ""
+					}],
+					"present": false,
+					"details": [
+						"Gather and evaluate user requirements in collaboration with product managers",
+						"Design user interface elements, such as menus, tabs, and buttons",
+						"Prepare and present mockups and prototypes to internal teams and key stakeholders",
+						"Identify and troubleshoot UX problems",
+						"Manage brand identity and standards across website"
+					]
+				}
+			]
+		},
+		{
+			"id": 3,
+			"type": "teaching",
+			"logo": "https://img.logoipsum.com/293.svg",
+			"color": "#444444",
+			"company": "Mercyhurst University",
+			"start_date": [{
+				"month": 8,
+				"year": 2021
+			}],
+			"end_date": [{
+				"month": "",
+				"year": ""
+			}],
+			"present": true,
+			"location": "Erie, Pennsylvania, USA",
+			"positions": [
+				{
+					"title": "Adjunct Faculty",
+					"start_date": [{
+						"month": "",
+						"year": ""
+					}],
+					"end_date": [{
+						"month": "",
+						"year": ""
+					}],
+					"present": true,
+					"details": [
+						"Gather and evaluate user requirements in collaboration with product managers",
+						"Design user interface elements, such as menus, tabs, and buttons",
+						"Prepare and present mockups and prototypes to internal teams and key stakeholders",
+						"Identify and troubleshoot UX problems",
+						"Manage brand identity and standards across website"
+					]
+				}
+			]
+		}
+	]
+}

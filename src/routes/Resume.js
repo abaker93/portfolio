@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import data from '../data/resume.json';
 import { convertMonth } from "../utilities/utilities";
-import { GeoAltFill } from "../assets/icons";
 import { gray } from "../utilities/colors";
+import { GeoAltFill } from "../assets/icons";
 
 const Resume = () => {
 	return (
@@ -149,6 +149,7 @@ const ResumeExperience = (p) => {
 
 	return (
 		<div className="experience">
+
 			<div className="row gx-3 align-items-center">
 				<div className="col-auto">
 					<img src={p.logo} alt={`${p.company} logo`} style={{ backgroundColor: p.color }} />
@@ -159,23 +160,23 @@ const ResumeExperience = (p) => {
 							<h4 className="p large m-0">{p.company}</h4>
 						</div>
 					</div>
-					<div className="row gx-2 align-items-center">
+					<div className="row gx-1 align-items-center">
 						{p.present ? (
 							<>
-								<div className="col-auto">
+								<div className="col-auto pe-1">
 									<div className="chip chip-primary-light chip-sm">Present</div>
 								</div>
-								<div className="col-auto">
+								<div className="col-auto pe-1">
 									<p className="small m-0 text-600">{`${convertMonth(p.start_date[0].month)} ${p.start_date[0].year}`}</p>
 								</div>
 							</>
 						) : (
-							<div className="col-auto">
+							<div className="col-auto pe-1">
 								<p className="small m-0 text-600">{convertMonth(p.start_date[0].month)} {p.start_date[0].year} &mdash; {convertMonth(p.end_date[0].month)} {p.end_date[0].year}</p>
 							</div>
 						)}
 						<div className="col-auto d-flex">
-							<GeoAltFill fill={gray[600]} />
+							<GeoAltFill fill={gray[500]} />
 						</div>
 						<div className="col-auto">
 							<p className="small m-0 text-600">{p.location}</p>
@@ -183,6 +184,7 @@ const ResumeExperience = (p) => {
 					</div>
 				</div>
 			</div>
+
 			<div id={`positions-${p.id}`}>
 				{p.positions.map(m => (
 					<div className="row gx-3">
@@ -194,9 +196,7 @@ const ResumeExperience = (p) => {
 								data-bs-target={`#details-${p.id}${m.id}`}
 								aria-expanded={p.id === 0 && m.id === 0 ? "true" : "false"}
 								aria-controls={`details-${p.id}${m.id}`}
-							>
-								+
-							</button>
+							></button>
 						</div>
 						<div className="col">
 							<div className="row">

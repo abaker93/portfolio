@@ -1,0 +1,55 @@
+@each $color, $value in $theme-colors {
+	$btn-color:			$value;
+	$color-hover:		rgba($btn-color, 0.7);
+	$active-border:	rgba($btn-color, 0.7);
+	$active-color:	$color-hover;
+
+	.btn-toggle-outline-#{$color} {
+		--#{$prefix}btn-color: #{$btn-color};
+		--#{$prefix}btn-border-color: #{$btn-color};
+
+		--#{$prefix}btn-hover-color: #{$color-hover};
+		--#{$prefix}btn-hover-bg: transparent;
+		--#{$prefix}btn-hover-border-color: #{$active-border};
+
+		--#{$prefix}btn-focus-shadow-rgb: #{to-rgb($btn-color)};
+
+		--#{$prefix}btn-active-color: #{$active-color};
+		--#{$prefix}btn-active-bg: transparent;
+		--#{$prefix}btn-active-border-color: #{$active-border};
+
+		--#{$prefix}btn-disabled-color: #{$btn-color};
+		--#{$prefix}btn-disabled-bg: transparent;
+		--#{$prefix}btn-disabled-border-color: #{$btn-color};
+
+		--#{$prefix}gradient: none;
+
+		--#{$prefix}btn-toggle-icon: #{$btn-toggle-icon};
+		--#{$prefix}btn-toggle-active-icon: #{$btn-toggle-active-icon};
+
+		height: 0.9rem;
+		width: 0.9rem;
+		transform: rotate(45deg);
+		position: relative;
+		padding: 0 !important;
+		border-radius: 0;
+
+		&::before {
+			content: '';
+			height: 100%;
+			width: 100%;
+			transform: rotate(-45deg);
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-image: var(--#{$prefix}btn-toggle-icon);
+			transition: $transition-base;
+		}
+
+		&.collapsed::before { background-image: var(--#{$prefix}btn-toggle-active-icon); }
+
+		&:hover, &:active {
+			&::before { opacity: 0.7; }
+		}
+	}
+}

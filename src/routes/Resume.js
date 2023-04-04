@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import data from '../data/resume.json';
 import { convertMonth } from "../utilities/utilities";
 import { GeoAltFill } from "../assets/icons";
+import { gray } from "../utilities/colors";
 
 const Resume = () => {
 	return (
 		<main data-template="resume">
 			<Hero />
 			<Summary />
-
 			<ResumeContainer />
 		</main>
 	)
@@ -40,7 +40,7 @@ const Summary = () => {
 			<div className="container-lg">
 				<div className="row justify-content-center">
 					<div className="col-md-8">
-						<h3 className="heading-line">Summary</h3>
+						<h3 className="baseline-rule">Summary</h3>
 					</div>
 				</div>
 			</div>
@@ -57,22 +57,26 @@ const Summary = () => {
 
 const ResumeContainer = () => {
 	return (
-		<div className="container-lg">
-			<div className="row gx-5">
-				<div className="col-lg-4">
-					<ResumeNav />
-				</div>
-				<div className="col-lg-8">
-					<div id="experience" className="row">
-						<div className="col">
-							<div id="industry-experience" className="row">
-								<h3>Industry Experience</h3>
-								{data.experience
-									.filter(f => f.type === "industry")
-									.sort((a, b) => a.start_date.year - b.start_date.year || a.start_date.month - b.start_date.month)
-									.map(d => (
-										<ResumeExperience key={d.id} {...d} />
-								))}
+		<div id="resume" className="overflow-x-hidden">
+			<div className="container-lg">
+				<div className="row gx-5">
+					<div className="col-lg-4">
+						<ResumeNav />
+					</div>
+					<div className="col-lg-8">
+						<div id="experience" className="row">
+							<div className="col">
+								<div id="industry-experience" className="row">
+									<div className="col">
+										<h3 className="h2 baseline-rule-end mb-4">Industry Experience</h3>
+										{data.experience
+											.filter(f => f.type === "industry")
+											.sort((a, b) => a.start_date.year - b.start_date.year || a.start_date.month - b.start_date.month)
+											.map(d => (
+												<ResumeExperience key={d.id} {...d} />
+										))}
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -145,58 +149,77 @@ const ResumeExperience = (p) => {
 
 	return (
 		<div className="experience">
-			<div className="row gx-3">
+			<div className="row gx-3 align-items-center">
 				<div className="col-auto">
 					<img src={p.logo} alt={`${p.company} logo`} style={{ backgroundColor: p.color }} />
 				</div>
-				<div className="col-auto">
+				<div className="col">
 					<div className="row">
 						<div className="col">
-							<h4>{p.company}</h4>
+							<h4 className="p large m-0">{p.company}</h4>
 						</div>
 					</div>
-					<div className="row">
-						<div className="col">
-							{p.present ? (
-								<>
-									<div className="chip chip-primary chip-sm">Present</div>
-									<p>{convertMonth(p.start_date[0].month)} {p.start_date[0].year}</p>
-								</>
-							) : (
-								<p>{convertMonth(p.start_date[0].month)} {p.start_date[0].year} &mdash; {convertMonth(p.end_date[0].month)} {p.end_date[0].year}</p>
-							)}
-							<GeoAltFill />
-							<p>{p.location}</p>
+					<div className="row gx-2 align-items-center">
+						{p.present ? (
+							<>
+								<div className="col-auto">
+									<div className="chip chip-primary-light chip-sm">Present</div>
+								</div>
+								<div className="col-auto">
+									<p className="small m-0 text-600">{`${convertMonth(p.start_date[0].month)} ${p.start_date[0].year}`}</p>
+								</div>
+							</>
+						) : (
+							<div className="col-auto">
+								<p className="small m-0 text-600">{convertMonth(p.start_date[0].month)} {p.start_date[0].year} &mdash; {convertMonth(p.end_date[0].month)} {p.end_date[0].year}</p>
+							</div>
+						)}
+						<div className="col-auto d-flex">
+							<GeoAltFill fill={gray[600]} />
+						</div>
+						<div className="col-auto">
+							<p className="small m-0 text-600">{p.location}</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			{p.positions.map(m => (
-				<div className="row gx-3">
-					<div className="col-auto">
-					</div>
-					<div className="col-auto">
-						<div className="row">
-							<div className="col">
-								<h5>{m.title}</h5>
-								<p>{m.start_date[0].month ? (
-									`${convertMonth(m.start_date[0].month)} ${m.start_date[0].year} — ${m.present ? "Present" : convertMonth(m.end_date[0].month)} ${m.end_date[0].year}`
-								) : null}</p>
+			<div id={`positions-${p.id}`}>
+				{p.positions.map(m => (
+					<div className="row gx-3">
+						<div className="col-auto">
+							<button
+								className={`btn btn-toggle-outline-dark${p.id === 0 && m.id === 0 ? "" : " collapsed"}`}
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target={`#details-${p.id}${m.id}`}
+								aria-expanded={p.id === 0 && m.id === 0 ? "true" : "false"}
+								aria-controls={`details-${p.id}${m.id}`}
+							>
+								+
+							</button>
+						</div>
+						<div className="col">
+							<div className="row">
+								<div className="col">
+									<h5 className="h3">{m.title}</h5>
+									<p>{m.start_date[0].month ? (
+										`${convertMonth(m.start_date[0].month)} ${m.start_date[0].year} — ${m.present ? "Present" : convertMonth(m.end_date[0].month)} ${m.end_date[0].year}`
+									) : null}</p>
+								</div>
+							</div>
+							<div className="row">
+								<div id={`details-${p.id}${m.id}`} className={`col collapse${p.id === 0 && m.id === 0 ? " show" : ""}`} data-bs-parent={`positions-${p.id}`}>
+									<ul>
+										{m.details.map(d => (
+											<li>{d}</li>
+										))}
+									</ul>
+								</div>
 							</div>
 						</div>
-						<div className="row">
-							<div className="col">
-								<ul>
-									{m.details.map(d => (
-										<li>{d}</li>
-									))}
-								</ul>
-							</div>
-						</div>
 					</div>
-				</div>
-			))}
-			
+				))}
+			</div>
 		</div>
 	)
 }

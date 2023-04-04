@@ -27,47 +27,48 @@ const Styles = () => {
 				</div>
 				<div className="row g-0 my-2">
 					<div className="col">
-						<div className="text-bg-purple-100 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-purple-100 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">purple-100</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-purple-200 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-purple-200 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">purple-200</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-purple-300 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-purple-300 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">purple-300</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-purple-400 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-purple-400 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">purple-400</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-purple-500 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-purple-500 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">purple-500</p>
+							<p className="m-0">primary</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-purple-600 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-purple-600 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">purple-600</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-purple-700 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-purple-700 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">purple-700</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-purple-800 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-purple-800 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">purple-800</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-purple-900 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-purple-900 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">purple-900</p>
 						</div>
 					</div>
@@ -79,47 +80,48 @@ const Styles = () => {
 				</div>
 				<div className="row g-0 my-2">
 					<div className="col">
-						<div className="text-bg-red-100 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-red-100 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">red-100</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-red-200 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-red-200 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">red-200</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-red-300 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-red-300 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">red-300</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-red-400 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-red-400 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">red-400</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-red-500 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-red-500 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">red-500</p>
+							<p className="m-0">secondary</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-red-600 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-red-600 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">red-600</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-red-700 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-red-700 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">red-700</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-red-800 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-red-800 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">red-800</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-red-900 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-red-900 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">red-900</p>
 						</div>
 					</div>
@@ -131,47 +133,48 @@ const Styles = () => {
 				</div>
 				<div className="row g-0 my-2">
 					<div className="col">
-						<div className="text-bg-cream-100 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-cream-100 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">cream-100</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-cream-200 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-cream-200 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">cream-200</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-cream-300 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-cream-300 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">cream-300</p>
+							<p className="m-0">light</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-cream-400 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-cream-400 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">cream-400</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-cream-500 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-cream-500 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">cream-500</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-cream-600 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-cream-600 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">cream-600</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-cream-700 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-cream-700 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">cream-700</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-cream-800 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-cream-800 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">cream-800</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-cream-900 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-cream-900 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">cream-900</p>
 						</div>
 					</div>
@@ -183,48 +186,49 @@ const Styles = () => {
 				</div>
 				<div className="row g-0 my-2">
 					<div className="col">
-						<div className="text-bg-100 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-100 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">bg-100</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-200 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-200 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">bg-200</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-300 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-300 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">bg-300</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-400 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-400 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">bg-400</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-500 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-500 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">bg-500</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-600 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-600 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">bg-600</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-700 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-700 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">bg-700</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-800 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-800 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">bg-800</p>
 						</div>
 					</div>
 					<div className="col">
-						<div className="text-bg-900 p-2 d-flex align-items-center" style={{ minHeight: 100 }}>
+						<div className="text-bg-900 p-2 d-flex flex-column justify-content-center" style={{ minHeight: 100 }}>
 							<p className="m-0">bg-900</p>
+							<p className="m-0">dark</p>
 						</div>
 					</div>
 				</div>

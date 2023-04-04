@@ -10,13 +10,19 @@
 
 
 
+//~~	bootstrap icons  ~~~~~~~~~~~~~~~~~~~~~~~~~//
+.bi { width: 1rem; }
+////																							
 
-//~~	headings  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//		heading lines
-.heading-line {
+
+
+//~~	baseline rule  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+[class*=baseline-rule] {
 	position: relative;
 	width: fit-content;
+}
 
+.baseline-rule {
 	&::before, &::after {
 		content: '';
 		position: absolute;
@@ -26,6 +32,30 @@
 	}
 
 	&::before { left: calc(-100vw + -10px); }
+	&::after { right: calc(-100vw + -10px); }
+}
+
+.baseline-rule-start {
+	&::before {
+		content: '';
+		position: absolute;
+		height: calc(100% - 9px);
+		width: 100vw;
+		border-bottom: 1px solid $body-color;
+	}
+	
+	&::before { left: calc(-100vw + -10px); }
+}
+
+.baseline-rule-end {
+	&::after {
+		content: '';
+		position: absolute;
+		height: calc(100% - 9px);
+		width: 100vw;
+		border-bottom: 1px solid $body-color;
+	}
+
 	&::after { right: calc(-100vw + -10px); }
 }
 ////																							
@@ -149,6 +179,7 @@
 	svg { width: 0.7em; }
 }
 ////																							
+
 
 
 //~~	navbar  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -300,6 +331,7 @@ textarea {
 			object-position: center center;
 			border-radius: $border-radius-sm;
 		}
+		.chip { margin-top: -5px; }
 	}
 }
 ////																							

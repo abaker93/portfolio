@@ -1,9 +1,6 @@
-//
-// Base styles
-//
-
+//~~	base styles  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 .chip {
-  // scss-docs-start chip-css-vars
+  //    scss-docs-start chip-css-vars
   --#{$prefix}chip-padding-x: #{$chip-padding-x};
   --#{$prefix}chip-padding-y: #{$chip-padding-y};
   --#{$prefix}chip-font-family: #{$chip-font-family};
@@ -16,7 +13,7 @@
   --#{$prefix}chip-border-color: transparent;
   --#{$prefix}chip-border-radius: #{$chip-border-radius};
   --#{$prefix}chip-disabled-opacity: #{$chip-disabled-opacity};
-  // scss-docs-end chip-css-vars
+  //    scss-docs-end chip-css-vars
 
   display: inline-block;
   padding: calc(var(--#{$prefix}chip-padding-y) / 2) var(--#{$prefix}chip-padding-x) var(--#{$prefix}chip-padding-y);
@@ -27,7 +24,7 @@
   color: var(--#{$prefix}chip-color);
   text-align: center;
   text-decoration: if($link-decoration == none, null, none);
-	text-transform: lowercase;
+	text-transform: none;
   white-space: $chip-white-space;
   vertical-align: middle;
   user-select: none;
@@ -46,16 +43,22 @@
     opacity: var(--#{$prefix}chip-disabled-opacity);
   }
 }
+////																							
 
 
-//
-// Alternate chips
-//
 
-// scss-docs-start chip-variant-loops
+//~~	alternate chips  ~~~~~~~~~~~~~~~~~~~~~~~~~//
+//    scss-docs-start chip-variant-loops
 @each $color, $value in $theme-colors {
   .chip-#{$color} {
     @include chip-variant($value, $value);
+  }
+  .chip-#{$color}-light {
+    @include chip-variant(
+      tint-color($value, 60%),
+      tint-color($value, 60%),
+      $value
+    );
   }
 }
 
@@ -64,14 +67,14 @@
     @include chip-outline-variant($value);
   }
 }
-// scss-docs-end chip-variant-loops
+//    scss-docs-end chip-variant-loops
+////																							
 
 
-//
-// Link chips
-//
 
-// Make a chip look and behave like a link
+
+//~~	link chips	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//    Make a chip look and behave like a link
 .chip-link {
   --#{$prefix}chip-font-weight: #{$font-weight-normal};
   --#{$prefix}chip-color: #{$chip-link-color};
@@ -84,19 +87,28 @@
   @if $enable-gradients {
     background-image: none;
   }
-
-  // No need for an active state here
 }
+////																							
 
 
-//
-// chip Sizes
-//
 
+
+//~~	chip sizes	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 .chip-lg {
-  @include chip-size($chip-padding-y-lg, $chip-padding-x-lg, $chip-font-size-lg, $chip-border-radius-lg);
+  @include chip-size(
+    $chip-padding-y-lg,
+    $chip-padding-x-lg,
+    $chip-font-size-lg,
+    $chip-border-radius-lg
+  );
 }
 
 .chip-sm {
-  @include chip-size($chip-padding-y-sm, $chip-padding-x-sm, $chip-font-size-sm, $chip-border-radius-sm);
+  @include chip-size(
+    $chip-padding-y-sm,
+    $chip-padding-x-sm,
+    $chip-font-size-sm,
+    $chip-border-radius-sm
+  );
 }
+////																							

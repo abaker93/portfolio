@@ -4,7 +4,7 @@ import { Arrow, EnvelopePaperHeartBI } from "../assets/icons";
 const Footer = () => {
 	return (
 		<footer id="Footer" className="mt-5 py-3">
-			<div className="container">
+			<div className="container-lg">
 				<div className="row my-3">
 					<div className="col">
 						<p className="display-6 text-lowercase baseline-rule">Let's get in touch!</p>
@@ -13,8 +13,8 @@ const Footer = () => {
 				<div className="row my-3">
 					<div className="col">
 						<p>
-							<Link className="icon-link icon-link-hover" href="mailto:anna.baker.design@gmail.com">
-								anna.baker.design@gmail.com
+							<Link className="icon-link icon-link-hover" href="mailto:hello@annabaker.dev">
+								hello@annabaker.dev
 								<EnvelopePaperHeartBI />
 							</Link>
 						</p>
@@ -44,6 +44,19 @@ const Footer = () => {
 								GitHub
 							</Link>
 						</p>
+					</div>
+				</div>
+			</div>
+			<div className="container-fluid">
+				<div className="row g-1 ps-2 mt-5 xxsmall">
+					<div className="col-auto">
+						{new Date().getFullYear()}
+					</div>
+					<div className="col-auto">
+						&copy;
+					</div>
+					<div className="col-auto">
+						Anna Baker
 					</div>
 				</div>
 			</div>

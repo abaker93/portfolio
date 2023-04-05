@@ -1,61 +1,154 @@
 {
-	"experience": [
+	"basics": {
+    "name": "Anna Baker",
+    "label": "UI/UX Developer",
+    "url": "https://www.annabaker.dev",
+    "summary": "A summary of John Doe…",
+    "location": {
+      "city": "Erie,",
+      "countryCode": "US",
+      "region": "Pennsylvania"
+    },
+    "profiles": [
+      {
+				"id": 0,
+        "network": "LinkedIn",
+        "username": "annabakerdesign",
+        "url": "https://www.linkedin.com/in/annabakerdesign/"
+      },
+			{
+				"id": 1,
+        "network": "GitHub",
+        "username": "abaker93",
+        "url": "https://github.com/abaker93/"
+      }
+    ]
+  },
+	"work": [
 		{
-			"id": 0,
-			"type": "industry",
+			"id": 5,
+			"type": "teaching",
 			"logo": "https://img.logoipsum.com/293.svg",
-			"color": "#0C6539",
-			"company": "Howard Hanna Real Estate Services",
-			"start_date": [{
-				"month": 1,
-				"year": 2021
-			}],
-			"end_date": [{
-				"month": "",
-				"year": ""
-			}],
+			"color": "#DDDDDD",
+			"name": "Mercyhurst University",
+			"startDate": "2021-08-01",
+			"endDate": "",
 			"present": true,
-			"location": "Remote - Pennsylvania, USA",
-			"positions": [
+			"location": "Erie, Pennsylvania, US",
+			"position": [
 				{
 					"id": 0,
-					"title": "UI/UX Developer",
-					"start_date": [{
-						"month": 8,
-						"year": 2022
-					}],
-					"end_date": [{
-						"month": "",
-						"year": ""
-					}],
+					"title": "Adjunct Faculty",
+					"startDate": "",
+					"endDate": "",
 					"present": true,
-					"details": [
+					"summary": [
 						"Gather and evaluate user requirements in collaboration with product managers",
 						"Design user interface elements, such as menus, tabs, and buttons",
 						"Prepare and present mockups and prototypes to internal teams and key stakeholders",
 						"Identify and troubleshoot UX problems",
 						"Manage brand identity and standards across website"
-					]
+					],
+					"highlights": []
+				}
+			]
+		},
+		{
+			"id": 4,
+			"type": "industry",
+			"logo": "https://img.logoipsum.com/293.svg",
+			"color": "#0C6539",
+			"name": "Howard Hanna Real Estate Services",
+			"startDate": "2021-01-01",
+			"endDate": "",
+			"present": true,
+			"location": "Remote - Pennsylvania, US",
+			"position": [
+				{
+					"id": 0,
+					"title": "UI/UX Developer",
+					"startDate": "2022-08-01",
+					"endDate": "",
+					"present": true,
+					"summary": [
+						"Gather and evaluate user requirements in collaboration with product managers",
+						"Design user interface elements, such as menus, tabs, and buttons",
+						"Prepare and present mockups and prototypes to internal teams and key stakeholders",
+						"Identify and troubleshoot UX problems",
+						"Manage brand identity and standards across website"
+					],
+					"highlights": []
 				},
 				{
 					"id": 1,
 					"title": "UI/UX Designer",
-					"start_date": [{
-						"month": 1,
-						"year": 2021
-					}],
-					"end_date": [{
-						"month": 8,
-						"year": 2022
-					}],
+					"startDate": "2021-01-01",
+					"endDate": "2022-08-01",
 					"present": false,
-					"details": [
+					"summary": [
 						"Gather and evaluate user requirements in collaboration with product managers",
 						"Design user interface elements, such as menus, tabs, and buttons",
 						"Prepare and present mockups and prototypes to internal teams and key stakeholders",
 						"Identify and troubleshoot UX problems",
 						"Manage brand identity and standards across website"
-					]
+					],
+					"highlights": []
+				}
+			]
+		},
+		{
+			"id": 3,
+			"type": "industry",
+			"logo": "https://img.logoipsum.com/293.svg",
+			"color": "#DDDDDD",
+			"name": "Epic Web Studios",
+			"startDate": "2019-08-01",
+			"endDate": "2020-08-01",
+			"present": false,
+			"location": "Erie, Pennsylvania, US",
+			"position": [
+				{
+					"id": 0,
+					"title": "Web Designer",
+					"startDate": "",
+					"endDate": "",
+					"present": false,
+					"summary": [
+						"Gather and evaluate user requirements in collaboration with product managers",
+						"Design user interface elements, such as menus, tabs, and buttons",
+						"Prepare and present mockups and prototypes to internal teams and key stakeholders",
+						"Identify and troubleshoot UX problems",
+						"Manage brand identity and standards across website"
+					],
+					"highlights": []
+				}
+			]
+		},
+		{
+			"id": 2,
+			"type": "industry",
+			"logo": "https://img.logoipsum.com/293.svg",
+			"color": "#DDDDDD",
+			"name": "Anna Baker Design",
+			"startDate": "2019-02-01",
+			"endDate": "2019-07-01",
+			"present": false,
+			"location": "Erie, Pennsylvania, US",
+			"position": [
+				{
+					"id": 0,
+					"title": "Layout Designer",
+					"startDate": "",
+					"endDate": "",
+					"present": false,
+					"summary": [
+						"Gather and evaluate user requirements in collaboration with product managers",
+						"Design user interface elements, such as menus, tabs, and buttons",
+						"Prepare and present mockups and prototypes to internal teams and key stakeholders",
+						"Identify and troubleshoot UX problems",
+						"Manage brand identity and standards across website"
+					],
+					"highlights": []
 				}
 			]
 		},
@@ -64,76 +157,128 @@
 			"type": "industry",
 			"logo": "https://img.logoipsum.com/293.svg",
 			"color": "#DDDDDD",
-			"company": "Epic Web Studios",
-			"start_date": [{
-				"month": 8,
-				"year": 2019
-			}],
-			"end_date": [{
-				"month": 8,
-				"year": 2020
-			}],
+			"name": "VertMarkets",
+			"startDate": "2016-11-01",
+			"endDate": "2019-02-01",
 			"present": false,
-			"location": "Erie, Pennsylvania, USA",
-			"positions": [
+			"location": "Erie, Pennsylvania, US",
+			"position": [
 				{
 					"id": 0,
-					"title": "Web Designer",
-					"start_date": [{
-						"month": "",
-						"year": ""
-					}],
-					"end_date": [{
-						"month": "",
-						"year": ""
-					}],
+					"title": "Art Director",
+					"startDate": "",
+					"endDate": "",
 					"present": false,
-					"details": [
+					"summary": [
 						"Gather and evaluate user requirements in collaboration with product managers",
 						"Design user interface elements, such as menus, tabs, and buttons",
 						"Prepare and present mockups and prototypes to internal teams and key stakeholders",
 						"Identify and troubleshoot UX problems",
 						"Manage brand identity and standards across website"
-					]
+					],
+					"highlights": []
 				}
 			]
 		},
 		{
-			"id": 2,
-			"type": "teaching",
+			"id": 0,
+			"type": "industry",
 			"logo": "https://img.logoipsum.com/293.svg",
 			"color": "#DDDDDD",
-			"company": "Mercyhurst University",
-			"start_date": [{
-				"month": 8,
-				"year": 2021
-			}],
-			"end_date": [{
-				"month": "",
-				"year": ""
-			}],
-			"present": true,
-			"location": "Erie, Pennsylvania, USA",
-			"positions": [
+			"name": "Altman-Hall Associates",
+			"startDate": "2015-02-01",
+			"endDate": "2016-11-01",
+			"present": false,
+			"location": "Erie, Pennsylvania, US",
+			"position": [
 				{
-					"id": 0,
-					"title": "Adjunct Faculty",
-					"start_date": [{
-						"month": "",
-						"year": ""
-					}],
-					"end_date": [{
-						"month": "",
-						"year": ""
-					}],
-					"present": true,
-					"details": [
+					"id": 1,
+					"title": "Graphic Designer & Junior Developer",
+					"startDate": "2015-05-01",
+					"endDate": "2016-11-01",
+					"present": false,
+					"summary": [
 						"Gather and evaluate user requirements in collaboration with product managers",
 						"Design user interface elements, such as menus, tabs, and buttons",
 						"Prepare and present mockups and prototypes to internal teams and key stakeholders",
 						"Identify and troubleshoot UX problems",
 						"Manage brand identity and standards across website"
-					]
+					],
+					"highlights": []
+				},
+				{
+					"id": 0,
+					"title": "Freelance Graphic Designer",
+					"startDate": "2015-02-01",
+					"endDate": "2015-05-01",
+					"present": false,
+					"summary": [
+						"Gather and evaluate user requirements in collaboration with product managers",
+						"Design user interface elements, such as menus, tabs, and buttons",
+						"Prepare and present mockups and prototypes to internal teams and key stakeholders",
+						"Identify and troubleshoot UX problems",
+						"Manage brand identity and standards across website"
+					],
+					"highlights": []
+				}
+			]
+		}
+	],
+	"education": [
+		{
+			"id": 0,
+			"institution": "Mercyhurst University",
+			"logo": "https://img.logoipsum.com/293.svg",
+			"color": "#DDDDDD",
+			"area": "Graphic Design",
+			"studyType": "Bachelor",
+			"startDate": "2011-09-01",
+			"endDate": "2015-05-01",
+			"present": false,
+			"score": "3.6",
+			"courses": []
+		},
+		{
+			"id": 1,
+			"institution": "Coursera",
+			"logo": "https://img.logoipsum.com/293.svg",
+			"color": "#DDDDDD",
+			"area": "Meta Front-End Developer",
+			"studyType": "Professional Certificate",
+			"startDate": "2023-01-01",
+			"endDate": "",
+			"present": true,
+			"score": "95.05%",
+			"courses": [
+				{
+					"id": 0,
+					"name": "Introduction to Front-End Development",
+					"url": ""
+				},
+				{
+					"id": 0,
+					"name": "Programming with JavaScript",
+					"url": ""
+				},
+				{
+					"id": 0,
+					"name": "Version Control",
+					"url": ""
+				},
+				{
+					"id": 0,
+					"name": "HTML and CSS in depth",
+					"url": ""
+				},
+				{
+					"id": 0,
+					"name": "React Basics",
+					"url": ""
+				},
+				{
+					"id": 0,
+					"name": "Advanced React",
+					"url": ""
 				}
 			]
 		}

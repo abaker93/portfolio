@@ -1,9 +1,14 @@
-export const convertMonth = (num) => {
-	if (typeof(num) !== "number") {
+export const convertYear = (date) => {
+	return date.substr(0,4);
+}
+
+export const convertMonth = (date) => {
+	const m = parseInt(date.substr(5,2));
+	if (typeof(m) !== "number") {
 		return;
 	}
 
-	switch (num) {
+	switch (m) {
 		case 1:
 			return "January";
 		case 2:

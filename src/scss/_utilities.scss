@@ -1,8 +1,21 @@
+
+
 $all-colors: map-merge-multiple($purples, $reds, $creams, $grays);
 
 $utilities: map-merge(
   $utilities,
   (
+    "background-color": map-merge(
+			map-get($utilities, "background-color"),
+			(
+				values: map-merge(
+					map-get(map-get($utilities, "background-color"), "values"),
+					(
+						$all-colors
+					),
+				),
+			),
+		),
     "color": map-merge(
       map-get($utilities, "color"),
       (
@@ -14,16 +27,5 @@ $utilities: map-merge(
         ),
       ),
     ),
-		"background-color": map-merge(
-			map-get($utilities, "background-color"),
-			(
-				values: map-merge(
-					map-get(map-get($utilities, "background-color"), "values"),
-					(
-						$all-colors
-					),
-				),
-			),
-		),
-	)
+	),
 );

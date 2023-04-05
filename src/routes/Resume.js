@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import data from '../data/resume.json';
 import { convertYear, convertMonth } from "../utilities/utilities";
 import { gray } from "../utilities/colors";
-import { GeoAltFill } from "../assets/icons";
+import { GeoAltFillBI, Link45DegBI } from "../assets/icons";
 
 const Resume = () => {
 	return (
@@ -56,6 +56,21 @@ const Summary = () => {
 }
 
 const ResumeContainer = () => {
+	const industryExperience =
+		data.work
+			.filter(f => f.type === "industry")
+			.sort((a, b) => a.startDate > b.startDate ? 1 : b.startDate > a.startDate ? -1 : 0)
+			.reverse();
+	const teachingExperience =
+		data.work
+			.filter(f => f.type === "teaching")
+			.sort((a, b) => a.startDate > b.startDate ? 1 : b.startDate > a.startDate ? -1 : 0)
+			.reverse();
+	const education =
+		data.education
+			.sort((a,b) => a.startDate > b.startDate ? 1 : b.startDate > a.startDate ? -1 : 0)
+			.reverse();
+
 	return (
 		<div id="resume" className="">
 			<div className="container-lg">
@@ -69,22 +84,16 @@ const ResumeContainer = () => {
 								<div id="industry-experience" className="row mb-3">
 									<div className="col">
 										<h3 className="h2 baseline-rule-end mb-4">Industry Experience</h3>
-										{data.work
-											.filter(f => f.type === "industry")
-											.sort((a, b) => a.startDate - b.startDate)
-											.map(d => (
-												<ResumeExperience key={d.id} {...d} />
+										{industryExperience.map(d => (
+											<ResumeExperience key={d.id} {...d} />
 										))}
 									</div>
 								</div>
 								<div id="teaching-experience" className="row">
 									<div className="col">
 										<h3 className="h2 baseline-rule-end mb-4">Teaching Experience</h3>
-										{data.work
-											.filter(f => f.type === "teaching")
-											.sort((a, b) => a.startDate - b.startDate)
-											.map(d => (
-												<ResumeExperience key={d.id} {...d} />
+										{teachingExperience.map(m => (
+											<ResumeExperience key={m.id} {...m} />
 										))}
 									</div>
 								</div>
@@ -94,6 +103,9 @@ const ResumeContainer = () => {
 						<div id="education" className="row">
 							<div className="col">
 								<h3 className="h2 baseline-rule-end mb-4">Education</h3>
+								{education.map(m => (
+									<ResumeEducation key={m.id} {...m} />
+								))}
 							</div>
 						</div>
 
@@ -193,7 +205,7 @@ const ResumeExperience = (p) => {
 							</div>
 						)}
 						<div className="col-auto d-flex">
-							<GeoAltFill fill={gray[500]} />
+							<GeoAltFillBI fill={gray[500]} />
 						</div>
 						<div className="col-auto">
 							<p className="small m-0 text-600">{p.location}</p>
@@ -207,11 +219,11 @@ const ResumeExperience = (p) => {
 					<div key={m.id} className="position row gx-3">
 						<div className="col-auto">
 							<button
-								className={`btn btn-toggle-outline-dark${p.present && m.present ? "" : " collapsed"}`}
+								className={`btn btn-toggle-outline-dark${p.present && m.present && p.type === "industry" ? "" : " collapsed"}`}
 								type="button"
 								data-bs-toggle="collapse"
 								data-bs-target={`#details-${p.id}${m.id}`}
-								aria-expanded={p.present && m.present ? "true" : "false"}
+								aria-expanded={p.present && m.present && p.type === "industry" ? "true" : "false"}
 								aria-controls={`details-${p.id}${m.id}`}
 							></button>
 						</div>
@@ -225,7 +237,7 @@ const ResumeExperience = (p) => {
 								</div>
 							</div>
 							<div className="row">
-								<div id={`details-${p.id}${m.id}`} className={`col collapse${p.present && m.present ? " show" : ""}`} data-bs-parent={`positions-${p.id}`}>
+								<div id={`details-${p.id}${m.id}`} className={`col collapse${p.present && m.present && p.type === "industry" ? " show" : ""}`} data-bs-parent={`positions-${p.id}`}>
 									<ul className="small m-0">
 										{m.summary.map((d, index) => (
 											<li key={index}>{d}</li>
@@ -237,6 +249,97 @@ const ResumeExperience = (p) => {
 					</div>
 				))}
 			</div>
+		</div>
+	)
+}
+
+const ResumeEducation = (p) => {
+	return (
+		<div className="education">
+
+			<div className="row gx-3 align-items-center mb-2">
+				<div className="col-auto">
+					<img src={p.logo} alt={`${p.institution} logo`} style={{ backgroundColor: p.color }} />
+				</div>
+				<div className="col">
+					<div className="row">
+						<div className="col">
+							<h4 className="p large m-0">{p.institution}</h4>
+						</div>
+					</div>
+					<div className="row gx-1 align-items-center">
+						{p.present ? (
+							<>
+								<div className="col-auto pe-1">
+									<div className="chip chip-primary-light chip-sm">Present</div>
+								</div>
+								<div className="col-auto pe-1">
+									<p className="small m-0 text-600">{`${convertMonth(p.startDate)} ${convertYear(p.startDate)}`}</p>
+								</div>
+							</>
+						) : (
+							<div className="col-auto pe-1">
+								<p className="small m-0 text-600">{convertMonth(p.startDate)} {convertYear(p.startDate)} &mdash; {convertMonth(p.endDate)} {convertYear(p.endDate)}</p>
+							</div>
+						)}
+						<div className="col-auto d-flex">
+							<GeoAltFillBI fill={gray[500]} />
+						</div>
+						<div className="col-auto">
+							<p className="small m-0 text-600">{p.location}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id={`education-${p.id}`}>
+				<div className="position row gx-3">
+						<div className="col-auto">
+							<button
+								className={`btn btn-toggle-outline-dark${p.present ? "" : " collapsed"}`}
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target={`#details-${p.id}`}
+								aria-expanded={p.present ? "true" : "false"}
+								aria-controls={`details-${p.id}`}
+							></button>
+						</div>
+						<div className="col pb-4">
+							<div className="row mb-2">
+								<div className="col">
+									<h5 className="h3 m-0">{p.area}</h5>
+									<p className="small text-600 m-0">{p.startDate ? (
+										`${convertMonth(p.startDate)} ${convertYear(p.startDate)} — ${p.present ? "Present" : convertMonth(p.endDate)} ${convertYear(p.endDate)}`
+									) : null}</p>
+								</div>
+							</div>
+							<div className="row">
+								<div id={`details-${p.id}`} className={`col collapse${p.present ? " show" : ""}`} data-bs-parent={`positions-${p.id}`}>
+									{p.score ? (
+										<p className="small">Average Grade Achieved: {p.score}</p>
+									) : null}
+									{p.courses.length > 0 ? (
+										<ul className="small m-0">
+											{p.courses
+												.sort((a,b) => a.id - b.id)
+												.reverse()
+												.map((m, index) => (
+												<li key={index}>
+													<Link className="icon-link icon-link-hover link-success link-underline-success link-underline-opacity-25" to={m.url}>
+														<Link45DegBI />
+														{m.name}
+													</Link>
+												</li>
+											))}
+										</ul>
+									) : null}
+									
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+
 		</div>
 	)
 }

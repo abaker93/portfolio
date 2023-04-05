@@ -226,27 +226,15 @@
 	],
 	"education": [
 		{
-			"id": 0,
-			"institution": "Mercyhurst University",
-			"logo": "https://img.logoipsum.com/293.svg",
-			"color": "#DDDDDD",
-			"area": "Graphic Design",
-			"studyType": "Bachelor",
-			"startDate": "2011-09-01",
-			"endDate": "2015-05-01",
-			"present": false,
-			"score": "3.6",
-			"courses": []
-		},
-		{
 			"id": 1,
 			"institution": "Coursera",
 			"logo": "https://img.logoipsum.com/293.svg",
 			"color": "#DDDDDD",
-			"area": "Meta Front-End Developer",
+			"area": "Front-End Developer Professional Certificate",
 			"studyType": "Professional Certificate",
 			"startDate": "2023-01-01",
 			"endDate": "",
+			"location": "Online",
 			"present": true,
 			"score": "95.05%",
 			"courses": [
@@ -256,31 +244,227 @@
 					"url": ""
 				},
 				{
-					"id": 0,
+					"id": 1,
 					"name": "Programming with JavaScript",
 					"url": ""
 				},
 				{
-					"id": 0,
+					"id": 2,
 					"name": "Version Control",
 					"url": ""
 				},
 				{
-					"id": 0,
+					"id": 3,
 					"name": "HTML and CSS in depth",
 					"url": ""
 				},
 				{
-					"id": 0,
+					"id": 4,
 					"name": "React Basics",
 					"url": ""
 				},
 				{
-					"id": 0,
+					"id": 5,
 					"name": "Advanced React",
 					"url": ""
 				}
 			]
+		},
+		{
+			"id": 0,
+			"institution": "Mercyhurst University",
+			"logo": "https://img.logoipsum.com/293.svg",
+			"color": "#DDDDDD",
+			"area": "B.A. Graphic Design",
+			"minor": "Digital Media",
+			"studyType": "Bachelor",
+			"startDate": "2011-09-01",
+			"endDate": "2015-05-01",
+			"location": "Erie, Pennsylvania, US",
+			"present": false,
+			"courses": []
+		}
+	],
+	"skills": [
+		{
+			"id": 0,
+			"name": "Web Development",
+			"category": "Development",
+			"subcategory": "Conceptual"
+		},
+		{
+			"id": 1,
+			"name": "Version Control",
+			"category": "Development",
+			"subcategory": "Conceptual"
+		},
+		{
+			"id": 2,
+			"name": "Accessibility",
+			"category": "Development",
+			"subcategory": "Conceptual"
+		},
+		{
+			"id": 3,
+			"name": "Responsive Design",
+			"category": "Development",
+			"subcategory": "Conceptual"
+		},
+		{
+			"id": 4,
+			"name": "React",
+			"category": "Development",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 5,
+			"name": "HTML",
+			"category": "Development",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 6,
+			"name": "CSS",
+			"category": "Development",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 7,
+			"name": "JavaScript",
+			"category": "Development",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 8,
+			"name": "Bootstrap",
+			"category": "Development",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 9,
+			"name": "MUI",
+			"category": "Development",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 10,
+			"name": "Tailwind",
+			"category": "Development",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 11,
+			"name": ".NET",
+			"category": "Development",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 12,
+			"name": "PHP",
+			"category": "Development",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 13,
+			"name": "SQL",
+			"category": "Development",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 14,
+			"name": "Wordpress",
+			"category": "Development",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 15,
+			"name": "Umbraco",
+			"category": "Development",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 16,
+			"name": "Web Design",
+			"category": "Design",
+			"subcategory": "Conceptual"
+		},
+		{
+			"id": 17,
+			"name": "User Experience",
+			"category": "Design",
+			"subcategory": "Conceptual"
+		},
+		{
+			"id": 18,
+			"name": "User Interface",
+			"category": "Design",
+			"subcategory": "Conceptual"
+		},
+		{
+			"id": 19,
+			"name": "Wireframing",
+			"category": "Design",
+			"subcategory": "Conceptual"
+		},
+		{
+			"id": 20,
+			"name": "Prototyping",
+			"category": "Design",
+			"subcategory": "Conceptual"
+		},
+		{
+			"id": 21,
+			"name": "Testing",
+			"category": "Design",
+			"subcategory": "Conceptual"
+		},
+		{
+			"id": 22,
+			"name": "Design Systems",
+			"category": "Design",
+			"subcategory": "Conceptual"
+		},
+		{
+			"id": 23,
+			"name": "Figma",
+			"category": "Design",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 24,
+			"name": "XD",
+			"category": "Design",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 25,
+			"name": "Photoshop",
+			"category": "Design",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 26,
+			"name": "InDesign",
+			"category": "Design",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 27,
+			"name": "Illustrator",
+			"category": "Design",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 28,
+			"name": "After Effects",
+			"category": "Design",
+			"subcategory": "Tools"
+		},
+		{
+			"id": 29,
+			"name": "Premiere",
+			"category": "Design",
+			"subcategory": "Tools"
 		}
 	]
 }

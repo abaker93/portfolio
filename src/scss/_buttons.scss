@@ -1,12 +1,13 @@
 @each $color, $value in $theme-colors {
-	$btn-color:			$value;
-	$color-hover:		rgba($btn-color, 0.7);
-	$active-border:	rgba($btn-color, 0.7);
-	$active-color:	$color-hover;
+	$btn-color:					$value;
+	$btn-border-width:	1px;
+	$color-hover:				rgba($btn-color, 0.7);
+	$active-border:			rgba($btn-color, 0.7);
+	$active-color:			$color-hover;
 
 	.btn-toggle-outline-#{$color} {
-		--#{$prefix}btn-color: #{$btn-color};
 		--#{$prefix}btn-border-color: #{$btn-color};
+		--#{$prefix}btn-border-width: #{$btn-border-width};
 
 		--#{$prefix}btn-hover-color: #{$color-hover};
 		--#{$prefix}btn-hover-bg: transparent;

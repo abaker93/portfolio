@@ -1,0 +1,43 @@
+$br-spacing: calc(-100vw + -0.5rem);
+
+@mixin baseline-rule() {
+	--#{$prefix}baseline-rule-border-width: #{$baseline-rule-border-width};
+	--#{$prefix}baseline-rule-border-color: #{$baseline-rule-border-color};
+
+	position: relative;
+	width: fit-content;
+}
+
+@mixin baseline-rule-psudo() {
+	content: '';
+	position: absolute;
+	height: calc(100% - 0.23em);
+	width: 100vw;
+	border-bottom: var(--#{$prefix}baseline-rule-border-width) solid var(--#{$prefix}baseline-rule-border-color);
+}
+
+.baseline-rule {
+	@include baseline-rule();
+
+	&::before, &::after { @include baseline-rule-psudo(); }
+	&::before { left: $br-spacing; }
+	&::after { right: $br-spacing; }
+}
+
+.baseline-rule-start {
+	@include baseline-rule();
+
+	&::before {
+		@include baseline-rule-psudo();
+		left: $br-spacing;
+	}
+}
+
+.baseline-rule-end {
+	@include baseline-rule();
+
+	&::after {
+		@include baseline-rule-psudo();
+		right: $br-spacing;
+	}
+}

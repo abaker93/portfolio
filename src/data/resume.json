@@ -227,7 +227,7 @@
 	"education": [
 		{
 			"id": 1,
-			"institution": "Coursera",
+			"name": "Coursera",
 			"logo": "https://img.logoipsum.com/293.svg",
 			"color": "#DDDDDD",
 			"area": "Front-End Developer Professional Certificate",
@@ -272,7 +272,7 @@
 		},
 		{
 			"id": 0,
-			"institution": "Mercyhurst University",
+			"name": "Mercyhurst University",
 			"logo": "https://img.logoipsum.com/293.svg",
 			"color": "#DDDDDD",
 			"area": "B.A. Graphic Design",

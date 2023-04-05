@@ -37,11 +37,18 @@ $component-active-bg: $primary;
 
 
 //~~	anchor variables  ~~~~~~~~~~~~~~~~~~~~~~~~//
-//$link-color:						$secondary;
-//$link-decoration:				null;
-//$link-hover-decoration:	underline;
+$link-color:						$secondary;
+$link-decoration:				null;
+$link-hover-decoration:	underline;
 
-//$link-hover-color:			$purple-400;
+$link-hover-color:			$purple-400;
+
+//		icon links
+$icon-link-gap:								.375rem !default;
+$icon-link-underline-offset:	.25em !default;
+$icon-link-icon-size:         1em !default;
+$icon-link-icon-transition:   .2s ease-in-out transform !default;
+$icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
 ////																							
 
 
@@ -96,7 +103,6 @@ $btn-toggle-icon-active-color:  $dark;
 
 $btn-toggle-icon:  							url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
 $btn-toggle-active-icon:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
-
 ////																							
 
 
@@ -132,8 +138,16 @@ $chip-border-radius-lg:			$border-radius-pill !default;
 
 
 
+//~~	baseline-rule variables  ~~~~~~~~~~~~~~~~~//
+$baseline-rule-border-width:	1px !default;
+$baseline-rule-border-color:	$body-color !default;
+////																							
+
+
+
 //~~	nav variables  ~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-$nav-link-color:	$gray-900;
+$nav-link-color:				$gray-900;
+$nav-link-active-color:	$primary !default;
 ////																							
 
 

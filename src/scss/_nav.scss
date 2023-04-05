@@ -1,0 +1,31 @@
+.nav.flex-column .nav-link {
+	position: relative;
+	transition: $transition;
+
+	&::before {
+		content: '';
+		background-color: var(--#{$prefix}primary);
+		height: 0.5rem;
+		width: 0.5rem;
+		transform: rotate(45deg);
+		position: absolute;
+		left: 0;
+		top: calc(50% - 0.2rem);
+		opacity: 0;
+		transition: $transition;
+	}
+
+	&.active {
+		--#{$prefix}nav-tabs-link-active-color: #{$nav-link-active-color};
+	
+		color: var(--#{$prefix}nav-link-active-color);
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.15em;
+	
+		&::before { opacity: 1; }
+	}
+}
+
+
+

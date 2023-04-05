@@ -36,47 +36,7 @@ ul:not(.nav):not(.navbar-nav) li {
 
 
 //~~	baseline rule  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-[class*=baseline-rule] {
-	position: relative;
-	width: fit-content;
-}
 
-.baseline-rule {
-	&::before, &::after {
-		content: '';
-		position: absolute;
-		height: calc(100% - 9px);
-		width: 100vw;
-		border-bottom: 1px solid $body-color;
-	}
-
-	&::before { left: calc(-100vw + -10px); }
-	&::after { right: calc(-100vw + -10px); }
-}
-
-.baseline-rule-start {
-	&::before {
-		content: '';
-		position: absolute;
-		height: calc(100% - 9px);
-		width: 100vw;
-		border-bottom: 1px solid $body-color;
-	}
-	
-	&::before { left: calc(-100vw + -10px); }
-}
-
-.baseline-rule-end {
-	&::after {
-		content: '';
-		position: absolute;
-		height: calc(100% - 9px);
-		width: 100vw;
-		border-bottom: 1px solid $body-color;
-	}
-
-	&::after { right: calc(-100vw + -10px); }
-}
 ////																							
 
 
@@ -346,9 +306,11 @@ textarea {
 		top: 100px;
 	}
 
-	.experience {
+	.resume-item {
 		margin-bottom: 2.5rem;
+	}
 
+	.resume-item-header {
 		img {
 			height: 2rem;
 			width: 2rem;
@@ -371,13 +333,12 @@ textarea {
 
 		&:not(:last-child) > .col-auto::after {
 			content: '';
-			border-right: 2px solid $body-color;
-			height: calc(100% - 22px);
-			width: calc(50% + 1px);
+			border-right: 1px solid $body-color;
+			height: calc(100% - 24px);
+			width: calc(49% + 1px);
 			position: absolute;
-			top: 0;
+			top: 2rem;
 			left: 0;
-			margin-top: 40px;
 		}
 	}
 	

@@ -57,11 +57,12 @@
 @import '../../node_modules/bootstrap/scss/transitions';
 @import '../../node_modules/bootstrap/scss/type';
 
-//-		custom helpers
-@import 'helpers';
-
 //*		bootstrap default helpers
 @import '../../node_modules/bootstrap/scss/helpers';
+@import "../../node_modules/bootstrap/scss/helpers/icon-link";
+
+//-		custom helpers
+@import 'helpers';
 
 //-		custom utilities
 @import 'utilities';
@@ -73,8 +74,10 @@
 @import 'mixins';
 
 //-		custom components
+@import 'baseline-rule';
 @import 'buttons';
 @import 'chips';
+@import 'nav';
 
 //-		additional styles
 @import 'custom';

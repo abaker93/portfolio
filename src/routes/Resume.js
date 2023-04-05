@@ -78,14 +78,28 @@ const ResumeContainer = () => {
 					<div className="col-lg-4">
 						<ResumeNav />
 					</div>
-					<div className="col-lg-8">
-						<div id="experience" className="row">
+					<div
+						className="col-lg-8"
+						data-bs-spy="scroll"
+						data-bs-target="#resume-nav"
+						data-bs-root-margin="0px 0px -40%"
+						data-bs-smooth-scroll="true"
+						tabIndex="0"
+					>
+						<div id="experience" className="row resume-item">
 							<div className="col">
 								<div id="industry-experience" className="row mb-3">
 									<div className="col">
 										<h3 className="h2 baseline-rule-end mb-4">Industry Experience</h3>
-										{industryExperience.map(d => (
-											<ResumeExperience key={d.id} {...d} />
+										{industryExperience.map(m => (
+											<div key={m.id} className="experience">
+												<ResumeItemHeader {...m} />
+												<div id={`positions-${m.id}`}>
+													{m.position.map(p => (
+														<ResumeExperience key={p.id} xpID={m.id} xpType={m.type} xpPresent={m.present} {...p} />
+													))}
+												</div>
+											</div>
 										))}
 									</div>
 								</div>
@@ -93,25 +107,91 @@ const ResumeContainer = () => {
 									<div className="col">
 										<h3 className="h2 baseline-rule-end mb-4">Teaching Experience</h3>
 										{teachingExperience.map(m => (
-											<ResumeExperience key={m.id} {...m} />
+											<div key={m.id} className="experience">
+												<ResumeItemHeader {...m} />
+												<div id={`positions-${m.id}`}>
+													{m.position.map(p => (
+														<ResumeExperience key={p.id} xpID={m.id} xpType={m.type} xpPresent={m.present} {...p} />
+													))}
+												</div>
+											</div>
 										))}
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<div id="education" className="row">
+						<div id="education" className="row resume-item">
 							<div className="col">
 								<h3 className="h2 baseline-rule-end mb-4">Education</h3>
 								{education.map(m => (
-									<ResumeEducation key={m.id} {...m} />
+									<div key={m.id} className="education">
+										<ResumeItemHeader {...m} />
+										<div id={`education-${m.id}`}>
+											<ResumeEducation {...m} />
+										</div>
+									</div>
 								))}
 							</div>
 						</div>
 
-						<div id="skills" className="row">
+						<div id="skills" className="row resume-item">
 							<div className="col">
 								<h3 className="h2 baseline-rule-end mb-4">Skills</h3>
+								<div className="row">
+									<div className="col-md-6">
+										<div className="row mb-3">
+											<div className="col">
+												<h4 className="h3">Development</h4>
+											</div>
+										</div>
+										<div className="row mb-4">
+											<div className="col">
+												{data.skills
+													.filter(f => f.category === "Development" && f.subcategory === "Conceptual")
+													.map(m => (
+														<div className="chip chip-light chip-sm me-2 mb-1 text-700">{m.name}</div>
+												))}
+											</div>
+										</div>
+										<div className="row mb-4">
+											<div className="col">
+												{data.skills
+													.filter(f => f.category === "Development" && f.subcategory === "Tools")
+													.map(m => (
+														<div className="chip chip-light chip-sm me-2 mb-1 text-700">{m.name}</div>
+												))}
+											</div>
+										</div>
+									</div>
+
+									<div className="col-md-6">
+										<div className="row mb-3">
+											<div className="col">
+												<h4 className="h3">Design</h4>
+											</div>
+										</div>
+										<div className="row mb-4">
+											<div className="col">
+												{data.skills
+													.filter(f => f.category === "Design" && f.subcategory === "Conceptual")
+													.map(m => (
+														<div className="chip chip-light chip-sm me-2 mb-1 text-700">{m.name}</div>
+												))}
+											</div>
+										</div>
+										<div className="row mb-4">
+											<div className="col">
+												{data.skills
+													.filter(f => f.category === "Design" && f.subcategory === "Tools")
+													.map(m => (
+														<div className="chip chip-light chip-sm me-2 mb-1 text-700">{m.name}</div>
+												))}
+											</div>
+										</div>
+									</div>
+
+								</div>
 							</div>
 						</div>
 
@@ -128,11 +208,12 @@ const ResumeNav = () => {
 	}
 
 	return (
-		<ul className="nav flex-column sticky-top">
+		<ul id="resume-nav" className="nav flex-column sticky-top">
 			<li className="nav-item h3">
 				<Link
 					className="nav-link"
-					onClick={e => handleClick(e, "experience")}
+					onClick={e => handleClick(e, "industry-experience")}
+					to="#industry-experience"
 				>
 					Experience
 				</Link>
@@ -141,6 +222,7 @@ const ResumeNav = () => {
 						<Link
 							className="nav-link"
 							onClick={e => handleClick(e, "industry-experience")}
+							to="#industry-experience"
 						>
 							Industry Experience
 						</Link>
@@ -149,6 +231,7 @@ const ResumeNav = () => {
 						<Link
 							className="nav-link"
 							onClick={e => handleClick(e, "teaching-experience")}
+							to="#teaching-experience"
 						>
 							Teaching Experience
 						</Link>
@@ -159,6 +242,7 @@ const ResumeNav = () => {
 				<Link
 					className="nav-link"
 					onClick={e => handleClick(e, "education")}
+					to="#education"
 				>
 					Education
 				</Link>
@@ -167,6 +251,7 @@ const ResumeNav = () => {
 				<Link
 					className="nav-link"
 					onClick={e => handleClick(e, "skills")}
+					to="#skills"
 				>
 					Skills
 				</Link>
@@ -175,79 +260,76 @@ const ResumeNav = () => {
 	)
 }
 
-const ResumeExperience = (p) => {
+const ResumeItemHeader = (p) => {
 	return (
-		<div className="experience">
-
-			<div className="row gx-3 align-items-center mb-2">
-				<div className="col-auto">
-					<img src={p.logo} alt={`${p.name} logo`} style={{ backgroundColor: p.color }} />
-				</div>
-				<div className="col">
-					<div className="row">
-						<div className="col">
-							<h4 className="p large m-0">{p.name}</h4>
-						</div>
+		<div className="resume-item-header row gx-3 align-items-center mb-2">
+			<div className="col-auto">
+				<img src={p.logo} alt={`${p.name} logo`} style={{ backgroundColor: p.color }} />
+			</div>
+			<div className="col">
+				<div className="row">
+					<div className="col">
+						<h4 className="p large m-0">{p.name}</h4>
 					</div>
-					<div className="row gx-1 align-items-center">
-						{p.present ? (
-							<>
-								<div className="col-auto pe-1">
-									<div className="chip chip-primary-light chip-sm">Present</div>
-								</div>
-								<div className="col-auto pe-1">
-									<p className="small m-0 text-600">{`${convertMonth(p.startDate)} ${convertYear(p.startDate)}`}</p>
-								</div>
-							</>
-						) : (
+				</div>
+				<div className="row gx-1 align-items-center">
+					{p.present ? (
+						<>
 							<div className="col-auto pe-1">
-								<p className="small m-0 text-600">{convertMonth(p.startDate)} {convertYear(p.startDate)} &mdash; {convertMonth(p.endDate)} {convertYear(p.endDate)}</p>
+								<div className="chip chip-primary-light chip-sm">Present</div>
 							</div>
-						)}
-						<div className="col-auto d-flex">
-							<GeoAltFillBI fill={gray[500]} />
+							<div className="col-auto pe-1">
+								<p className="small m-0 text-600">{`${convertMonth(p.startDate)} ${convertYear(p.startDate)}`}</p>
+							</div>
+						</>
+					) : (
+						<div className="col-auto pe-1">
+							<p className="small m-0 text-600">{convertMonth(p.startDate)} {convertYear(p.startDate)} &mdash; {convertMonth(p.endDate)} {convertYear(p.endDate)}</p>
 						</div>
-						<div className="col-auto">
-							<p className="small m-0 text-600">{p.location}</p>
-						</div>
+					)}
+					<div className="col-auto d-flex">
+						<GeoAltFillBI fill={gray[500]} />
+					</div>
+					<div className="col-auto">
+						<p className="small m-0 text-600">{p.location}</p>
 					</div>
 				</div>
 			</div>
+		</div>
+	)
+}
 
-			<div id={`positions-${p.id}`}>
-				{p.position.map(m => (
-					<div key={m.id} className="position row gx-3">
-						<div className="col-auto">
-							<button
-								className={`btn btn-toggle-outline-dark${p.present && m.present && p.type === "industry" ? "" : " collapsed"}`}
-								type="button"
-								data-bs-toggle="collapse"
-								data-bs-target={`#details-${p.id}${m.id}`}
-								aria-expanded={p.present && m.present && p.type === "industry" ? "true" : "false"}
-								aria-controls={`details-${p.id}${m.id}`}
-							></button>
-						</div>
-						<div className="col pb-4">
-							<div className="row mb-2">
-								<div className="col">
-									<h5 className="h3 m-0">{m.title}</h5>
-									<p className="small text-600 m-0">{m.startDate ? (
-										`${convertMonth(m.startDate)} ${convertYear(m.startDate)} — ${m.present ? "Present" : convertMonth(m.endDate)} ${convertYear(m.endDate)}`
-									) : null}</p>
-								</div>
-							</div>
-							<div className="row">
-								<div id={`details-${p.id}${m.id}`} className={`col collapse${p.present && m.present && p.type === "industry" ? " show" : ""}`} data-bs-parent={`positions-${p.id}`}>
-									<ul className="small m-0">
-										{m.summary.map((d, index) => (
-											<li key={index}>{d}</li>
-										))}
-									</ul>
-								</div>
-							</div>
-						</div>
+const ResumeExperience = (p) => {
+	return (
+		<div className="position row gx-3">
+			<div className="col-auto">
+				<button
+					className={`btn btn-toggle-outline-dark${p.xpPresent && p.present && p.xpType === "industry" ? "" : " collapsed"}`}
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target={`#details-${p.xpID}${p.id}`}
+					aria-expanded={p.xpPresent && p.present && p.xpType === "industry" ? "true" : "false"}
+					aria-controls={`details-${p.xpID}${p.id}`}
+				></button>
+			</div>
+			<div className="col pb-4">
+				<div className="row mb-2">
+					<div className="col">
+						<h5 className="h3 m-0">{p.title}</h5>
+						<p className="small text-600 m-0">{p.startDate ? (
+							`${convertMonth(p.startDate)} ${convertYear(p.startDate)} — ${p.present ? "Present" : convertMonth(p.endDate)} ${convertYear(p.endDate)}`
+						) : null}</p>
 					</div>
-				))}
+				</div>
+				<div className="row">
+					<div id={`details-${p.xpID}${p.id}`} className={`col collapse${p.xpPresent && p.present && p.xpType === "industry" ? " show" : ""}`} data-bs-parent={`positions-${p.xpID}`}>
+						<ul className="small m-0">
+							{p.summary.map((d, index) => (
+								<li key={index}>{d}</li>
+							))}
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	)
@@ -255,91 +337,52 @@ const ResumeExperience = (p) => {
 
 const ResumeEducation = (p) => {
 	return (
-		<div className="education">
-
-			<div className="row gx-3 align-items-center mb-2">
-				<div className="col-auto">
-					<img src={p.logo} alt={`${p.institution} logo`} style={{ backgroundColor: p.color }} />
-				</div>
-				<div className="col">
-					<div className="row">
-						<div className="col">
-							<h4 className="p large m-0">{p.institution}</h4>
-						</div>
+		<div className="position row gx-3">
+			<div className="col-auto">
+				<button
+					className={`btn btn-toggle-outline-dark${p.present ? "" : " collapsed"}`}
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target={`#details-${p.id}`}
+					aria-expanded={p.present ? "true" : "false"}
+					aria-controls={`details-${p.id}`}
+				></button>
+			</div>
+			<div className="col pb-4">
+				<div className="row mb-2">
+					<div className="col">
+						<h5 className="h3 m-0">{p.area}</h5>
+						<p className="small text-600 m-0">{p.startDate ? (
+							`${convertMonth(p.startDate)} ${convertYear(p.startDate)} — ${p.present ? "Present" : convertMonth(p.endDate)} ${convertYear(p.endDate)}`
+						) : null}</p>
 					</div>
-					<div className="row gx-1 align-items-center">
-						{p.present ? (
-							<>
-								<div className="col-auto pe-1">
-									<div className="chip chip-primary-light chip-sm">Present</div>
-								</div>
-								<div className="col-auto pe-1">
-									<p className="small m-0 text-600">{`${convertMonth(p.startDate)} ${convertYear(p.startDate)}`}</p>
-								</div>
-							</>
-						) : (
-							<div className="col-auto pe-1">
-								<p className="small m-0 text-600">{convertMonth(p.startDate)} {convertYear(p.startDate)} &mdash; {convertMonth(p.endDate)} {convertYear(p.endDate)}</p>
-							</div>
-						)}
-						<div className="col-auto d-flex">
-							<GeoAltFillBI fill={gray[500]} />
-						</div>
-						<div className="col-auto">
-							<p className="small m-0 text-600">{p.location}</p>
-						</div>
+				</div>
+				<div className="row">
+					<div id={`details-${p.id}`} className={`col collapse${p.present ? " show" : ""}`} data-bs-parent={`positions-${p.id}`}>
+						{p.score ? (
+							<p className="small">Average Grade Achieved: {p.score}</p>
+						) : null}
+						{p.courses.length > 0 ? (
+							<ul className="small m-0">
+								{p.courses
+									.sort((a,b) => a.id - b.id)
+									.reverse()
+									.map((m, index) => (
+									<li key={index}>
+										<Link className="icon-link icon-link-hover" to={m.url}>
+											{m.name}
+											<Link45DegBI />
+										</Link>
+									</li>
+								))}
+							</ul>
+						) : null}
+						{p.minor ? (
+							<p>Minor: {p.minor}</p>
+						) : null}
 					</div>
 				</div>
 			</div>
-
-			<div id={`education-${p.id}`}>
-				<div className="position row gx-3">
-						<div className="col-auto">
-							<button
-								className={`btn btn-toggle-outline-dark${p.present ? "" : " collapsed"}`}
-								type="button"
-								data-bs-toggle="collapse"
-								data-bs-target={`#details-${p.id}`}
-								aria-expanded={p.present ? "true" : "false"}
-								aria-controls={`details-${p.id}`}
-							></button>
-						</div>
-						<div className="col pb-4">
-							<div className="row mb-2">
-								<div className="col">
-									<h5 className="h3 m-0">{p.area}</h5>
-									<p className="small text-600 m-0">{p.startDate ? (
-										`${convertMonth(p.startDate)} ${convertYear(p.startDate)} — ${p.present ? "Present" : convertMonth(p.endDate)} ${convertYear(p.endDate)}`
-									) : null}</p>
-								</div>
-							</div>
-							<div className="row">
-								<div id={`details-${p.id}`} className={`col collapse${p.present ? " show" : ""}`} data-bs-parent={`positions-${p.id}`}>
-									{p.score ? (
-										<p className="small">Average Grade Achieved: {p.score}</p>
-									) : null}
-									{p.courses.length > 0 ? (
-										<ul className="small m-0">
-											{p.courses
-												.sort((a,b) => a.id - b.id)
-												.reverse()
-												.map((m, index) => (
-												<li key={index}>
-													<Link className="icon-link icon-link-hover link-success link-underline-success link-underline-opacity-25" to={m.url}>
-														<Link45DegBI />
-														{m.name}
-													</Link>
-												</li>
-											))}
-										</ul>
-									) : null}
-									
-								</div>
-							</div>
-						</div>
-					</div>
-			</div>
-
 		</div>
 	)
 }

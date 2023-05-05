@@ -3,7 +3,7 @@
     "name": "Anna Baker",
     "label": "UI/UX Developer",
     "url": "https://www.annabaker.dev",
-    "summary": "A summary of John Doe…",
+    "summary": "Transition from a UI design career to a development role, utilizing my skills in user experience design and my passion for front end development to create visually stunning, user-friendly websites and web applications.",
     "location": {
       "city": "Erie,",
       "countryCode": "US",
@@ -28,8 +28,8 @@
 		{
 			"id": 5,
 			"type": "teaching",
-			"logo": "https://img.logoipsum.com/293.svg",
-			"color": "#DDDDDD",
+			"logo": "Mercyhurst",
+			"color": "#ADCE65",
 			"name": "Mercyhurst University",
 			"startDate": "2021-08-01",
 			"endDate": "",
@@ -56,7 +56,7 @@
 		{
 			"id": 4,
 			"type": "industry",
-			"logo": "https://img.logoipsum.com/293.svg",
+			"logo": "HowardHanna",
 			"color": "#0C6539",
 			"name": "Howard Hanna Real Estate Services",
 			"startDate": "2021-01-01",
@@ -99,8 +99,8 @@
 		{
 			"id": 3,
 			"type": "industry",
-			"logo": "https://img.logoipsum.com/293.svg",
-			"color": "#DDDDDD",
+			"logo": "EpicWebStudios",
+			"color": "#66ACDF",
 			"name": "Epic Web Studios",
 			"startDate": "2019-08-01",
 			"endDate": "2020-08-01",
@@ -127,8 +127,8 @@
 		{
 			"id": 2,
 			"type": "industry",
-			"logo": "https://img.logoipsum.com/293.svg",
-			"color": "#DDDDDD",
+			"logo": "AnnaBakerDesign",
+			"color": "#4B228A",
 			"name": "Anna Baker Design",
 			"startDate": "2019-02-01",
 			"endDate": "2019-07-01",
@@ -155,8 +155,8 @@
 		{
 			"id": 1,
 			"type": "industry",
-			"logo": "https://img.logoipsum.com/293.svg",
-			"color": "#DDDDDD",
+			"logo": "VertMarkets",
+			"color": "#083677",
 			"name": "VertMarkets",
 			"startDate": "2016-11-01",
 			"endDate": "2019-02-01",
@@ -183,8 +183,8 @@
 		{
 			"id": 0,
 			"type": "industry",
-			"logo": "https://img.logoipsum.com/293.svg",
-			"color": "#DDDDDD",
+			"logo": "AltmanHall",
+			"color": "#0079C1",
 			"name": "Altman-Hall Associates",
 			"startDate": "2015-02-01",
 			"endDate": "2016-11-01",
@@ -228,44 +228,60 @@
 		{
 			"id": 1,
 			"name": "Coursera",
-			"logo": "https://img.logoipsum.com/293.svg",
-			"color": "#DDDDDD",
+			"logo": "Coursera",
+			"color": "#0056D2",
 			"area": "Front-End Developer Professional Certificate",
 			"studyType": "Professional Certificate",
 			"startDate": "2023-01-01",
 			"endDate": "",
 			"location": "Online",
 			"present": true,
-			"score": "95.05%",
+			"score": "95.50%",
+			"url": "",
 			"courses": [
 				{
 					"id": 0,
 					"name": "Introduction to Front-End Development",
-					"url": ""
+					"url": "https://coursera.org/share/b79ba831134bbef23c36768ca071b9d4"
 				},
 				{
 					"id": 1,
 					"name": "Programming with JavaScript",
-					"url": ""
+					"url": "https://coursera.org/share/e51a1003efbd0b7182aca531e7ebf6f0"
 				},
 				{
 					"id": 2,
 					"name": "Version Control",
-					"url": ""
+					"url": "https://coursera.org/share/9953c74eaeb424f9a3d65622b611e193"
 				},
 				{
 					"id": 3,
 					"name": "HTML and CSS in depth",
-					"url": ""
+					"url": "https://coursera.org/share/46ad3a2bc364ae1507ce7fd49a348c1c"
 				},
 				{
 					"id": 4,
 					"name": "React Basics",
-					"url": ""
+					"url": "https://coursera.org/share/4292a69ffca4738dfebf707a3e76d14b"
 				},
 				{
 					"id": 5,
 					"name": "Advanced React",
+					"url": "https://coursera.org/share/d7b1009ecdb3db7421f52ad7b197af74"
+				},
+				{
+					"id": 5,
+					"name": "Principles of UX/UI Design",
+					"url": "https://coursera.org/share/6e8d12d540903d196c26edb4a6813c00"
+				},
+				{
+					"id": 6,
+					"name": "Front-End Developer Capstone",
+					"url": "https://coursera.org/share/07f0a9ac4e1a1be0b9874b157cfdc8a3"
+				},
+				{
+					"id": 7,
+					"name": "Coding Interview Preparation",
 					"url": ""
 				}
 			]
@@ -273,8 +289,8 @@
 		{
 			"id": 0,
 			"name": "Mercyhurst University",
-			"logo": "https://img.logoipsum.com/293.svg",
-			"color": "#DDDDDD",
+			"logo": "Mercyhurst",
+			"color": "#ADCE65",
 			"area": "B.A. Graphic Design",
 			"minor": "Digital Media",
 			"studyType": "Bachelor",
@@ -372,7 +388,7 @@
 		},
 		{
 			"id": 14,
-			"name": "Wordpress",
+			"name": "WordPress",
 			"category": "Development",
 			"subcategory": "Tools"
 		},

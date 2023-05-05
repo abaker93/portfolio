@@ -48,15 +48,22 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="container-fluid">
-				<div className="row g-1 ps-2 mt-5 xxsmall">
+				<div className="row justify-content-between mt-5 px-2 xxsmall">
 					<div className="col-auto">
-						{new Date().getFullYear()}
+						<div className="row g-1">
+							<div className="col-auto">
+								{new Date().getFullYear()}
+							</div>
+							<div className="col-auto">
+								&copy;
+							</div>
+							<div className="col-auto">
+								Anna Baker
+							</div>
+						</div>
 					</div>
 					<div className="col-auto">
-						&copy;
-					</div>
-					<div className="col-auto">
-						Anna Baker
+						<Link to="/privacy-policy" className="link-dark link-offset-2 link-opacity-75-hover link-underline-opacity-50-hover">Privacy Policy</Link>
 					</div>
 				</div>
 			</div>

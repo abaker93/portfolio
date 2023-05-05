@@ -1,8 +1,10 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import data from '../data/resume.json';
 import { convertYear, convertMonth } from "../utilities/utilities";
 import { gray } from "../utilities/colors";
 import { GeoAltFillBI, Link45DegBI } from "../assets/icons";
+import { AltmanHall, AnnaBakerDesign, Coursera, EpicWebStudios, HowardHanna, Mercyhurst, VertMarkets } from "../assets/logos";
 
 const Resume = () => {
 	return (
@@ -35,6 +37,7 @@ const Hero = () => {
 }
 
 const Summary = () => {
+	const summary = data.basics.summary;
 	return (
 		<div id="Summary" className="overflow-x-hidden pb-8">
 			<div className="container-lg">
@@ -47,7 +50,7 @@ const Summary = () => {
 			<div className="container-lg">
 				<div className="row justify-content-center">
 					<div className="col-md-8">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+						<p>{summary}</p>
 					</div>
 				</div>
 			</div>
@@ -150,7 +153,7 @@ const ResumeContainer = () => {
 												{data.skills
 													.filter(f => f.category === "Development" && f.subcategory === "Conceptual")
 													.map(m => (
-														<div className="chip chip-light chip-sm me-2 mb-1 text-700">{m.name}</div>
+														<div key={m.id} className="chip chip-light chip-sm me-2 mb-1 text-700">{m.name}</div>
 												))}
 											</div>
 										</div>
@@ -159,7 +162,7 @@ const ResumeContainer = () => {
 												{data.skills
 													.filter(f => f.category === "Development" && f.subcategory === "Tools")
 													.map(m => (
-														<div className="chip chip-light chip-sm me-2 mb-1 text-700">{m.name}</div>
+														<div key={m.id} className="chip chip-light chip-sm me-2 mb-1 text-700">{m.name}</div>
 												))}
 											</div>
 										</div>
@@ -176,7 +179,7 @@ const ResumeContainer = () => {
 												{data.skills
 													.filter(f => f.category === "Design" && f.subcategory === "Conceptual")
 													.map(m => (
-														<div className="chip chip-light chip-sm me-2 mb-1 text-700">{m.name}</div>
+														<div key={m.id} className="chip chip-light chip-sm me-2 mb-1 text-700">{m.name}</div>
 												))}
 											</div>
 										</div>
@@ -185,7 +188,7 @@ const ResumeContainer = () => {
 												{data.skills
 													.filter(f => f.category === "Design" && f.subcategory === "Tools")
 													.map(m => (
-														<div className="chip chip-light chip-sm me-2 mb-1 text-700">{m.name}</div>
+														<div key={m.id} className="chip chip-light chip-sm me-2 mb-1 text-700">{m.name}</div>
 												))}
 											</div>
 										</div>
@@ -261,10 +264,20 @@ const ResumeNav = () => {
 }
 
 const ResumeItemHeader = (p) => {
+	const compontentMap = {
+		AltmanHall: AltmanHall,
+		AnnaBakerDesign: AnnaBakerDesign,
+		Coursera: Coursera,
+		EpicWebStudios: EpicWebStudios,
+		HowardHanna: HowardHanna,
+		Mercyhurst: Mercyhurst,
+		VertMarkets: VertMarkets,
+	}
+
 	return (
 		<div className="resume-item-header row gx-3 align-items-center mb-2">
 			<div className="col-auto">
-				<img src={p.logo} alt={`${p.name} logo`} style={{ backgroundColor: p.color }} />
+				{typeof compontentMap[p.logo] !== "undefined" ? React.createElement(compontentMap[p.logo], {background: p.color}) : null}
 			</div>
 			<div className="col">
 				<div className="row">
@@ -359,23 +372,32 @@ const ResumeEducation = (p) => {
 				</div>
 				<div className="row">
 					<div id={`details-${p.id}`} className={`col collapse${p.present ? " show" : ""}`} data-bs-parent={`positions-${p.id}`}>
+						{p.url ? (
+							<Link className="icon-link icon-link-hover" to={p.url} target="_blank">
+								Professional Certificate
+								<Link45DegBI />
+							</Link>
+						) : null}
 						{p.score ? (
 							<p className="small">Average Grade Achieved: {p.score}</p>
 						) : null}
 						{p.courses.length > 0 ? (
-							<ul className="small m-0">
-								{p.courses
-									.sort((a,b) => a.id - b.id)
-									.reverse()
-									.map((m, index) => (
-									<li key={index}>
-										<Link className="icon-link icon-link-hover" to={m.url}>
-											{m.name}
-											<Link45DegBI />
-										</Link>
-									</li>
-								))}
-							</ul>
+							<>
+								<h6 className="p"><small><strong>Course Certificates:</strong></small></h6>
+								<ul className="small m-0">
+									{p.courses
+										.sort((a,b) => a.id - b.id)
+										.reverse()
+										.map((m, index) => (
+										<li key={index}>
+											<Link className="icon-link icon-link-hover" to={m.url} target="_blank">
+												{m.name}
+												<Link45DegBI />
+											</Link>
+										</li>
+									))}
+								</ul>
+							</>
 						) : null}
 						{p.minor ? (
 							<p>Minor: {p.minor}</p>

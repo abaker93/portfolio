@@ -90,7 +90,7 @@ const Portfolio = (props) => {
 const PortfolioItem = (props) => {
 	//console.log(props)
 	return (
-		<div className="PortfolioItem container-lg mb-5">
+		<div className={`PortfolioItem container-lg mb-5 portfolio-${props.key % 2 === 0 ? "right" : "left"}`}>
 			<div className="row gx-5">
 				<div className="col">
 					<img src={props.featured_img} alt={props.title} />

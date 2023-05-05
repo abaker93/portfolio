@@ -15212,7 +15212,7 @@ ul:not(.nav):not(.navbar-nav) li::before {
   left: 0;
   background: url("assets/noise.png");
   z-index: 1;
-  opacity: 0.75;
+  opacity: 0.6;
   mix-blend-mode: hard-light;
   animation: noise 0.09s infinite;
 }
@@ -15225,8 +15225,6 @@ ul:not(.nav):not(.navbar-nav) li::before {
   left: 0;
   right: auto;
   bottom: auto;
-  width: 30vw;
-  height: 30vw;
   border-radius: 100%;
   opacity: 1;
 }
@@ -15237,14 +15235,16 @@ ul:not(.nav):not(.navbar-nav) li::before {
   margin-left: -16%;
   border-radius: 20%;
   background-color: #5B3A73;
-  animation: bg-circle-1 16s linear 0s infinite;
+  animation: bg-circle-1 20s linear 0s infinite;
 }
 #Background .bg-circle._2 {
+  width: 30vw;
+  height: 30vw;
   margin-top: 40%;
   border-radius: 30%;
   background-color: #372345;
   opacity: 0.5;
-  animation: bg-circle-2 16s linear 0s infinite;
+  animation: bg-circle-2 25s linear 0s infinite;
 }
 #Background .bg-circle._3 {
   width: 60vw;
@@ -15263,14 +15263,16 @@ ul:not(.nav):not(.navbar-nav) li::before {
   margin-right: -10%;
   background-color: #FE5F55;
   opacity: 0.8;
-  animation: bg-circle-4 16s linear 0s infinite;
+  animation: bg-circle-4 14s linear 0s infinite;
 }
 #Background .bg-circle._5 {
+  width: 30vw;
+  height: 30vw;
   margin-top: 25%;
   margin-left: 30%;
   border-radius: 20%;
   background-color: #9d89ab;
-  animation: bg-circle-5 16s linear 0s infinite;
+  animation: bg-circle-5 25s linear 0s infinite;
 }
 #Background .bg-circle._6 {
   left: auto;
@@ -15282,7 +15284,7 @@ ul:not(.nav):not(.navbar-nav) li::before {
   margin-right: -16%;
   margin-bottom: -20%;
   background-color: #fe9f99;
-  animation: bg-circle-6 16s linear 0s infinite;
+  animation: bg-circle-6 30s linear 0s infinite;
 }
 
 .btn {

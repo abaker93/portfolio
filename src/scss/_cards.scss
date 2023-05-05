@@ -1,3 +1,5 @@
 .card-portfolio {
-	
+	&.portfolio-right {
+		flex-direction: row-reverse;
+	}
 }

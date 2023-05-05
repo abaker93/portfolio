@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import data from '../data/resume.json';
 import { convertYear, convertMonth } from "../utilities/utilities";
 import { gray } from "../utilities/colors";
-import { GeoAltFillBI, Link45DegBI } from "../assets/icons";
+import { CertificateBI, GeoAltFillBI } from "../assets/icons";
 import { AltmanHall, AnnaBakerDesign, Coursera, EpicWebStudios, HowardHanna, Mercyhurst, VertMarkets } from "../assets/logos";
 
 const Resume = () => {
@@ -375,7 +375,7 @@ const ResumeEducation = (p) => {
 						{p.url ? (
 							<Link className="icon-link icon-link-hover" to={p.url} target="_blank">
 								Professional Certificate
-								<Link45DegBI />
+								<CertificateBI />
 							</Link>
 						) : null}
 						{p.score ? (
@@ -392,7 +392,7 @@ const ResumeEducation = (p) => {
 										<li key={index}>
 											<Link className="icon-link icon-link-hover" to={m.url} target="_blank">
 												{m.name}
-												<Link45DegBI />
+												<CertificateBI />
 											</Link>
 										</li>
 									))}

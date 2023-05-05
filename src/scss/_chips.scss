@@ -16,7 +16,7 @@
   //    scss-docs-end chip-css-vars
 
   display: inline-block;
-  padding: calc(var(--#{$prefix}chip-padding-y) / 2) var(--#{$prefix}chip-padding-x) var(--#{$prefix}chip-padding-y);
+  padding: calc(var(--#{$prefix}chip-padding-y) * 0.8) var(--#{$prefix}chip-padding-x) var(--#{$prefix}chip-padding-y);
   font-family: var(--#{$prefix}chip-font-family);
   @include font-size(var(--#{$prefix}chip-font-size));
   font-weight: var(--#{$prefix}chip-font-weight);

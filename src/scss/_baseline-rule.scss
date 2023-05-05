@@ -5,13 +5,16 @@ $br-spacing: calc(-100vw + -0.5rem);
 	--#{$prefix}baseline-rule-border-color: #{$baseline-rule-border-color};
 
 	position: relative;
-	width: fit-content;
+	// width: fit-content;
+	display: inline;
 }
 
 @mixin baseline-rule-psudo() {
 	content: '';
 	position: absolute;
-	height: calc(100% - 0.23em);
+	// height: calc(100% - 0.23em);
+	z-index: -1;
+	bottom: 0.21em;
 	width: 100vw;
 	border-bottom: var(--#{$prefix}baseline-rule-border-width) solid var(--#{$prefix}baseline-rule-border-color);
 }

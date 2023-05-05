@@ -11,11 +11,11 @@ const Home = () => {
 
 			<About />
 
-			<Portfolio>
-				{portfolio.map(p => (
+			<div id="Portfolio" className="container-lg">
+				{portfolio.filter(f => f.featured).map(p => (
 					<PortfolioItem key={p.id} {...p} />
 				))}
-			</Portfolio>
+			</div>
 
 			<Contact />
 		</main>
@@ -79,29 +79,20 @@ const About = () => {
 	)
 }
 
-const Portfolio = (props) => {
-	return (
-		<div id="Portfolio" className="container-fluid">
-			{props.children}
-		</div>
-	)
-}
-
 const PortfolioItem = (props) => {
 	//console.log(props)
 	return (
-		<div className={`PortfolioItem container-lg mb-5 portfolio-${props.key % 2 === 0 ? "right" : "left"}`}>
-			<div className="row gx-5">
-				<div className="col">
-					<img src={props.featured_img} alt={props.title} />
-				</div>
-				<div className="col">
-					<h2>{props.title}</h2>
-					<div className="tags">
-						{props.tags.map((t, index) => (
-							<span key={index} className="chip chip-sm chip-light">{t}</span>
-						))}
-					</div>
+		<div className={`row gx-5 mb-5 card-portfolio portfolio-${props.id % 2 === 0 ? "left" : "right"}`}>
+			<div className="col-lg-5">
+				<img src={props.featured_img} alt={props.title} />
+			</div>
+			<div className="col-lg-2"></div>
+			<div className="col-lg-5">
+				<h2 className="baseline-rule">{props.title}</h2>
+				<div className="tags mt-3 d-flex flex-wrap gap-2">
+					{props.tags.map((t, index) => (
+						<span key={index} className="chip chip-outline-dark">{t}</span>
+					))}
 				</div>
 			</div>
 		</div>

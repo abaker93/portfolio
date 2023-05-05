@@ -2,6 +2,24 @@
 	"portfolio": [
 		{
 			"id": 0,
+			"featured": true,
+			"featured_img": "https://images.unsplash.com/photo-1680122754429-397770cfa151?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+			"tags": [
+				"Design",
+				"Development",
+				"Figma",
+				"React",
+				"JavaScript",
+				"JSX",
+				"SASS",
+				"JavaScript"
+			],
+			"title": "Little Lemon Capstone Project",
+			"url": "little-lemon"
+		},
+		{
+			"id": 1,
+			"featured": true,
 			"featured_img": "https://images.unsplash.com/photo-1680122754429-397770cfa151?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
 			"tags": [
 				"Design",
@@ -14,10 +32,11 @@
 				"JavaScript"
 			],
 			"title": "Howard Hanna Relocation Services",
-			"url": "/portfolio/howard-hanna-relocation-services"
+			"url": "howard-hanna-relocation-services"
 		},
 		{
-			"id": 1,
+			"id": 2,
+			"featured": true,
 			"featured_img": "https://images.unsplash.com/photo-1680122754429-397770cfa151?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
 			"tags": [
 				"Design",
@@ -30,10 +49,11 @@
 				"REST API"
 			],
 			"title": "Drifloon Database",
-			"url": "/portfolio/drifloon-database"
+			"url": "drifloon-database"
 		},
 		{
-			"id": 2,
+			"id": 3,
+			"featured": true,
 			"featured_img": "https://images.unsplash.com/photo-1680122754429-397770cfa151?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
 			"tags": [
 				"Design",
@@ -42,10 +62,25 @@
 				"CSS"
 			],
 			"title": "HSuite Intranet",
-			"url": "/portfolio/hsuite-intranet"
+			"url": "hsuite-intranet"
 		},
 		{
-			"id": 3,
+			"id": 4,
+			"featured": true,
+			"featured_img": "https://images.unsplash.com/photo-1680122754429-397770cfa151?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+			"tags": [
+				"Design",
+				"Adobe XD",
+				"Bootstrap",
+				"HTML",
+				"CSS"
+			],
+			"title": "Hanna Luxury",
+			"url": "hanna-luxury"
+		},
+		{
+			"id": 5,
+			"featured": false,
 			"featured_img": "https://images.unsplash.com/photo-1680122754429-397770cfa151?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
 			"tags": [
 				"Design",
@@ -58,7 +93,7 @@
 				"JavaScript"
 			],
 			"title": "Children's Free Care Fund",
-			"url": "/portfolio/childrens-free-care-fund"
+			"url": "childrens-free-care-fund"
 		}
 	]
 }

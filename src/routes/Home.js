@@ -82,12 +82,12 @@ const About = () => {
 const PortfolioItem = (props) => {
 	//console.log(props)
 	return (
-		<div className={`row gx-5 mb-5 card-portfolio portfolio-${props.id % 2 === 0 ? "left" : "right"}`}>
-			<div className="col-lg-5">
+		<div className={`row gx-5 mb-8 card-portfolio portfolio-${props.id % 2 === 0 ? "left" : "right"}`}>
+			<div className="col-lg-5 image">
 				<img src={props.featured_img} alt={props.title} />
 			</div>
 			<div className="col-lg-2"></div>
-			<div className="col-lg-5">
+			<div className="col-lg-5 details">
 				<h2 className="baseline-rule">{props.title}</h2>
 				<div className="tags mt-3 d-flex flex-wrap gap-2">
 					{props.tags.map((t, index) => (

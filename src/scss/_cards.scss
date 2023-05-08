@@ -1,5 +1,13 @@
 .card-portfolio {
-	&.portfolio-right {
-		flex-direction: row-reverse;
+	align-items: end;
+
+	&.portfolio-right { flex-direction: row-reverse; }
+
+	img {
+		width: 100%;
+		border-radius: $border-radius-2xl;
+		aspect-ratio: 4 / 3;
+		object-fit: cover;
+		object-position: center;
 	}
 }

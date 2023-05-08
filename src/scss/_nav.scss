@@ -27,5 +27,14 @@
 	}
 }
 
+.navbar {
+	border-bottom: 1px solid rgba($dark, 0);
+	backdrop-filter: none;
+	z-index: 999;
+	transition: $transition;
 
-
+	&.scroll {
+		border-bottom-color: $dark;
+		backdrop-filter: blur(7px);
+	}
+}

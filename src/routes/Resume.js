@@ -263,7 +263,7 @@ const ResumeNav = () => {
 	)
 }
 
-const ResumeItemHeader = (p) => {
+const ResumeItemHeader = p => {
 	const compontentMap = {
 		AltmanHall: AltmanHall,
 		AnnaBakerDesign: AnnaBakerDesign,

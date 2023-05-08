@@ -1,6 +1,8 @@
 import Arrow from "../assets/Arrow";
 import { GitHubBI, LinkedInBI } from "../assets/icons";
 import portfolioData from "../data/portfolio.json";
+import littleLemon from "../assets/portfolio/little-lemon-1.jpg";
+import { useEffect, useState } from "react";
 
 const Home = () => {
 	const portfolio = portfolioData.portfolio;
@@ -79,18 +81,36 @@ const About = () => {
 	)
 }
 
-const PortfolioItem = (props) => {
-	//console.log(props)
+const PortfolioItem = p => {
+	const [ transformOrigin, setTransformOrigin ] = useState('50% 50%');
+
+	const handleMouseMove = e => {
+		const { left, top, width, height } = e.target.getBoundingClientRect();
+		const x = (e.clientX - left) / width * 100;
+		const y = (e.clientY - top) / height * 100;
+		setTransformOrigin(`${x}% ${y}%`)
+	}
+
+	const componentMap = {
+		littleLemon: littleLemon,
+		relocationServices: littleLemon,
+		drifloonDatabase: littleLemon,
+		hSuite: littleLemon,
+		hannaLuxury: littleLemon,
+	}
+
 	return (
-		<div className={`row gx-5 mb-8 card-portfolio portfolio-${props.id % 2 === 0 ? "left" : "right"}`}>
+		<div className={`row gx-5 mb-8 card-portfolio portfolio-${p.id % 2 === 0 ? "left" : "right"}`}>
 			<div className="col-lg-5 image">
-				<img src={props.featured_img} alt={props.title} />
+				<figure className="image-container" onMouseMove={e => handleMouseMove(e)} onMouseLeave={() => setTransformOrigin('50% 50%')}>
+					<img src={componentMap[p.featured_img]} alt={p.title} style={{ transformOrigin: transformOrigin }} />
+				</figure>
 			</div>
 			<div className="col-lg-2"></div>
 			<div className="col-lg-5 details">
-				<h2 className="baseline-rule">{props.title}</h2>
+				<h2 className="baseline-rule">{p.title}</h2>
 				<div className="tags mt-3 d-flex flex-wrap gap-2">
-					{props.tags.map((t, index) => (
+					{p.tags.map((t, index) => (
 						<span key={index} className="chip chip-outline-dark">{t}</span>
 					))}
 				</div>

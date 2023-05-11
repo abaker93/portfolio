@@ -7,54 +7,45 @@ import { CertificateBI, GeoAltFillBI } from "../assets/icons";
 import { AltmanHall, AnnaBakerDesign, Coursera, EpicWebStudios, HowardHanna, Mercyhurst, VertMarkets } from "../assets/logos";
 
 const Resume = () => {
+	const summary = data.basics.summary;
+
 	return (
 		<main data-template="resume">
-			<Hero />
-			<Summary />
+			<div id="Hero" className="pt-10 pb-7">
+				<div className="container-lg">
+					<div className="row align-items-center">
+						<div className="col-auto me-auto">
+							<h1 className="display-6">Anna Baker</h1>
+						</div>
+						<div className="col-auto">
+							<h2>
+								<span>Creative Developer</span>
+								<span>Digital Designer</span>
+							</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="Summary" className="overflow-x-hidden pb-8">
+				<div className="container-lg">
+					<div className="row justify-content-center">
+						<div className="col-md-8">
+							<h3 className="baseline-rule">Summary</h3>
+						</div>
+					</div>
+				</div>
+				<div className="container-lg">
+					<div className="row justify-content-center">
+						<div className="col-md-8">
+							<p>{summary}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<ResumeContainer />
 		</main>
-	)
-}
-
-const Hero = () => {
-	return (
-		<div id="Hero" className="pt-10 pb-7">
-			<div className="container-lg">
-				<div className="row align-items-center">
-					<div className="col-auto me-auto">
-						<h1 className="display-6">Anna Baker</h1>
-					</div>
-					<div className="col-auto">
-						<h2>
-							<span>Creative Developer</span>
-							<span>Digital Designer</span>
-						</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-	)
-}
-
-const Summary = () => {
-	const summary = data.basics.summary;
-	return (
-		<div id="Summary" className="overflow-x-hidden pb-8">
-			<div className="container-lg">
-				<div className="row justify-content-center">
-					<div className="col-md-8">
-						<h3 className="baseline-rule">Summary</h3>
-					</div>
-				</div>
-			</div>
-			<div className="container-lg">
-				<div className="row justify-content-center">
-					<div className="col-md-8">
-						<p>{summary}</p>
-					</div>
-				</div>
-			</div>
-		</div>
 	)
 }
 

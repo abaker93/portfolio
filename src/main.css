@@ -14866,7 +14866,7 @@ textarea.form-control-lg {
   border-radius: 2rem;
   aspect-ratio: 4/3;
   overflow: hidden;
-  filter: saturate(0);
+  filter: saturate(0) sepia(0.1) brightness(0.9);
   transition: all ease-in-out 0.15s;
 }
 .card-portfolio .image-container img {
@@ -15188,6 +15188,8 @@ textarea.form-control-lg {
 }
 
 .navbar {
+  position: fixed;
+  width: 100%;
   border-bottom: 1px solid rgba(48, 41, 39, 0);
   backdrop-filter: none;
   z-index: 999;
@@ -15196,6 +15198,21 @@ textarea.form-control-lg {
 .navbar.scroll {
   border-bottom-color: #302927;
   backdrop-filter: blur(7px);
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+}
+.nav-link span {
+  line-height: 1.1;
+}
+.nav-link span:first-child {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+.nav-link span:last-child {
+  font-family: swear-display, serif;
 }
 
 .large {
@@ -15234,15 +15251,16 @@ ul:not(.nav):not(.navbar-nav) li::before {
 }
 
 #Background {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: -100;
+  background-color: orange;
 }
 #Background .bg-noise {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
@@ -15254,7 +15272,15 @@ ul:not(.nav):not(.navbar-nav) li::before {
   animation: noise 0.09s infinite;
 }
 #Background .bg-circles {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
   filter: blur(150px);
+}
+#Background .bg-circles.index {
+  position: fixed;
 }
 #Background .bg-circle {
   position: absolute;
@@ -15269,7 +15295,7 @@ ul:not(.nav):not(.navbar-nav) li::before {
   width: 35vw;
   height: 35vw;
   margin-top: -16%;
-  margin-left: -16%;
+  margin-left: 16%;
   border-radius: 20%;
   background-color: #5B3A73;
   animation: bg-circle-1 20s linear 0s infinite;
@@ -15279,8 +15305,8 @@ ul:not(.nav):not(.navbar-nav) li::before {
   height: 30vw;
   margin-top: 40%;
   border-radius: 30%;
-  background-color: #372345;
-  opacity: 0.5;
+  background-color: #5B3A73;
+  opacity: 0.7;
   animation: bg-circle-2 25s linear 0s infinite;
 }
 #Background .bg-circle._3 {
@@ -15308,7 +15334,7 @@ ul:not(.nav):not(.navbar-nav) li::before {
   margin-top: 25%;
   margin-left: 30%;
   border-radius: 20%;
-  background-color: #9d89ab;
+  background-color: #5B3A73;
   animation: bg-circle-5 25s linear 0s infinite;
 }
 #Background .bg-circle._6 {
@@ -15320,7 +15346,7 @@ ul:not(.nav):not(.navbar-nav) li::before {
   margin-top: 35%;
   margin-right: -16%;
   margin-bottom: -20%;
-  background-color: #fe9f99;
+  background-color: #FE5F55;
   animation: bg-circle-6 30s linear 0s infinite;
 }
 
@@ -15336,26 +15362,6 @@ ul:not(.nav):not(.navbar-nav) li::before {
 }
 .btn-icon svg {
   width: 0.7em;
-}
-
-.navbar {
-  position: fixed;
-  width: 100%;
-}
-
-.nav-link {
-  display: flex;
-  flex-direction: column;
-}
-.nav-link span {
-  line-height: 1.1;
-}
-.nav-link span:first-child {
-  text-transform: uppercase;
-  font-size: 1.25rem;
-}
-.nav-link span:last-child {
-  font-family: swear-display, serif;
 }
 
 textarea.form-control {

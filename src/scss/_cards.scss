@@ -7,10 +7,8 @@
 		width: 100%;
 		border-radius: $border-radius-2xl;
 		aspect-ratio: 4 / 3;
-		// object-fit: cover;
-		// object-position: center;
 		overflow: hidden;
-		filter: saturate(0);
+		filter: saturate(0) sepia(0.1) brightness(0.9);
 		transition: $transition;
 
 		img {
@@ -20,14 +18,6 @@
 			transform-origin: center center;
 			transition: transform ease-in-out 0.2s;
 		}
-
-		// &:hover {
-		// 	filter: saturate(1);
-
-		// 	img {
-		// 		transform: scale(1.1);
-		// 	}
-		// }
 	}
 
 	&:hover {

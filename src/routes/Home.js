@@ -1,8 +1,10 @@
+import { useState } from "react";
+import portfolioData from "../data/portfolio.json";
 import Arrow from "../assets/Arrow";
 import { GitHubBI, LinkedInBI } from "../assets/icons";
-import portfolioData from "../data/portfolio.json";
 import littleLemon from "../assets/portfolio/little-lemon-1.jpg";
-import { useEffect, useState } from "react";
+import relocationServices from "../assets/portfolio/relocation-1.jpg";
+
 
 const Home = () => {
 	const portfolio = portfolioData.portfolio;
@@ -93,7 +95,7 @@ const PortfolioItem = p => {
 
 	const componentMap = {
 		littleLemon: littleLemon,
-		relocationServices: littleLemon,
+		relocationServices: relocationServices,
 		drifloonDatabase: littleLemon,
 		hSuite: littleLemon,
 		hannaLuxury: littleLemon,

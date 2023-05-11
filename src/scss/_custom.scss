@@ -44,15 +44,16 @@ ul:not(.nav):not(.navbar-nav) li {
 
 //~~	background  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 #Background {
-	position: fixed;
+	position: relative;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
 	z-index: -100;
+	background-color: orange;
 
 	.bg-noise {
-		position: absolute;
+		position: fixed;
 		height: 100%;
 		width: 100%;
 		top: 0;
@@ -65,7 +66,19 @@ ul:not(.nav):not(.navbar-nav) li {
 	}
 
 	.bg-circles {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
 		filter: blur(150px);
+		// background-color: blue;
+	}
+
+	.bg-circles.index {
+		position: fixed;
+		// height: 100%;
+		// width: 100%;
 	}
 
 	.bg-circle {
@@ -81,9 +94,10 @@ ul:not(.nav):not(.navbar-nav) li {
 			width: 35vw;
 			height: 35vw;
 			margin-top: -16%;
-			margin-left: -16%;
+			margin-left: 16%;
 			border-radius: 20%;
 			background-color: $purple-500;
+			// opacity: 0.7;
 			animation: bg-circle-1 20s linear 0s infinite;
 		}
 
@@ -92,8 +106,8 @@ ul:not(.nav):not(.navbar-nav) li {
 			height: 30vw;
 			margin-top: 40%;
 			border-radius: 30%;
-			background-color: $purple-700;
-			opacity: 0.5;
+			background-color: $purple-500;
+			opacity: 0.7;
 			animation: bg-circle-2 25s linear 0s infinite;
 		}
 
@@ -124,7 +138,7 @@ ul:not(.nav):not(.navbar-nav) li {
 			margin-top: 25%;
 			margin-left: 30%;
 			border-radius: 20%;
-			background-color: $purple-300;
+			background-color: $purple-500;
 			animation: bg-circle-5 25s linear 0s infinite;
 		}
 
@@ -137,7 +151,7 @@ ul:not(.nav):not(.navbar-nav) li {
 			margin-top: 35%;
 			margin-right: -16%;
 			margin-bottom: -20%;
-			background-color: $red-300;
+			background-color: $red-500;
 			animation: bg-circle-6 30s linear 0s infinite;
 		}
 	}
@@ -159,33 +173,6 @@ ul:not(.nav):not(.navbar-nav) li {
 	align-items: baseline;
 
 	svg { width: 0.7em; }
-}
-////																							
-
-
-
-//~~	navbar  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-.navbar {
-	position: fixed;
-	width: 100%;
-}
-
-.nav-link {
-	display: flex;
-	flex-direction: column;
-
-	span {
-		line-height: 1.1;
-
-		&:first-child {
-			text-transform: uppercase;
-			font-size: $font-size-lg;
-		}
-
-		&:last-child {
-			font-family: $font-family-serif;
-		}
-	}
 }
 ////																							
 

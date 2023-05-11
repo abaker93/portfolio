@@ -28,6 +28,8 @@
 }
 
 .navbar {
+	position: fixed;
+	width: 100%;
 	border-bottom: 1px solid rgba($dark, 0);
 	backdrop-filter: none;
 	z-index: 999;
@@ -36,5 +38,23 @@
 	&.scroll {
 		border-bottom-color: $dark;
 		backdrop-filter: blur(7px);
+	}
+}
+
+.nav-link {
+	display: flex;
+	flex-direction: column;
+
+	span {
+		line-height: 1.1;
+
+		&:first-child {
+			text-transform: uppercase;
+			font-size: $font-size-lg;
+		}
+
+		&:last-child {
+			font-family: $font-family-serif;
+		}
 	}
 }

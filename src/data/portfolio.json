@@ -2,8 +2,76 @@
 	"portfolio": [
 		{
 			"id": 0,
+			"color_palette": [
+				{
+					"id": 0,
+					"color": "#FFFFFF",
+					"hex": "#495E57",
+					"name": "Hunter"
+				},
+				{
+					"id": 1,
+					"color": "#000000",
+					"hex": "#F4CE14",
+					"name": "Lemonaide"
+				},
+				{
+					"id": 2,
+					"color": "#000000",
+					"hex": "#FBDABB",
+					"name": "Delicate Peach"
+				},
+				{
+					"id": 3,
+					"color": "#000000",
+					"hex": "#EE9972",
+					"name": "Peach Amber"
+				},
+				{
+					"id": 4,
+					"color": "#FFFFFF",
+					"hex": "#333333",
+					"name": "Carbon"
+				}
+			],
 			"featured": true,
-			"featured_img": "littleLemon",
+			"featured_img": "little-lemon-featured.jpg",
+			"goal": {
+				"title": "project goal",
+				"content": "Design and develop a new form to book a reservation online. In addition, the homepage needed to be built and the UI/UX cleaned up from the mockups provided."
+			},
+			"home": [
+				{
+					"id": 0,
+					"img": "little-lemon-home.png",
+					"alt": "little lemon homepage"
+				}
+			],
+			"logo": [
+				{
+					"id": 0,
+					"img": "little-lemon-logo.svg",
+					"alt": "little lemon logo"
+				}
+			],
+			"overview": {
+				"title": "what is little lemon?",
+				"content": "Little Lemon is a fictional restaurant located in Chicago. They pride themselves on their natural, wholistic food and their commitment to using technology to elevate their customers' dining experience."
+			},
+			"page": "little-lemon",
+			"interior": [
+				{
+					"id": 0,
+					"title": "reservations",
+					"img": [
+						{
+							"id": 0,
+							"img": "little-lemon-reservations.png",
+							"alt": "little lemon reservations"
+						}
+					]
+				}
+			],
 			"tags": [
 				"Design",
 				"Development",
@@ -14,13 +82,93 @@
 				"SASS",
 				"JavaScript"
 			],
-			"title": "Little Lemon Capstone Project",
-			"url": "little-lemon"
+			"tagline": {
+				"short": "Restaurant website featuring reservation booking feature",
+				"long": "Restaurant website development featuring a reservation booking feature.\nUX, UI Design and Frontend Development. "
+			},
+			"title": "little lemon capstone project",
+			"tools": [
+				"Figma",
+				"User Personas",
+				"Journey Maps",
+				"UI/UX Design",
+				"Wireframes",
+				"High Fidelity Prototypes",
+				"React",
+				"JavaScript",
+				"JSX",
+				"SASS"
+			],
+			"typography": [
+				{
+					"id": 0,
+					"img": "little-lemon-type-1.png",
+					"alt": "markazi text regular and medium"
+				},
+				{
+					"id": 1,
+					"img": "little-lemon-type-2.png",
+					"alt": "karla regular, medium, bold, and extrabold"
+				}
+			],
+			"url": "https://little-lemon.annabaker.design",
+			"wireframe": [
+				{
+					"id": 0,
+					"img": "little-lemon-wireframes.png",
+					"alt": "little lemon wireframes"
+				}
+			]
 		},
 		{
 			"id": 1,
+			"color_palette": [
+				{
+					"id": 0,
+					"color": "#000000",
+					"hex": "#72A84D",
+					"name": "RH Green"
+				},
+				{
+					"id": 1,
+					"color": "#000000",
+					"hex": "#D5AE1C",
+					"name": "HGA Gold"
+				},
+				{
+					"id": 2,
+					"color": "#FFFFFF",
+					"hex": "#222222",
+					"name": "Black Out"
+				},
+				{
+					"id": 3,
+					"color": "#FFFFFF",
+					"hex": "#4D4D4D",
+					"name": "Thunder"
+				},
+				{
+					"id": 4,
+					"color": "#000000",
+					"hex": "#AAAAAA",
+					"name": "Uniform Gray"
+				},
+				{
+					"id": 4,
+					"color": "#000000",
+					"hex": "#EEEEEE",
+					"name": "Super Silver"
+				},
+				{
+					"id": 4,
+					"color": "#000000",
+					"hex": "#F8F9FA",
+					"name": "Ghost White"
+				}
+			],
 			"featured": true,
-			"featured_img": "relocationServices",
+			"featured_img": "relocation-horizons-1.jpg",
+			"page": "relocation-horizons",
 			"tags": [
 				"Design",
 				"Development",
@@ -32,12 +180,13 @@
 				"JavaScript"
 			],
 			"title": "Howard Hanna Relocation Services",
+			"tagline": "Relocation assistance for individuals and corporations",
 			"url": "howard-hanna-relocation-services"
 		},
 		{
 			"id": 2,
 			"featured": true,
-			"featured_img": "drifloonDatabase",
+			"featured_img": "relocation-horizons-1.jpg",
 			"tags": [
 				"Design",
 				"Development",
@@ -54,7 +203,7 @@
 		{
 			"id": 3,
 			"featured": true,
-			"featured_img": "hSuite",
+			"featured_img": "relocation-horizons-1.jpg",
 			"tags": [
 				"Design",
 				"Adobe XD",
@@ -67,7 +216,7 @@
 		{
 			"id": 4,
 			"featured": true,
-			"featured_img": "hannaLuxury",
+			"featured_img": "relocation-horizons-1.jpg",
 			"tags": [
 				"Design",
 				"Adobe XD",
@@ -81,7 +230,7 @@
 		{
 			"id": 5,
 			"featured": false,
-			"featured_img": "childrensFreeCareFund",
+			"featured_img": "relocation-horizons-1.jpg",
 			"tags": [
 				"Design",
 				"Development",

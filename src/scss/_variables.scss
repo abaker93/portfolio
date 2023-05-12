@@ -31,15 +31,16 @@ $cream-900: #958F8E;
 
 
 //*		font variables
-$font-family-sans-serif:				zeitung-pro-variable, sans-serif;
+$font-family-sans-serif:				zeitung-micro, sans-serif;
 $font-family-serif:							swear-display, serif;
 $font-family-serif-decoration:	swear-display-cilati, sans-serif;
-$font-family-monospace:					input-mono, monospace;
+$font-family-monospace:					zeitung-mono, monospace;
 
 $font-size-root:								20px;
 
 $font-weight-lighter:           200;
-$font-weight-bolder:            600;
+$font-weight-bold:							600;
+$font-weight-bolder:            700;
 
 //*   headings variables
 $headings-font-weight:  400;

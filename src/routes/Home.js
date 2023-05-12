@@ -1,10 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import portfolioData from "../data/portfolio.json";
 import Arrow from "../assets/Arrow";
 import { GitHubBI, LinkedInBI } from "../assets/icons";
-import littleLemon from "../assets/portfolio/little-lemon-1.jpg";
-import relocationServices from "../assets/portfolio/relocation-1.jpg";
-
 
 const Home = () => {
 	const portfolio = portfolioData.portfolio;
@@ -93,24 +91,16 @@ const PortfolioItem = p => {
 		setTransformOrigin(`${x}% ${y}%`)
 	}
 
-	const componentMap = {
-		littleLemon: littleLemon,
-		relocationServices: relocationServices,
-		drifloonDatabase: littleLemon,
-		hSuite: littleLemon,
-		hannaLuxury: littleLemon,
-	}
-
 	return (
 		<div className={`row gx-5 mb-8 card-portfolio portfolio-${p.id % 2 === 0 ? "left" : "right"}`}>
 			<div className="col-lg-5 image">
 				<figure className="image-container" onMouseMove={e => handleMouseMove(e)} onMouseLeave={() => setTransformOrigin('50% 50%')}>
-					<img src={componentMap[p.featured_img]} alt={p.title} style={{ transformOrigin: transformOrigin }} />
+					<img src={`images/portfolio/${p.featured_img}`} alt={p.title} style={{ transformOrigin: transformOrigin }} />
 				</figure>
 			</div>
 			<div className="col-lg-2"></div>
 			<div className="col-lg-5 details">
-				<h2 className="baseline-rule">{p.title}</h2>
+				<h2 className="baseline-rule"><Link className="link-dark link-opacity-75-hover link-underline-opacity-0" to={`portfolio/${p.page}`}>{p.title}</Link></h2>
 				<div className="tags mt-3 d-flex flex-wrap gap-2">
 					{p.tags.map((t, index) => (
 						<span key={index} className="chip chip-outline-dark">{t}</span>

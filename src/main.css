@@ -68,8 +68,8 @@
   --bs-dark-border-subtle: #949190;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: zeitung-pro-variable, sans-serif;
-  --bs-font-monospace: input-mono, monospace;
+  --bs-font-sans-serif: zeitung-micro, sans-serif;
+  --bs-font-monospace: zeitung-mono, monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-root-font-size: 20px;
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -301,7 +301,7 @@ ul ol {
 }
 
 dt {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 dd {
@@ -315,7 +315,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 small, .small {
@@ -749,7 +749,7 @@ progress {
 }
 
 .alert-link {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--bs-alert-link-color);
 }
 
@@ -824,7 +824,7 @@ progress {
   --bs-badge-padding-x: 0.65em;
   --bs-badge-padding-y: 0.35em;
   --bs-badge-font-size: 0.75em;
-  --bs-badge-font-weight: 700;
+  --bs-badge-font-weight: 600;
   --bs-badge-color: #fff;
   --bs-badge-border-radius: var(--bs-border-radius);
   display: inline-block;
@@ -5095,7 +5095,7 @@ textarea.form-control-lg {
 }
 .nav-underline .nav-link.active,
 .nav-underline .show > .nav-link {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--bs-nav-underline-link-active-color);
   border-bottom-color: currentcolor;
 }
@@ -9181,11 +9181,11 @@ textarea.form-control-lg {
 }
 
 .fw-bold {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 .fw-bolder {
-  font-weight: 600 !important;
+  font-weight: 700 !important;
 }
 
 .lh-1 {
@@ -14886,7 +14886,7 @@ textarea.form-control-lg {
 .chip {
   --bs-chip-padding-x: 0.75rem;
   --bs-chip-padding-y: 0.5rem;
-  --bs-chip-font-family: zeitung-pro-variable, sans-serif;
+  --bs-chip-font-family: zeitung-micro, sans-serif;
   --bs-chip-font-size: 0.8rem;
   --bs-chip-font-weight: 300;
   --bs-chip-line-height: 1;
@@ -15224,10 +15224,18 @@ textarea.form-control-lg {
 }
 
 .p {
-  font-family: zeitung-pro-variable, sans-serif !important;
+  font-family: zeitung-micro, sans-serif !important;
   font-size: 1rem !important;
   font-weight: 300 !important;
   line-height: 1.5 !important;
+}
+
+.ff-sans {
+  font-family: zeitung-micro, sans-serif !important;
+}
+
+.ff-serif-deco {
+  font-family: swear-display-cilati, sans-serif !important;
 }
 
 ol, ul {

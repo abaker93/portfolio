@@ -2,76 +2,10 @@
 	"portfolio": [
 		{
 			"id": 0,
-			"color_palette": [
-				{
-					"id": 0,
-					"color": "#FFFFFF",
-					"hex": "#495E57",
-					"name": "Hunter"
-				},
-				{
-					"id": 1,
-					"color": "#000000",
-					"hex": "#F4CE14",
-					"name": "Lemonaide"
-				},
-				{
-					"id": 2,
-					"color": "#000000",
-					"hex": "#FBDABB",
-					"name": "Delicate Peach"
-				},
-				{
-					"id": 3,
-					"color": "#000000",
-					"hex": "#EE9972",
-					"name": "Peach Amber"
-				},
-				{
-					"id": 4,
-					"color": "#FFFFFF",
-					"hex": "#333333",
-					"name": "Carbon"
-				}
-			],
 			"featured": true,
 			"featured_img": "little-lemon-featured.jpg",
-			"goal": {
-				"title": "project goal",
-				"content": "Design and develop a new form to book a reservation online. In addition, the homepage needed to be built and the UI/UX cleaned up from the mockups provided."
-			},
-			"home": [
-				{
-					"id": 0,
-					"img": "little-lemon-home.png",
-					"alt": "little lemon homepage"
-				}
-			],
-			"logo": [
-				{
-					"id": 0,
-					"img": "little-lemon-logo.svg",
-					"alt": "little lemon logo"
-				}
-			],
-			"overview": {
-				"title": "what is little lemon?",
-				"content": "Little Lemon is a fictional restaurant located in Chicago. They pride themselves on their natural, wholistic food and their commitment to using technology to elevate their customers' dining experience."
-			},
+			"gradient_colors": [ "#EE9972", "#F4CE14" ],
 			"page": "little-lemon",
-			"interior": [
-				{
-					"id": 0,
-					"title": "reservations",
-					"img": [
-						{
-							"id": 0,
-							"img": "little-lemon-reservations.png",
-							"alt": "little lemon reservations"
-						}
-					]
-				}
-			],
 			"tags": [
 				"Design",
 				"Development",
@@ -84,39 +18,142 @@
 			],
 			"tagline": {
 				"short": "Restaurant website featuring reservation booking feature",
-				"long": "Restaurant website development featuring a reservation booking feature.\nUX, UI Design and Frontend Development. "
+				"long": "Restaurant website development featuring a reservation booking feature.\nUX, UI Design, and Frontend Development. "
 			},
-			"title": "little lemon capstone project",
-			"tools": [
-				"Figma",
-				"User Personas",
-				"Journey Maps",
-				"UI/UX Design",
-				"Wireframes",
-				"High Fidelity Prototypes",
-				"React",
-				"JavaScript",
-				"JSX",
-				"SASS"
-			],
-			"typography": [
+			"title": "little lemon restaurant",
+			"url": "https://little-lemon.annabaker.design",
+			"sections" : [
 				{
 					"id": 0,
-					"img": "little-lemon-type-1.png",
-					"alt": "markazi text regular and medium"
+					"template": "logo",
+					"title": "logo",
+					"logos": [
+						{
+							"id": 0,
+							"img": "little-lemon-logo.svg",
+							"alt": "little lemon logo"
+						}
+					]
 				},
 				{
 					"id": 1,
-					"img": "little-lemon-type-2.png",
-					"alt": "karla regular, medium, bold, and extrabold"
-				}
-			],
-			"url": "https://little-lemon.annabaker.design",
-			"wireframe": [
+					"template": "overview",
+					"title": "overview",
+					"goal": {
+						"title": "project goal",
+						"content": "Capstone project for Front End Developer Certificate. Design and develop a new form to book a reservation online. In addition, the homepage needed to be built and the UI/UX cleaned up from the mockups provided."
+					},
+					"overview": {
+						"title": "what is little lemon?",
+						"content": "Little Lemon is a fictional restaurant located in Chicago. They pride themselves on their natural, wholistic food and their commitment to using technology to elevate their customers' dining experience."
+					}
+				},
 				{
-					"id": 0,
-					"img": "little-lemon-wireframes.png",
-					"alt": "little lemon wireframes"
+					"id": 2,
+					"template": "typography",
+					"title": "typography",
+					"typography": [
+						{
+							"id": 0,
+							"img": "little-lemon-type-1.png",
+							"alt": "markazi text regular and medium"
+						},
+						{
+							"id": 1,
+							"img": "little-lemon-type-2.png",
+							"alt": "karla regular, medium, bold, and extrabold"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"template": "color_palette",
+					"title": "color palette",
+					"color_palette": [
+						{
+							"id": 0,
+							"color": "#FFFFFF",
+							"hex": "#495E57",
+							"name": "Hunter"
+						},
+						{
+							"id": 1,
+							"color": "#000000",
+							"hex": "#F4CE14",
+							"name": "Lemonaide"
+						},
+						{
+							"id": 2,
+							"color": "#000000",
+							"hex": "#FBDABB",
+							"name": "Delicate Peach"
+						},
+						{
+							"id": 3,
+							"color": "#000000",
+							"hex": "#EE9972",
+							"name": "Peach Amber"
+						},
+						{
+							"id": 4,
+							"color": "#FFFFFF",
+							"hex": "#333333",
+							"name": "Carbon"
+						}
+					]
+				},
+				{
+					"id": 4,
+					"template": "single_col_img",
+					"title": "wireframe",
+					"img": [
+						{
+							"id": 0,
+							"img": "little-lemon-wireframes.png",
+							"alt": "little lemon wireframes"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"template": "single_col_img",
+					"title": "home",
+					"img": [
+						{
+							"id": 0,
+							"img": "little-lemon-home.png",
+							"alt": "little lemon homepage"
+						}
+					]
+				},
+				{
+					"id": 6,
+					"template": "single_col_img",
+					"title": "reservations",
+					"img": [
+						{
+							"id": 0,
+							"img": "little-lemon-reservations.png",
+							"alt": "little lemon reservations"
+						}
+					]
+				},
+				{
+					"id": 7,
+					"template": "tools",
+					"title": "tools & techniques",
+					"tools": [
+						"Figma",
+						"User Personas",
+						"Journey Maps",
+						"UI/UX Design",
+						"Wireframes",
+						"High Fidelity Prototypes",
+						"React",
+						"JavaScript",
+						"JSX",
+						"SASS"
+					]
 				}
 			]
 		},

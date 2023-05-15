@@ -12,8 +12,10 @@ const Background = p => {
 	useEffect(() => {
 		location.pathname === "/" ? setIsHome(true) : setIsHome(false)
 
-		if (p.colors[0] !== null) { setBgColor1(p.colors[0]) }
-		if (p.colors[1] !== null) { setBgColor2(p.colors[1]) }
+		if (p.colors) {
+			if (p.colors[0]) { setBgColor1(p.colors[0]) }
+			if (p.colors[1]) { setBgColor2(p.colors[1]) }
+		}
 	}, [location])
 
 	// console.log(isHome)

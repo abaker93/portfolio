@@ -4,6 +4,7 @@
 			"id": 0,
 			"featured": true,
 			"featured_img": "little-lemon-featured.jpg",
+			"github": "https://github.com/abaker93/little-lemon",
 			"gradient_colors": [ "#EE9972", "#F4CE14" ],
 			"page": "little-lemon",
 			"tags": [
@@ -39,14 +40,20 @@
 					"id": 1,
 					"template": "overview",
 					"title": "overview",
-					"goal": {
-						"title": "project goal",
-						"content": "Capstone project for Front End Developer Certificate. Design and develop a new form to book a reservation online. In addition, the homepage needed to be built and the UI/UX cleaned up from the mockups provided."
-					},
-					"overview": {
-						"title": "what is little lemon?",
-						"content": "Little Lemon is a fictional restaurant located in Chicago. They pride themselves on their natural, wholistic food and their commitment to using technology to elevate their customers' dining experience."
-					}
+					"columns": [
+						{
+							"id": 0,
+							"double_col":  false,
+							"title": "project goal",
+							"content": "Capstone project for Front End Developer Certificate. Design and develop a new form to book a reservation online. In addition, the homepage needed to be built and the UI/UX cleaned up from the mockups provided."
+						},
+						{
+							"id": 1,
+							"double_col":  false,
+							"title": "what is little lemon?",
+							"content": "Little Lemon is a fictional restaurant located in Chicago. They pride themselves on their natural, wholistic food and their commitment to using technology to elevate their customers' dining experience."
+						}
+					]
 				},
 				{
 					"id": 2,
@@ -117,7 +124,7 @@
 				{
 					"id": 5,
 					"template": "single_col_img",
-					"title": "home",
+					"title": "homepage",
 					"img": [
 						{
 							"id": 0,
@@ -159,52 +166,9 @@
 		},
 		{
 			"id": 1,
-			"color_palette": [
-				{
-					"id": 0,
-					"color": "#000000",
-					"hex": "#72A84D",
-					"name": "RH Green"
-				},
-				{
-					"id": 1,
-					"color": "#000000",
-					"hex": "#D5AE1C",
-					"name": "HGA Gold"
-				},
-				{
-					"id": 2,
-					"color": "#FFFFFF",
-					"hex": "#222222",
-					"name": "Black Out"
-				},
-				{
-					"id": 3,
-					"color": "#FFFFFF",
-					"hex": "#4D4D4D",
-					"name": "Thunder"
-				},
-				{
-					"id": 4,
-					"color": "#000000",
-					"hex": "#AAAAAA",
-					"name": "Uniform Gray"
-				},
-				{
-					"id": 4,
-					"color": "#000000",
-					"hex": "#EEEEEE",
-					"name": "Super Silver"
-				},
-				{
-					"id": 4,
-					"color": "#000000",
-					"hex": "#F8F9FA",
-					"name": "Ghost White"
-				}
-			],
 			"featured": true,
 			"featured_img": "relocation-horizons-1.jpg",
+			"gradient_colors": [ "#ECD7A0", "#72A84D" ],
 			"page": "relocation-horizons",
 			"tags": [
 				"Design",
@@ -218,7 +182,191 @@
 			],
 			"title": "Howard Hanna Relocation Services",
 			"tagline": "Relocation assistance for individuals and corporations",
-			"url": "howard-hanna-relocation-services"
+			"url": "https://relocationhorizons.com/",
+			"sections": [
+				{
+					"id": 0,
+					"template": "logo",
+					"title": "logo",
+					"logos": [
+						{
+							"id": 0,
+							"img": "relocation-horizons-logo.svg",
+							"alt": "relocation horizons logo"
+						}
+					]
+				},
+				{
+					"id": 1,
+					"template": "overview",
+					"title": "overview",
+					"columns": [
+						{
+							"id": 0,
+							"double_col":  false,
+							"title": "what is relocation horizons?",
+							"content": "Relocation Horizons is a brand under the Howard Hanna family. The relocation team works with companies and individuals on relocations both large and small."
+						},
+						{
+							"id": 1,
+							"double_col":  true,
+							"title": "project goal",
+							"content": "The relocation horizons website had not been updated in over 15 years and was severely outdated in design and capabilities. The main goal was to improve the interface and experience and move the whole site to a platform that was easily editable by the average team member. In addition to the main goal, Relocation Horizons had a very tight brand. There were no secondary colors, icons, or imagery guidelines. As part of this project, a basic design system was built out."
+						}
+						
+					]
+				},
+				{
+					"id": 2,
+					"template": "single_col_img",
+					"title": "original website",
+					"img": [
+						{
+							"id": 0,
+							"img": "relocation-horizons-original.png",
+							"alt": "original relocation horizons website"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"template": "typography",
+					"title": "typography",
+					"typography": [
+						{
+							"id": 0,
+							"img": "relocation-horizons-type-1.png",
+							"alt": "proxima nova regular and semibold"
+						}
+					]
+				},
+				{
+					"id": 4,
+					"template": "color_palette",
+					"title": "color palette",
+					"color_palette": [
+						{
+							"id": 0,
+							"color": "#000000",
+							"hex": "#72A84D",
+							"name": "RH Green",
+							"shades": [
+								{
+									"id": 0,
+									"color": "#000000",
+									"hex": "#C2D4AE"
+								},
+								{
+									"id": 1,
+									"color": "#000000",
+									"hex": "#E3EEDB"
+								}
+							]
+						},
+						{
+							"id": 1,
+							"color": "#000000",
+							"hex": "#D5AE1C",
+							"name": "HGA Gold",
+							"shades": [
+								{
+									"id": 0,
+									"color": "#000000",
+									"hex": "#ECD7A0"
+								},
+								{
+									"id": 1,
+									"color": "#000000",
+									"hex": "#FBEAB6"
+								}
+							]
+						},
+						{
+							"id": 2,
+							"color": "#FFFFFF",
+							"hex": "#222222",
+							"name": "Black Out"
+						},
+						{
+							"id": 3,
+							"color": "#FFFFFF",
+							"hex": "#4D4D4D",
+							"name": "Thunder"
+						},
+						{
+							"id": 4,
+							"color": "#000000",
+							"hex": "#AAAAAA",
+							"name": "Uniform Gray"
+						},
+						{
+							"id": 4,
+							"color": "#000000",
+							"hex": "#EEEEEE",
+							"name": "Super Silver"
+						},
+						{
+							"id": 4,
+							"color": "#000000",
+							"hex": "#F8F9FA",
+							"name": "Ghost White"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"template": "single_col_img",
+					"title": "wireframe",
+					"img": [
+						{
+							"id": 0,
+							"img": "relocation-horizons-wireframe.png",
+							"alt": "relocation horizons wireframes"
+						}
+					]
+				},
+				{
+					"id": 6,
+					"template": "single_col_img",
+					"title": "homepage",
+					"img": [
+						{
+							"id": 0,
+							"img": "relocation-horizons-home.png",
+							"alt": "relocation horizons homepage"
+						}
+					]
+				},
+				{
+					"id": 7,
+					"template": "single_col_img",
+					"title": "interior pages",
+					"img": [
+						{
+							"id": 0,
+							"img": "relocation-horizons-interior.png",
+							"alt": "relocation horizons interior pages"
+						}
+					]
+				},
+				{
+					"id": 7,
+					"template": "tools",
+					"title": "tools & techniques",
+					"tools": [
+						"Figma",
+						"User Research",
+						"UI/UX Design",
+						"Wireframes",
+						"High Fidelity Prototypes",
+						"Umbraco",
+						".NET",
+						"HTML",
+						"CSS",
+						"JavaScript"
+					]
+				}
+			]
 		},
 		{
 			"id": 2,

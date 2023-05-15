@@ -35,10 +35,11 @@
 // scss-docs-end chip-outline-variant-mixin
 
 // scss-docs-start chip-size-mixin
-@mixin chip-size($padding-y, $padding-x, $font-size, $border-radius) {
+@mixin chip-size($padding-y, $padding-x, $font-size, $font-weight, $border-radius) {
   --#{$prefix}chip-padding-y: #{$padding-y};
   --#{$prefix}chip-padding-x: #{$padding-x};
   @include rfs($font-size, --#{$prefix}chip-font-size);
+  --#{$prefix}chip-font-weight: #{$font-weight};
   --#{$prefix}chip-border-radius: #{$border-radius};
 }
 // scss-docs-end chip-size-mixin

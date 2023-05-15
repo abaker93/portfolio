@@ -119,10 +119,12 @@ $chip-white-space:					nowrap !default; // Set to `null` to allow text wrapping
 $chip-padding-y-sm:					0.15rem !default;
 $chip-padding-x-sm:					0.4rem !default;
 $chip-font-size-sm:					$chip-font-size !default;
+$chip-font-weight-sm:				$chip-font-weight !default;
 
-$chip-padding-y-lg:					$input-btn-padding-y-lg !default;
-$chip-padding-x-lg:					$input-btn-padding-x-lg !default;
+$chip-padding-y-lg:					1.5rem !default;
+$chip-padding-x-lg:					3rem !default;
 $chip-font-size-lg:					$input-btn-font-size-lg !default;
+$chip-font-weight-lg:				$font-weight-bold !default;
 
 $chip-border-width:					1px !default;
 
@@ -133,7 +135,7 @@ $chip-link-color:						var(--#{$prefix}link-color) !default;
 
 $chip-border-radius:				$border-radius-pill !default;
 $chip-border-radius-sm:			$border-radius-pill !default;
-$chip-border-radius-lg:			$border-radius-pill !default;
+$chip-border-radius-lg:			$border-radius-lg !default;
 ////																							
 
 

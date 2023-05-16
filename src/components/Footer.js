@@ -10,40 +10,34 @@ const Footer = () => {
 						<p className="display-6 text-lowercase baseline-rule">Let's get in touch!</p>
 					</div>
 				</div>
-				<div className="row my-3">
+				<div className="row my-4 pb-3">
 					<div className="col">
-						<p>
-							<Link className="icon-link icon-link-hover" href="mailto:hello@annabaker.dev">
-								hello@annabaker.dev
-								<EnvelopePaperHeartBI />
-							</Link>
-						</p>
+						<a className="icon-link icon-link-hover" href="mailto:hello@annabaker.dev">
+							hello@annabaker.dev
+							<EnvelopePaperHeartBI />
+						</a>
 					</div>
 				</div>
-				<div className="row my-3">
+				<div className="row my-4">
 					<div className="col-auto">
-						<p>
-							<Link
-								className="icon-link icon-link-hover"
-								style={{ "--bs-icon-link-transform": "translate3d(0.125rem, -0.125rem, 0)" }}
-								href="https://www.linkedin.com/in/annabakerdesign/"
-							>
-								<Arrow direction="up-right" />
-								LinkedIn
-							</Link>
-						</p>
+						<a
+							className="icon-link icon-link-hover"
+							style={{ "--bs-icon-link-transform": "translate3d(0.125rem, -0.125rem, 0)" }}
+							href="https://www.linkedin.com/in/annabakerdesign/"
+						>
+							<Arrow direction="up-right" />
+							LinkedIn
+						</a>
 					</div>
 					<div className="col-auto">
-						<p>
-							<Link
-								className="icon-link icon-link-hover"
-								style={{ "--bs-icon-link-transform": "translate3d(0.125rem, -0.125rem, 0)" }}
-								href="https://github.com/abaker93/"
-							>
-								<Arrow direction="up-right" />
-								GitHub
-							</Link>
-						</p>
+						<a
+							className="icon-link icon-link-hover"
+							style={{ "--bs-icon-link-transform": "translate3d(0.125rem, -0.125rem, 0)" }}
+							href="https://github.com/abaker93/"
+						>
+							<Arrow direction="up-right" />
+							GitHub
+						</a>
 					</div>
 				</div>
 			</div>

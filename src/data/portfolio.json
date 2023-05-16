@@ -370,26 +370,30 @@
 		},
 		{
 			"id": 4,
+			"buttons": [
+				{
+					"id": 0,
+					"title": "view live landing page",
+					"url": "https://www.howardhanna.com/hanna-luxury"
+				}
+			],
 			"featured": true,
-			"featured_img": "relocation-horizons-1.jpg",
-			"gradient_colors": [ "#01A530", "#095533" ],
+			"featured_img": "hanna-luxury-1.jpg",
+			"gradient_colors": [ "#095533", "#4E836B" ],
 			"page": "hanna-luxury",
 			"tags": [
 				"Design",
-				"Development",
-				"Figma",
-				"React",
-				"JavaScript",
-				"JSX",
-				"SASS",
-				"JavaScript"
+				"Adobe XD",
+				"Bootstrap",
+				"HTML",
+				"CSS"
 			],
 			"tagline": {
-				"short": "Restaurant website featuring reservation booking feature",
-				"long": "Restaurant website development featuring a reservation booking feature.\nUX, UI Design, and Frontend Development. "
+				"short": "Landing page for luxury real estate brand",
+				"long": "Landing page redesign and development for a luxury real estate brand.\nUI Design and Frontend Development."
 			},
 			"title": "hanna luxury",
-			"url": "https://little-lemon.annabaker.design",
+			"url": "https://www.howardhanna.com/hanna-luxury",
 			"sections" : [
 				{
 					"id": 0,
@@ -411,104 +415,86 @@
 						{
 							"id": 0,
 							"double_col":  false,
-							"title": "project goal",
-							"content": "Capstone project for Front End Developer Certificate. Design and develop a new form to book a reservation online. In addition, the homepage needed to be built and the UI/UX cleaned up from the mockups provided."
+							"title": "what is hanna luxury?",
+							"content": "Hanna Luxury is the high-end listings brand under the Howard Hanna umbrella. Hanna Luxury sells luxury properties and strives to give customers an exclusive experience."
 						},
 						{
 							"id": 1,
-							"double_col":  false,
-							"title": "what is little lemon?",
-							"content": "Little Lemon is a fictional restaurant located in Chicago. They pride themselves on their natural, wholistic food and their commitment to using technology to elevate their customers' dining experience."
+							"double_col":  true,
+							"title": "project goal",
+							"content": "Hanna Luxury underwent a rebrand from Howard Hanna Homes of Distinction. Along with the new branding, the landing page on HowardHanna.com needed a refresh. The goal was to keep most of the same content from the original page but incorporate some new calls to action and utilize the Hanna Luxury brand colors, typography, and imagery. The page needed to fit with the rest of HowardHanna.com while also distinguishing itself as the luxury brand."
 						}
 					]
 				},
 				{
 					"id": 2,
-					"template": "typography",
-					"title": "typography",
-					"typography": [
+					"template": "single_col_img",
+					"title": "original",
+					"img": [
 						{
 							"id": 0,
-							"img": "little-lemon-type-1.png",
-							"alt": "markazi text regular and medium"
-						},
-						{
-							"id": 1,
-							"img": "little-lemon-type-2.png",
-							"alt": "karla regular, medium, bold, and extrabold"
+							"img": "hanna-luxury-original.png",
+							"alt": "original hanna luxury landing page"
 						}
 					]
 				},
 				{
 					"id": 3,
+					"template": "typography",
+					"title": "typography",
+					"typography": [
+						{
+							"id": 0,
+							"img": "hanna-luxury-type-1.png",
+							"alt": "futura pt light"
+						},
+						{
+							"id": 1,
+							"img": "hanna-luxury-type-2.png",
+							"alt": "adelle sans thin"
+						}
+					]
+				},
+				{
+					"id": 4,
 					"template": "color_palette",
 					"title": "color palette",
 					"color_palette": [
 						{
 							"id": 0,
 							"color": "#FFFFFF",
-							"hex": "#495E57",
-							"name": "Hunter"
+							"hex": "#095533",
+							"name": "Luxury Green"
 						},
 						{
 							"id": 1,
 							"color": "#000000",
-							"hex": "#F4CE14",
-							"name": "Lemonaide"
+							"hex": "#BCBDC0",
+							"name": "Tokyo Gray"
 						},
 						{
 							"id": 2,
-							"color": "#000000",
-							"hex": "#FBDABB",
-							"name": "Delicate Peach"
+							"color": "#FFFFFF",
+							"hex": "#353537",
+							"name": "Bauhaus"
 						},
 						{
 							"id": 3,
 							"color": "#000000",
-							"hex": "#EE9972",
-							"name": "Peach Amber"
-						},
-						{
-							"id": 4,
-							"color": "#FFFFFF",
-							"hex": "#333333",
-							"name": "Carbon"
-						}
-					]
-				},
-				{
-					"id": 4,
-					"template": "single_col_img",
-					"title": "wireframe",
-					"img": [
-						{
-							"id": 0,
-							"img": "little-lemon-wireframes.png",
-							"alt": "little lemon wireframes"
+							"hex": "#FFFFFF",
+							"name": "Lynx White"
 						}
 					]
 				},
 				{
 					"id": 5,
 					"template": "single_col_img",
-					"title": "homepage",
+					"title": "landing page",
 					"img": [
 						{
 							"id": 0,
-							"img": "little-lemon-home.png",
-							"alt": "little lemon homepage"
-						}
-					]
-				},
-				{
-					"id": 6,
-					"template": "single_col_img",
-					"title": "reservations",
-					"img": [
-						{
-							"id": 0,
-							"img": "little-lemon-reservations.png",
-							"alt": "little lemon reservations"
+							"img": "hanna-luxury-page.png",
+							"alt": "hanna luxury landing page"
 						}
 					]
 				},
@@ -517,14 +503,12 @@
 					"template": "tools",
 					"title": "tools & techniques",
 					"tools": [
-						"Figma",
-						"User Personas",
-						"Journey Maps",
+						"Adobe XD",
 						"UI/UX Design",
-						"Wireframes",
-						"High Fidelity Prototypes",
-						"React",
-						"JavaScript",
+						"Responsive Design",
+						"Bootstrap",
+						"HTML",
+						"CSS",
 						"JSX",
 						"SASS"
 					]

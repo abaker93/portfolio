@@ -2,7 +2,7 @@
 	"folders": [
 		{
 			"name": "bootstrap",
-			"path": "../dev-portfolio/node_modules/bootstrap"
+			"path": "node_modules/bootstrap"
 		},
 		{
 			"name": "portfolio",

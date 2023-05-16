@@ -14,10 +14,14 @@
 
 
 
-//~~	base  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~	overrides  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 #root {
 	position: relative;
 	overflow: hidden;
+}
+
+.icon-link {
+	text-decoration-color: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
 }
 ////																							
 

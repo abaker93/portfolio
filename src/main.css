@@ -90,11 +90,11 @@
   --bs-tertiary-color-rgb: 48, 41, 39;
   --bs-tertiary-bg: #F9F9F9;
   --bs-tertiary-bg-rgb: 249, 249, 249;
-  --bs-link-color: #FE5F55;
-  --bs-link-color-rgb: 254, 95, 85;
+  --bs-link-color: #302927;
+  --bs-link-color-rgb: 48, 41, 39;
   --bs-link-decoration: ;
-  --bs-link-hover-color: #7c618f;
-  --bs-link-hover-color-rgb: 124, 97, 143;
+  --bs-link-hover-color: #5B3A73;
+  --bs-link-hover-color-rgb: 91, 58, 115;
   --bs-link-hover-decoration: underline;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
@@ -1345,7 +1345,7 @@ progress {
   --bs-btn-disabled-color: #7B7776;
   --bs-btn-disabled-border-color: transparent;
   --bs-btn-box-shadow: 0 0 0 #000;
-  --bs-btn-focus-shadow-rgb: 223, 87, 78;
+  --bs-btn-focus-shadow-rgb: 78, 71, 69;
 }
 .btn-link:hover, .btn-link:focus-visible {
   text-decoration: underline;
@@ -15315,6 +15315,10 @@ textarea.form-control-lg {
 #root {
   position: relative;
   overflow: hidden;
+}
+
+.icon-link {
+  text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
 }
 
 ol, ul {

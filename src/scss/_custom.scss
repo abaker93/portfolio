@@ -10,6 +10,11 @@
 
 .ff-sans { font-family: $font-family-sans-serif !important; }
 .ff-serif-deco { font-family: $font-family-serif-decoration !important; }
+
+.a > i {
+	font-style:inherit !important;
+	font-family: $font-family-serif-decoration !important;
+}
 ////																							
 
 
@@ -251,6 +256,16 @@ textarea {
 	.container-lg { height: 100%; }
 }
 
+[data-template=resume] #Hero {
+	h2 span:nth-child(1)::after {
+		content: '•';
+		position: relative;
+		bottom: 0.25em;
+		margin: 0 0.75em;
+		font-size: 0.5em;
+	}
+}
+
 .scroll-indicator {
 	position: absolute;
 	bottom: 3.25rem;
@@ -325,9 +340,9 @@ textarea {
 		top: 100px;
 	}
 
-	.resume-item {
-		margin-bottom: 2.5rem;
-	}
+	h3 + div { margin-top: 1.5rem; }
+
+	.resume-item { margin-bottom: 2.5rem; }
 
 	.resume-item-header {
 		img {

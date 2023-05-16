@@ -15273,19 +15273,18 @@ textarea.form-control-lg {
   border-bottom-color: #302927;
   backdrop-filter: blur(7px);
 }
-
-.nav-link {
+.navbar .nav-link {
   display: flex;
   flex-direction: column;
 }
-.nav-link span {
+.navbar .nav-link span {
   line-height: 1.1;
 }
-.nav-link span:first-child {
+.navbar .nav-link span:first-child {
   text-transform: uppercase;
   font-size: 1.25rem;
 }
-.nav-link span:last-child {
+.navbar .nav-link span:last-child {
   font-family: swear-display, serif;
 }
 
@@ -15309,6 +15308,11 @@ textarea.form-control-lg {
 }
 
 .ff-serif-deco {
+  font-family: swear-display-cilati, sans-serif !important;
+}
+
+.a > i {
+  font-style: inherit !important;
   font-family: swear-display-cilati, sans-serif !important;
 }
 
@@ -15506,6 +15510,14 @@ textarea.form-control-lg {
   height: 100%;
 }
 
+[data-template=resume] #Hero h2 span:nth-child(1)::after, [data-template=resume] #Hero .h2 span:nth-child(1)::after {
+  content: "•";
+  position: relative;
+  bottom: 0.25em;
+  margin: 0 0.75em;
+  font-size: 0.5em;
+}
+
 .scroll-indicator {
   position: absolute;
   bottom: 3.25rem;
@@ -15558,6 +15570,9 @@ textarea.form-control-lg {
 [data-template=resume] .nav {
   position: sticky;
   top: 100px;
+}
+[data-template=resume] h3 + div, [data-template=resume] .h3 + div {
+  margin-top: 1.5rem;
 }
 [data-template=resume] .resume-item {
   margin-bottom: 2.5rem;

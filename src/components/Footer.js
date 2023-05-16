@@ -7,7 +7,7 @@ const Footer = () => {
 			<div className="container-lg">
 				<div className="row my-3">
 					<div className="col">
-						<p className="display-6 text-lowercase baseline-rule">Let's get in touch!</p>
+						<p className="display-6 text-lowercase baseline-rule a">Let's get in touch!</p>
 					</div>
 				</div>
 				<div className="row my-4 pb-3">

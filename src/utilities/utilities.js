@@ -1,7 +1,3 @@
-export const convertYear = (date) => {
-	return date.substr(0,4);
-}
-
 export const convertMonth = (date) => {
 	const m = parseInt(date.substr(5,2));
 	if (typeof(m) !== "number") {
@@ -35,5 +31,23 @@ export const convertMonth = (date) => {
 			return "December";
 		default:
 			return;
+	}
+}
+
+export const convertYear = (date) => {
+	return date.substr(0,4);
+}
+
+export const serifAccent = () => {
+	const queryAccents = document.querySelectorAll(".a");
+
+	console.log(queryAccents)
+
+	for (let i = 0; i < queryAccents.length; i++) {
+		const accent = queryAccents[i].innerHTML
+
+		accent.match(/<i>/)
+			? queryAccents[i].innerHTML = accent
+			: queryAccents[i].innerHTML = accent.replaceAll(/a/g, '<i>a</i>');
 	}
 }

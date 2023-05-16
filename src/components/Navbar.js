@@ -17,9 +17,7 @@ const Navbar = () => {
 	return (
 			<nav className={`navbar navbar-expand-sm${scroll ? " scroll" : ""}`}>
 				<div className="container-fluid">
-					<Link to="/" className="navbar-brand">
-						<span className="h4 mb-0">anna baker</span>
-					</Link>
+					<Link to="/" className="navbar-brand h4 mb-0 a">anna baker</Link>
 					<button
 						className="navbar-toggler"
 						type="button"
@@ -46,7 +44,7 @@ const Navbar = () => {
 										to="/#about"
 									>
 										<span>Info</span>
-										<span>about me</span>
+										<span className="a">about me</span>
 									</Link>
 								</li>
 								<li className="nav-item mx-sm-2">
@@ -58,11 +56,11 @@ const Navbar = () => {
 										to="/#portfolio"
 									>
 										<span>Work</span>
-										<span>some cases</span>
+										<span className="a">some cases</span>
 									</Link>
 								</li>
 								<li className="nav-item mx-sm-2">
-									<button type="button" className="btn btn-outline-dark" onClick={e => handleClick(e, "contact")}>Contact</button>
+									<button type="button" className="btn btn-outline-dark a" onClick={e => handleClick(e, "contact")}>Contact</button>
 								</li>
 							</ul>
 						</div>

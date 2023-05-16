@@ -38,7 +38,7 @@
 			"position": [
 				{
 					"id": 0,
-					"title": "Adjunct Faculty",
+					"title": "adjunct faculty",
 					"startDate": "",
 					"endDate": "",
 					"present": true,
@@ -66,7 +66,7 @@
 			"position": [
 				{
 					"id": 0,
-					"title": "UI/UX Developer",
+					"title": "UI/UX developer",
 					"startDate": "2022-08-01",
 					"endDate": "",
 					"present": true,
@@ -81,7 +81,7 @@
 				},
 				{
 					"id": 1,
-					"title": "UI/UX Designer",
+					"title": "UI/UX designer",
 					"startDate": "2021-01-01",
 					"endDate": "2022-08-01",
 					"present": false,
@@ -109,7 +109,7 @@
 			"position": [
 				{
 					"id": 0,
-					"title": "Web Designer",
+					"title": "web designer",
 					"startDate": "",
 					"endDate": "",
 					"present": false,
@@ -137,7 +137,7 @@
 			"position": [
 				{
 					"id": 0,
-					"title": "Layout Designer",
+					"title": "layout designer",
 					"startDate": "",
 					"endDate": "",
 					"present": false,
@@ -165,7 +165,7 @@
 			"position": [
 				{
 					"id": 0,
-					"title": "Art Director",
+					"title": "art director",
 					"startDate": "",
 					"endDate": "",
 					"present": false,
@@ -193,7 +193,7 @@
 			"position": [
 				{
 					"id": 1,
-					"title": "Graphic Designer & Junior Developer",
+					"title": "graphic designer & junior developer",
 					"startDate": "2015-05-01",
 					"endDate": "2016-11-01",
 					"present": false,
@@ -208,7 +208,7 @@
 				},
 				{
 					"id": 0,
-					"title": "Freelance Graphic Designer",
+					"title": "freelance graphic designer",
 					"startDate": "2015-02-01",
 					"endDate": "2015-05-01",
 					"present": false,
@@ -230,7 +230,7 @@
 			"name": "Coursera",
 			"logo": "Coursera",
 			"color": "#0056D2",
-			"area": "Front-End Developer Professional Certificate",
+			"area": "front-end developer professional certificate",
 			"studyType": "Professional Certificate",
 			"startDate": "2023-01-01",
 			"endDate": "",
@@ -291,7 +291,7 @@
 			"name": "Mercyhurst University",
 			"logo": "Mercyhurst",
 			"color": "#ADCE65",
-			"area": "B.A. Graphic Design",
+			"area": "B.A. graphic design",
 			"minor": "Digital Media",
 			"studyType": "Bachelor",
 			"startDate": "2011-09-01",

@@ -31,23 +31,23 @@ const Hero = () => {
 			<div className="container-lg">
 				<h1 className="display-1">
 					<div className="row">
-						<div className="col-auto offset-md-1">Creative</div>
-						<div className="col-auto ms-auto">Developer</div>
-						<div className="col-auto offset-md-2">
+						<div className="col-auto offset-md-1 a">creative</div>
+						<div className="col-auto ms-auto a">developer</div>
+						<div className="col-auto offset-md-1">
 							<div className="row">
-								<div className="col-auto">Digital</div>
+								<div className="col-auto a">digital</div>
 								<div className="col-auto d-flex align-items-end">
 									<span className="p text-uppercase pb-4">Crafting amazing web experiences.</span>
 								</div>
 							</div>
 						</div>
-						<div className="col-auto offset-md-3">Designer</div>
+						<div className="col-auto offset-md-3 a">designer</div>
 
 					</div>
 				</h1>
 				<div className="scroll-indicator">
 					<Arrow direction="down" stroke="#302927" />
-					<span className="h5">scroll</span>
+					<span className="h5 a">scroll</span>
 				</div>
 			</div>
 		</div>
@@ -59,7 +59,7 @@ const About = () => {
 		<div id="About" className="container-md py-10">
 			<div className="row">
 				<div className="col-4 title">
-					<h2 className="display-5 text-lowercase">Anna</h2>
+					<h2 className="display-5 a">anna</h2>
 					<p>(n) /ˈänə/</p>
 				</div>
 				<div className="col-8">
@@ -68,14 +68,14 @@ const About = () => {
 					<p>As a developer, I have expertise in HTML, CSS, JavaScript, and frameworks such as React. I create dynamic and responsive user interfaces that are optimized for performance and accessibility. I stay up-to-date with the latest design and development trends to ensure my solutions are scalable and meet industry standards.</p>
 					<p>Currently, I'm also a proud professor of Graphic Design at Mercyhurst University in Erie, Pennsylvania.</p>
 					<div className="mt-5 d-flex justify-content-end">
-						<a className="btn btn-outline-dark me-4" href="/resume">Resume</a>
+						<a className="btn btn-outline-dark me-4 a" href="/resume">Resume</a>
 						<a className="btn btn-icon btn-outline-dark me-4" href="https://www.linkedin.com/in/annabakerdesign/">
 							<LinkedInBI />
-							LinkedIn
+							<span className="a">linkedin</span>
 						</a>
 						<a className="btn btn-icon btn-outline-dark" href="https://github.com/abaker93/">
 							<GitHubBI />
-							GitHub
+							<span className="a">github</span>
 						</a>
 					</div>
 				</div>
@@ -105,7 +105,7 @@ const PortfolioItem = p => {
 			</div>
 			<div className="col-lg-2"></div>
 			<div className="col-lg-5 details">
-				<h2 className="baseline-rule"><Link className="link-dark link-opacity-75-hover link-underline-opacity-0" to={`portfolio/${p.page}`}>{p.title}</Link></h2>
+				<h2 className="baseline-rule"><Link className="link-dark link-opacity-75-hover link-underline-opacity-0 a" to={`portfolio/${p.page}`}>{p.title}</Link></h2>
 				<div className="tags mt-3 d-flex flex-wrap gap-2">
 					{p.tags.map((t, index) => (
 						<span key={index} className="chip chip-outline-dark">{t}</span>

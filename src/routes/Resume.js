@@ -18,12 +18,12 @@ const Resume = () => {
 					<div className="container-lg">
 						<div className="row align-items-center">
 							<div className="col-auto me-auto">
-								<h1 className="display-6">Anna Baker</h1>
+								<h1 className="display-6 a">anna baker</h1>
 							</div>
 							<div className="col-auto">
 								<h2>
-									<span>Creative Developer</span>
-									<span>Digital Designer</span>
+									<span className="a">creative developer</span>
+									<span className="a">digital designer</span>
 								</h2>
 							</div>
 						</div>
@@ -33,7 +33,7 @@ const Resume = () => {
 					<div className="container-lg">
 						<div className="row justify-content-center">
 							<div className="col-md-8">
-								<h3 className="baseline-rule">Summary</h3>
+								<h3 className="baseline-rule a">summary</h3>
 							</div>
 						</div>
 					</div>
@@ -86,7 +86,7 @@ const ResumeContainer = () => {
 							<div className="col">
 								<div id="industry-experience" className="row mb-3">
 									<div className="col">
-										<h3 className="h2 baseline-rule-end mb-4">Industry Experience</h3>
+										<h3 className="h2 baseline-rule-end mb-4 a">industry experience</h3>
 										{industryExperience.map(m => (
 											<div key={m.id} className="experience">
 												<ResumeItemHeader {...m} />
@@ -101,7 +101,7 @@ const ResumeContainer = () => {
 								</div>
 								<div id="teaching-experience" className="row">
 									<div className="col">
-										<h3 className="h2 baseline-rule-end mb-4">Teaching Experience</h3>
+										<h3 className="h2 baseline-rule-end mb-4 a">teaching experience</h3>
 										{teachingExperience.map(m => (
 											<div key={m.id} className="experience">
 												<ResumeItemHeader {...m} />
@@ -119,7 +119,7 @@ const ResumeContainer = () => {
 
 						<div id="education" className="row resume-item">
 							<div className="col">
-								<h3 className="h2 baseline-rule-end mb-4">Education</h3>
+								<h3 className="h2 baseline-rule-end mb-4 a">education</h3>
 								{education.map(m => (
 									<div key={m.id} className="education">
 										<ResumeItemHeader {...m} />
@@ -133,12 +133,12 @@ const ResumeContainer = () => {
 
 						<div id="skills" className="row resume-item">
 							<div className="col">
-								<h3 className="h2 baseline-rule-end mb-4">Skills</h3>
+								<h3 className="h2 baseline-rule-end mb-4 a">skills</h3>
 								<div className="row">
 									<div className="col-md-6">
 										<div className="row mb-3">
 											<div className="col">
-												<h4 className="h3">Development</h4>
+												<h4 className="h3 a">development</h4>
 											</div>
 										</div>
 										<div className="row mb-4">
@@ -164,7 +164,7 @@ const ResumeContainer = () => {
 									<div className="col-md-6">
 										<div className="row mb-3">
 											<div className="col">
-												<h4 className="h3">Design</h4>
+												<h4 className="h3 a">design</h4>
 											</div>
 										</div>
 										<div className="row mb-4">
@@ -207,11 +207,11 @@ const ResumeNav = () => {
 		<ul id="resume-nav" className="nav flex-column sticky-top">
 			<li className="nav-item h3">
 				<Link
-					className="nav-link"
+					className="nav-link a"
 					onClick={e => handleClick(e, "industry-experience")}
 					to="#industry-experience"
 				>
-					Experience
+					experience
 				</Link>
 				<ul className="nav flex-column ps-4">
 					<li className="nav-item p large">
@@ -236,20 +236,20 @@ const ResumeNav = () => {
 			</li>
 			<li className="nav-item h3">
 				<Link
-					className="nav-link"
+					className="nav-link a"
 					onClick={e => handleClick(e, "education")}
-					to="#education"
+					// to="#education"
 				>
-					Education
+					education
 				</Link>
 			</li>
 			<li className="nav-item h3">
 				<Link
-					className="nav-link"
+					className="nav-link a"
 					onClick={e => handleClick(e, "skills")}
 					to="#skills"
 				>
-					Skills
+					skills
 				</Link>
 			</li>
 		</ul>
@@ -321,7 +321,7 @@ const ResumeExperience = (p) => {
 			<div className="col pb-4">
 				<div className="row mb-2">
 					<div className="col">
-						<h5 className="h3 m-0">{p.title}</h5>
+						<h5 className="h3 m-0 a">{p.title}</h5>
 						<p className="small text-600 m-0">{p.startDate ? (
 							`${convertMonth(p.startDate)} ${convertYear(p.startDate)} — ${p.present ? "Present" : convertMonth(p.endDate)} ${convertYear(p.endDate)}`
 						) : null}</p>
@@ -357,7 +357,7 @@ const ResumeEducation = (p) => {
 			<div className="col pb-4">
 				<div className="row mb-2">
 					<div className="col">
-						<h5 className="h3 m-0">{p.area}</h5>
+						<h5 className="h3 m-0 a">{p.area}</h5>
 						<p className="small text-600 m-0">{p.startDate ? (
 							`${convertMonth(p.startDate)} ${convertYear(p.startDate)} — ${p.present ? "Present" : convertMonth(p.endDate)} ${convertYear(p.endDate)}`
 						) : null}</p>

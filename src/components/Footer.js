@@ -12,7 +12,11 @@ const Footer = () => {
 				</div>
 				<div className="row my-4 pb-3">
 					<div className="col">
-						<a className="icon-link icon-link-hover" href="mailto:hello@annabaker.dev">
+						<a
+							className="icon-link icon-link-hover"
+							href="mailto:hello@annabaker.dev"
+							target="_blank"
+						>
 							hello@annabaker.dev
 							<EnvelopePaperHeartBI />
 						</a>
@@ -24,6 +28,7 @@ const Footer = () => {
 							className="icon-link icon-link-hover"
 							style={{ "--bs-icon-link-transform": "translate3d(0.125rem, -0.125rem, 0)" }}
 							href="https://www.linkedin.com/in/annabakerdesign/"
+							target="_blank"
 						>
 							<Arrow direction="up-right" />
 							LinkedIn
@@ -34,6 +39,7 @@ const Footer = () => {
 							className="icon-link icon-link-hover"
 							style={{ "--bs-icon-link-transform": "translate3d(0.125rem, -0.125rem, 0)" }}
 							href="https://github.com/abaker93/"
+							target="_blank"
 						>
 							<Arrow direction="up-right" />
 							GitHub

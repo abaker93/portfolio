@@ -14,6 +14,14 @@
 
 
 
+//~~	base  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+#root {
+	position: relative;
+	overflow: hidden;
+}
+////																							
+
+
 //~~	lists  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 ol, ul { padding-left: 1rem; }
 
@@ -39,21 +47,14 @@ ul:not(.nav):not(.navbar-nav) li {
 
 
 
-//~~	baseline rule  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
-////																							
-
-
-
 //~~	background  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 #Background {
-	position: relative;
+	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
 	z-index: -100;
-	background-color: orange;
 
 	.bg-noise {
 		position: fixed;
@@ -75,14 +76,9 @@ ul:not(.nav):not(.navbar-nav) li {
 		top: 0;
 		left: 0;
 		filter: blur(150px);
-		// background-color: blue;
 	}
 
-	.bg-circles.index {
-		position: fixed;
-		// height: 100%;
-		// width: 100%;
-	}
+	.bg-circles.index { position: fixed; }
 
 	.bg-circle {
 		position: absolute;
@@ -100,7 +96,6 @@ ul:not(.nav):not(.navbar-nav) li {
 			margin-left: 16%;
 			border-radius: 20%;
 			background-color: $purple-500;
-			// opacity: 0.7;
 			animation: bg-circle-1 20s linear 0s infinite;
 		}
 
@@ -157,6 +152,43 @@ ul:not(.nav):not(.navbar-nav) li {
 			background-color: $red-500;
 			animation: bg-circle-6 30s linear 0s infinite;
 		}
+
+		&._7 {
+			left: auto;
+			right: 0;
+			top: auto;
+			bottom: 0;
+			width: 40vw;
+			height: 40vw;
+			margin-top: 35%;
+			margin-right: -16%;
+			margin-bottom: -20%;
+			opacity: 0.8;
+			animation: bg-circle-2 30s linear 0s infinite;
+		}
+
+		&._8 {
+			top: auto;
+			bottom: 0;
+			width: 30vw;
+			height: 30vw;
+			margin-bottom: -10%;
+			margin-left: -10%;
+			border-radius: 20%;
+			opacity: 0.8;
+			animation: bg-circle-4 25s linear 0s infinite;
+		}
+
+		&._9 {
+			top: auto;
+			bottom: 0;
+			width: 35vw;
+			height: 35vw;
+			margin-bottom: -2%;
+			margin-left: 30%;
+			background-color: $cream-100;
+			animation: bg-circle-3 16s linear 0s infinite;
+		}
 	}
 }
 ////																							
@@ -208,7 +240,12 @@ textarea {
 
 
 //~~	hero	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-[data-template=home] #Hero { height: 100vh; }
+[data-template=home] #Hero {
+	height: 100vh;
+	position: relative;
+
+	.container-lg { height: 100%; }
+}
 
 .scroll-indicator {
 	position: absolute;

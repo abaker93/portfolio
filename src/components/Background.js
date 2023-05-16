@@ -44,6 +44,10 @@ const Background = p => {
 				<div className="bg-circle _1" style={{ backgroundColor: bgColor1 }}></div>
 				<div className="bg-circle _3"></div>
 				<div className="bg-circle _4" style={{ backgroundColor: bgColor2 }}></div>
+				{/* <div className="bg-circle _9" style={{ backgroundColor: "orange" }}></div> */}
+				<div className="bg-circle _7" style={{ backgroundColor: bgColor1 }}></div>
+				<div className="bg-circle _8" style={{ backgroundColor: bgColor2 }}></div>
+				<div className="bg-circle _9"></div>
 			</div>
 		</div>
 	)	

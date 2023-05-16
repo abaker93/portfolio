@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Background from "../components/Background";
 import data from '../data/resume.json';
 import { convertYear, convertMonth } from "../utilities/utilities";
 import { gray } from "../utilities/colors";
@@ -10,42 +11,43 @@ const Resume = () => {
 	const summary = data.basics.summary;
 
 	return (
-		<main data-template="resume">
-			<div id="Hero" className="pt-10 pb-7">
-				<div className="container-lg">
-					<div className="row align-items-center">
-						<div className="col-auto me-auto">
-							<h1 className="display-6">Anna Baker</h1>
-						</div>
-						<div className="col-auto">
-							<h2>
-								<span>Creative Developer</span>
-								<span>Digital Designer</span>
-							</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div id="Summary" className="overflow-x-hidden pb-8">
-				<div className="container-lg">
-					<div className="row justify-content-center">
-						<div className="col-md-8">
-							<h3 className="baseline-rule">Summary</h3>
+		<>
+			<Background />
+			<main data-template="resume">
+				<div id="Hero" className="pt-10 pb-7">
+					<div className="container-lg">
+						<div className="row align-items-center">
+							<div className="col-auto me-auto">
+								<h1 className="display-6">Anna Baker</h1>
+							</div>
+							<div className="col-auto">
+								<h2>
+									<span>Creative Developer</span>
+									<span>Digital Designer</span>
+								</h2>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div className="container-lg">
-					<div className="row justify-content-center">
-						<div className="col-md-8">
-							<p>{summary}</p>
+				<div id="Summary" className="overflow-x-hidden pb-8">
+					<div className="container-lg">
+						<div className="row justify-content-center">
+							<div className="col-md-8">
+								<h3 className="baseline-rule">Summary</h3>
+							</div>
+						</div>
+					</div>
+					<div className="container-lg">
+						<div className="row justify-content-center">
+							<div className="col-md-8">
+								<p>{summary}</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-
-			<ResumeContainer />
-		</main>
+				<ResumeContainer />
+			</main>
+		</>
 	)
 }
 

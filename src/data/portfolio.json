@@ -14,12 +14,11 @@
 				"React",
 				"JavaScript",
 				"JSX",
-				"SASS",
-				"JavaScript"
+				"SASS"
 			],
 			"tagline": {
 				"short": "Restaurant website featuring reservation booking feature",
-				"long": "Restaurant website development featuring a reservation booking feature.\nUX, UI Design, and Frontend Development. "
+				"long": "Restaurant website development featuring a reservation booking feature.\nUX, UI Design, and Frontend Development."
 			},
 			"title": "little lemon restaurant",
 			"url": "https://little-lemon.annabaker.design",
@@ -44,15 +43,16 @@
 						{
 							"id": 0,
 							"double_col":  false,
-							"title": "project goal",
-							"content": "Capstone project for Front End Developer Certificate. Design and develop a new form to book a reservation online. In addition, the homepage needed to be built and the UI/UX cleaned up from the mockups provided."
+							"title": "what is little lemon?",
+							"content": "Little Lemon is a fictional restaurant located in Chicago. They pride themselves on their natural, wholistic food and their commitment to using technology to elevate their customers' dining experience."
 						},
 						{
 							"id": 1,
 							"double_col":  false,
-							"title": "what is little lemon?",
-							"content": "Little Lemon is a fictional restaurant located in Chicago. They pride themselves on their natural, wholistic food and their commitment to using technology to elevate their customers' dining experience."
+							"title": "project goal",
+							"content": "Capstone project for Front End Developer Certificate. Design and develop a new form to book a reservation online. In addition, the homepage needed to be built and the UI/UX cleaned up from the mockups provided."
 						}
+						
 					]
 				},
 				{
@@ -180,7 +180,7 @@
 				"CSS",
 				"JavaScript"
 			],
-			"title": "Howard Hanna Relocation Services",
+			"title": "relocation horizons",
 			"tagline": "Relocation assistance for individuals and corporations",
 			"url": "https://relocationhorizons.com/",
 			"sections": [
@@ -369,65 +369,167 @@
 			]
 		},
 		{
-			"id": 2,
+			"id": 4,
 			"featured": true,
 			"featured_img": "relocation-horizons-1.jpg",
+			"gradient_colors": [ "#01A530", "#095533" ],
+			"page": "hanna-luxury",
 			"tags": [
 				"Design",
 				"Development",
 				"Figma",
-				"MUI",
 				"React",
+				"JavaScript",
 				"JSX",
 				"SASS",
-				"REST API"
-			],
-			"title": "Drifloon Database",
-			"url": "drifloon-database"
-		},
-		{
-			"id": 3,
-			"featured": true,
-			"featured_img": "relocation-horizons-1.jpg",
-			"tags": [
-				"Design",
-				"Adobe XD",
-				"HTML",
-				"CSS"
-			],
-			"title": "HSuite Intranet",
-			"url": "hsuite-intranet"
-		},
-		{
-			"id": 4,
-			"featured": true,
-			"featured_img": "relocation-horizons-1.jpg",
-			"tags": [
-				"Design",
-				"Adobe XD",
-				"Bootstrap",
-				"HTML",
-				"CSS"
-			],
-			"title": "Hanna Luxury",
-			"url": "hanna-luxury"
-		},
-		{
-			"id": 5,
-			"featured": false,
-			"featured_img": "relocation-horizons-1.jpg",
-			"tags": [
-				"Design",
-				"Development",
-				"Adobe XD",
-				"Bootstrap",
-				".NET",
-				"HTML",
-				"CSS",
 				"JavaScript"
 			],
-			"title": "Children's Free Care Fund",
-			"url": "childrens-free-care-fund"
+			"tagline": {
+				"short": "Restaurant website featuring reservation booking feature",
+				"long": "Restaurant website development featuring a reservation booking feature.\nUX, UI Design, and Frontend Development. "
+			},
+			"title": "hanna luxury",
+			"url": "https://little-lemon.annabaker.design",
+			"sections" : [
+				{
+					"id": 0,
+					"template": "logo",
+					"title": "logo",
+					"logos": [
+						{
+							"id": 0,
+							"img": "hanna-luxury-logo.svg",
+							"alt": "hanna luxury logo"
+						}
+					]
+				},
+				{
+					"id": 1,
+					"template": "overview",
+					"title": "overview",
+					"columns": [
+						{
+							"id": 0,
+							"double_col":  false,
+							"title": "project goal",
+							"content": "Capstone project for Front End Developer Certificate. Design and develop a new form to book a reservation online. In addition, the homepage needed to be built and the UI/UX cleaned up from the mockups provided."
+						},
+						{
+							"id": 1,
+							"double_col":  false,
+							"title": "what is little lemon?",
+							"content": "Little Lemon is a fictional restaurant located in Chicago. They pride themselves on their natural, wholistic food and their commitment to using technology to elevate their customers' dining experience."
+						}
+					]
+				},
+				{
+					"id": 2,
+					"template": "typography",
+					"title": "typography",
+					"typography": [
+						{
+							"id": 0,
+							"img": "little-lemon-type-1.png",
+							"alt": "markazi text regular and medium"
+						},
+						{
+							"id": 1,
+							"img": "little-lemon-type-2.png",
+							"alt": "karla regular, medium, bold, and extrabold"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"template": "color_palette",
+					"title": "color palette",
+					"color_palette": [
+						{
+							"id": 0,
+							"color": "#FFFFFF",
+							"hex": "#495E57",
+							"name": "Hunter"
+						},
+						{
+							"id": 1,
+							"color": "#000000",
+							"hex": "#F4CE14",
+							"name": "Lemonaide"
+						},
+						{
+							"id": 2,
+							"color": "#000000",
+							"hex": "#FBDABB",
+							"name": "Delicate Peach"
+						},
+						{
+							"id": 3,
+							"color": "#000000",
+							"hex": "#EE9972",
+							"name": "Peach Amber"
+						},
+						{
+							"id": 4,
+							"color": "#FFFFFF",
+							"hex": "#333333",
+							"name": "Carbon"
+						}
+					]
+				},
+				{
+					"id": 4,
+					"template": "single_col_img",
+					"title": "wireframe",
+					"img": [
+						{
+							"id": 0,
+							"img": "little-lemon-wireframes.png",
+							"alt": "little lemon wireframes"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"template": "single_col_img",
+					"title": "homepage",
+					"img": [
+						{
+							"id": 0,
+							"img": "little-lemon-home.png",
+							"alt": "little lemon homepage"
+						}
+					]
+				},
+				{
+					"id": 6,
+					"template": "single_col_img",
+					"title": "reservations",
+					"img": [
+						{
+							"id": 0,
+							"img": "little-lemon-reservations.png",
+							"alt": "little lemon reservations"
+						}
+					]
+				},
+				{
+					"id": 7,
+					"template": "tools",
+					"title": "tools & techniques",
+					"tools": [
+						"Figma",
+						"User Personas",
+						"Journey Maps",
+						"UI/UX Design",
+						"Wireframes",
+						"High Fidelity Prototypes",
+						"React",
+						"JavaScript",
+						"JSX",
+						"SASS"
+					]
+				}
+			]
 		}
 	]
 }

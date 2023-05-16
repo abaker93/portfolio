@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Background from "../components/Background";
 import portfolioData from "../data/portfolio.json";
 import Arrow from "../assets/Arrow";
 import { GitHubBI, LinkedInBI } from "../assets/icons";
@@ -8,44 +9,46 @@ const Home = () => {
 	const portfolio = portfolioData.portfolio;
 
 	return (
-		<main data-template="home">
-			<Hero />
-
-			<About />
-
-			<div id="Portfolio" className="container-lg">
-				{portfolio.filter(f => f.featured).map(p => (
-					<PortfolioItem key={p.id} {...p} />
-				))}
-			</div>
-
-			<Contact />
-		</main>
+		<>
+			<Background />
+			<main data-template="home">
+				<Hero />
+				<About />
+				<div id="Portfolio" className="container-lg">
+					{portfolio.filter(f => f.featured).map(p => (
+						<PortfolioItem key={p.id} {...p} />
+					))}
+				</div>
+				<Contact />
+			</main>
+		</>
 	)
 }
 
 const Hero = () => {
 	return (
-		<div id="Hero" className="container-lg">
-			<h1 className="display-1">
-				<div className="row">
-					<div className="col-auto offset-md-1">Creative</div>
-					<div className="col-auto ms-auto">Developer</div>
-					<div className="col-auto offset-md-2">
-						<div className="row">
-							<div className="col-auto">Digital</div>
-							<div className="col-auto d-flex align-items-end">
-								<span className="p text-uppercase pb-4">Crafting amazing web experiences.</span>
+		<div id="Hero">
+			<div className="container-lg">
+				<h1 className="display-1">
+					<div className="row">
+						<div className="col-auto offset-md-1">Creative</div>
+						<div className="col-auto ms-auto">Developer</div>
+						<div className="col-auto offset-md-2">
+							<div className="row">
+								<div className="col-auto">Digital</div>
+								<div className="col-auto d-flex align-items-end">
+									<span className="p text-uppercase pb-4">Crafting amazing web experiences.</span>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div className="col-auto offset-md-3">Designer</div>
+						<div className="col-auto offset-md-3">Designer</div>
 
+					</div>
+				</h1>
+				<div className="scroll-indicator">
+					<Arrow direction="down" stroke="#302927" />
+					<span className="h5">scroll</span>
 				</div>
-			</h1>
-			<div className="scroll-indicator">
-				<Arrow direction="down" stroke="#302927" />
-				<span className="h5">scroll</span>
 			</div>
 		</div>
 	)
@@ -95,7 +98,9 @@ const PortfolioItem = p => {
 		<div className={`row gx-5 mb-8 card-portfolio portfolio-${p.id % 2 === 0 ? "left" : "right"}`}>
 			<div className="col-lg-5 image">
 				<figure className="image-container" onMouseMove={e => handleMouseMove(e)} onMouseLeave={() => setTransformOrigin('50% 50%')}>
-					<img src={`images/portfolio/${p.featured_img}`} alt={p.title} style={{ transformOrigin: transformOrigin }} />
+					<Link to={`portfolio/${p.page}`}>
+						<img src={`images/portfolio/${p.featured_img}`} alt={p.title} style={{ transformOrigin: transformOrigin }} />
+					</Link>
 				</figure>
 			</div>
 			<div className="col-lg-2"></div>

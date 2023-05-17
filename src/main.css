@@ -15311,14 +15311,19 @@ textarea.form-control-lg {
   font-family: swear-display-cilati, sans-serif !important;
 }
 
-.a > i {
-  font-style: inherit !important;
-  font-family: swear-display-cilati, sans-serif !important;
+::selection {
+  color: #F6F4EF;
+  background-color: #FE5F55;
 }
 
 #root {
   position: relative;
   overflow: hidden;
+}
+
+.a > i {
+  font-style: inherit !important;
+  font-family: swear-display-cilati, sans-serif !important;
 }
 
 .icon-link {

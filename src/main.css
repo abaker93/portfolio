@@ -15565,8 +15565,11 @@ textarea.form-control-lg {
   z-index: -1;
   font-size: 70vh;
   font-family: swear-display-cilati, sans-serif;
-  mix-blend-mode: multiply;
+  mix-blend-mode: overlay;
   opacity: 0.2;
+}
+[data-template=home] h1 > .row > .col-auto, [data-template=home] .h1 > .row > .col-auto {
+  mix-blend-mode: overlay;
 }
 [data-template=home] #About .title p {
   font-size: 1.5rem;

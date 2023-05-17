@@ -181,7 +181,10 @@
 				"JavaScript"
 			],
 			"title": "relocation horizons",
-			"tagline": "Relocation assistance for individuals and corporations",
+			"tagline": {
+				"short": "Corporate website development for a real estate relocation company.",
+				"long": "Corporate website development for a real estate relocation company.\nUX, UI Design and Frontend Development. Design systems."
+			},
 			"url": "https://relocationhorizons.com/",
 			"sections": [
 				{
@@ -389,7 +392,7 @@
 				"CSS"
 			],
 			"tagline": {
-				"short": "Landing page for luxury real estate brand",
+				"short": "Landing page redesign and development for a luxury real estate brand.",
 				"long": "Landing page redesign and development for a luxury real estate brand.\nUI Design and Frontend Development."
 			},
 			"title": "hanna luxury",
@@ -508,9 +511,167 @@
 						"Responsive Design",
 						"Bootstrap",
 						"HTML",
-						"CSS",
-						"JSX",
-						"SASS"
+						"CSS"
+					]
+				}
+			]
+		},
+		{
+			"id": 5,
+			"buttons": [
+				{
+					"id": 0,
+					"title": "view live website",
+					"url": "https://howardhannachildrensfreecarefund.org/"
+				}
+			],
+			"featured": true,
+			"featured_img": "cfcf-1.jpg",
+			"gradient_colors": [ "#FFCE07", "#CE4A9B" ],
+			"page": "childrens-free-care-fund",
+			"tags": [
+				"Design",
+				"Development",
+				"Adobe XD",
+				"Umbraco",
+				".NET",
+				"HTML",
+				"CSS"
+			],
+			"tagline": {
+				"short": "Corporate website development for philanthropy efforts.",
+				"long": "Corporate website development for philanthropy efforts.\nFront-end development and design support."
+			},
+			"title": "children's free care fund",
+			"url": "https://howardhannachildrensfreecarefund.org/",
+			"sections" : [
+				{
+					"id": 0,
+					"template": "logo",
+					"title": "logo",
+					"logos": [
+						{
+							"id": 0,
+							"img": "cfcf-logo.svg",
+							"alt": "children's free care fund logo"
+						}
+					]
+				},
+				{
+					"id": 1,
+					"template": "overview",
+					"title": "overview",
+					"columns": [
+						{
+							"id": 0,
+							"double_col":  false,
+							"title": "what is the children’s free care fund?",
+							"content": "Howard Hanna Children’s Free Care Fund is one of Howard Hanna’s philanthropic endeavors. The fund is a 501(c)(3) charitable organization that receives funds through yearly fundraising and sponsorships hosted by local Howard Hanna offices. Funds raised by these branches go to children’s hospitals and pediatric programs in their area."
+						},
+						{
+							"id": 1,
+							"double_col":  false,
+							"title": "project goal",
+							"content": "Howard Hanna Children’s Free Care Fund did not have a website and simply had a small dedicated section on the Howard Hanna website. Their main request were to create an online donation form and prominent donation calls to action. They also requested a content management system and displayed calendar that could both be easily updated by their team."
+						}
+					]
+				},
+				{
+					"id": 2,
+					"template": "typography",
+					"title": "typography",
+					"typography": [
+						{
+							"id": 0,
+							"img": "cfcf-type-1.png",
+							"alt": "marvin regular"
+						},
+						{
+							"id": 1,
+							"img": "cfcf-type-2.png",
+							"alt": "arial regular and bold"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"template": "color_palette",
+					"title": "color palette",
+					"color_palette": [
+						{
+							"id": 0,
+							"color": "#FFFFFF",
+							"hex": "#08A88B",
+							"name": "Honeydew Melon"
+						},
+						{
+							"id": 1,
+							"color": "#FFFFFF",
+							"hex": "#5C2D88",
+							"name": "Concord Grape"
+						},
+						{
+							"id": 2,
+							"color": "#FFFFFF",
+							"hex": "#CE4A9B",
+							"name": "Raspberry Sorbet"
+						},
+						{
+							"id": 3,
+							"color": "#FFFFFF",
+							"hex": "#EE3342",
+							"name": "Watermelon Ripple"
+						},
+						{
+							"id": 4,
+							"color": "#000000",
+							"hex": "#FBCE20",
+							"name": "HH Yellow"
+						},
+						{
+							"id": 5,
+							"color": "#FFFFFF",
+							"hex": "#0C653A",
+							"name": "HH Green"
+						}
+					]
+				},
+				{
+					"id": 4,
+					"template": "single_col_img",
+					"title": "homepage",
+					"img": [
+						{
+							"id": 0,
+							"img": "cfcf-home.png",
+							"alt": "children's free care fund homepage"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"template": "single_col_img",
+					"title": "interior pages",
+					"img": [
+						{
+							"id": 0,
+							"img": "cfcf-interior.png",
+							"alt": "children's free care fund interior pages"
+						}
+					]
+				},
+				{
+					"id": 6,
+					"template": "tools",
+					"title": "tools & techniques",
+					"tools": [
+						"Adobe XD",
+						"UI/UX Design",
+						"Responsive Design",
+						"Umbraco",
+						".NET",
+						"HTML",
+						"CSS"
 					]
 				}
 			]

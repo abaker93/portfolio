@@ -227,32 +227,6 @@ ul:not(.nav):not(.navbar-nav) li {
 
 
 
-//~~	forms  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//		form control
-//		textarea
-textarea {
-	&.form-control {
-		//@extend textarea.form-control;
-
-		@include border-radius($form-textarea-border-radius);
-	}
-
-	&.form-control-sm {
-		//@extend textarea.form-control-sm;
-
-		@include border-radius($form-textarea-border-radius-sm);
-	}
-
-	&.form-control-lg {
-		//@extend textarea.form-control-lg;
-
-		@include border-radius($form-textarea-border-radius-lg);
-	}
-}
-////																							
-
-
-
 //~~	hero	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 [data-template=home] #Hero {
 	height: 100vh;

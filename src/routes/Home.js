@@ -19,7 +19,7 @@ const Home = () => {
 						<PortfolioItem key={p.id} {...p} />
 					))}
 				</div>
-				<Contact />
+				{/* <Contact /> */}
 			</main>
 		</>
 	)

@@ -1,28 +1,20 @@
 import { Link } from "react-router-dom"
 import { Arrow, EnvelopePaperHeartBI } from "../assets/icons";
+import Contact from "./Contact";
 
 const Footer = () => {
 	return (
 		<footer id="Footer" className="mt-5 py-3">
+
 			<div className="container-lg">
 				<div className="row my-3">
 					<div className="col">
-						<p className="display-6 text-lowercase baseline-rule a">Let's get in touch!</p>
+						<p className="display-6 baseline-rule a">let's work together!</p>
+						<p>Got ideas? Looking for a new team member? Want to meet up for coffee? Drop me a note below <Arrow direction="right-down" className="" /></p>
 					</div>
 				</div>
-				<div className="row my-4 pb-3">
-					<div className="col">
-						<a
-							className="icon-link icon-link-hover"
-							href="mailto:hello@annabaker.dev"
-							target="_blank"
-						>
-							hello@annabaker.dev
-							<EnvelopePaperHeartBI />
-						</a>
-					</div>
-				</div>
-				<div className="row my-4">
+
+				<div className="row my-4 gap-4">
 					<div className="col-auto">
 						<a
 							className="icon-link icon-link-hover"
@@ -37,7 +29,7 @@ const Footer = () => {
 					<div className="col-auto">
 						<a
 							className="icon-link icon-link-hover"
-							style={{ "--bs-icon-link-transform": "translate3d(0.125rem, -0.125rem, 0)" }}
+							style={{ "--bs-icon-link-transform": "translate3d(0.15rem, -0.15rem, 0)" }}
 							href="https://github.com/abaker93/"
 							target="_blank"
 						>
@@ -45,8 +37,26 @@ const Footer = () => {
 							GitHub
 						</a>
 					</div>
+					<div className="col-auto">
+						<a
+							className="icon-link icon-link-hover"
+							style={{ "--bs-icon-link-transform": "translate3d(0, -0.125rem, 0)" }}
+							href="mailto:hello@annabaker.dev"
+							target="_blank"
+						>
+							<EnvelopePaperHeartBI />
+							hello@annabaker.dev
+						</a>
+					</div>
+				</div>
+
+				<div className="row my-6">
+					<div className="col-lg-6 col-md-8">
+						<Contact />
+					</div>
 				</div>
 			</div>
+
 			<div className="container-fluid">
 				<div className="row justify-content-between mt-5 px-2 xxsmall">
 					<div className="col-auto">

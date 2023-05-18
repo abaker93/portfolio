@@ -1,0 +1,22 @@
+textarea {
+	height: 150px;
+
+	&.form-control {
+		@include border-radius($form-textarea-border-radius);
+	}
+
+	&.form-control-sm {
+		@include border-radius($form-textarea-border-radius-sm);
+	}
+
+	&.form-control-lg {
+		@include border-radius($form-textarea-border-radius-lg);
+	}
+}
+
+.form-floating > textarea.form-control {
+	height: 150px;
+	
+	&:focus,
+	&:not(:placeholder-shown) { padding-top: 1rem; }
+}

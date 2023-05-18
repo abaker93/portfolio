@@ -6,6 +6,12 @@ export const Arrow = ({ fill = "currentColor", className, direction }) => {
 					<path d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
 				</svg>
 			);
+		case "right-down":
+			return (
+				<svg xmlns="http://www.w3.org/2000/svg" fill={fill} className={`bi bi-arrow-down-right${className ? ` ${className}` : ""}`} viewBox="0 0 16 16">
+					<path d="M10.1464 14.8536C10.3417 15.0488 10.6583 15.0488 10.8536 14.8536L14.8536 10.8536C15.0488 10.6583 15.0488 10.3417 14.8536 10.1464C14.6583 9.95118 14.3417 9.95118 14.1464 10.1464L11 13.2929V3.5C11 2.11929 9.88071 1 8.5 1H0.5C0.223858 1 0 1.22386 0 1.5C0 1.77614 0.223858 2 0.5 2H8.5C9.32843 2 10 2.67157 10 3.5V13.2929L6.85355 10.1464C6.65829 9.95118 6.34171 9.95118 6.14645 10.1464C5.95118 10.3417 5.95118 10.6583 6.14645 10.8536L10.1464 14.8536Z" />
+				</svg>
+			);
 		default:
 			return (
 				<svg xmlns="http://www.w3.org/2000/svg" fill={fill} className={`bi bi-arrow-up${className ? ` ${className}` : ""}`} viewBox="0 0 16 16">

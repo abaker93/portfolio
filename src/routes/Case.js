@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Background from "../components/Background";
 import portfolioData from "../data/portfolio.json";
+import { serifAccent } from "../utilities/utilities";
 
 const Case = () => {
 	const page = useParams().case;
@@ -15,7 +16,8 @@ const Case = () => {
 
 	useEffect(() => {
 		getCaseData(page)
-	}, [page])
+		serifAccent()
+	}, [])
 	
 	// console.log(caseData)
 
@@ -29,24 +31,21 @@ const Case = () => {
 					<div className="container-lg">
 
 						<header className="pt-10">
-							<h1 className="baseline-rule">{m.title}</h1>
+							<h1 className="baseline-rule a">{m.title}</h1>
 							<p style={{ whiteSpace: "pre" }}>{m.tagline.long}</p>
 						</header>
 						
 						{m.sections.map(s => (
-							<Section key={s.id} url={m.url} github={m.github} {...s} />
+							<Section key={s.id} buttons={m.buttons} url={m.url} github={m.github} {...s} />
 						))}
 
 						<section className="buttons pt-10">
 							<div className="row d-flex justify-content-center">
-								<div className="col-auto">
-									<a href={m.url} target="_blank" className="btn btn-outline-dark">view live website</a>
-								</div>
-								{m.github ? (
-									<div className="col-auto">
-										<a href={m.github} target="_blank" className="btn btn-outline-dark">github repository</a>
+								{m.buttons.map(b => (
+									<div key={b.id} className="col-auto">
+										<a href={b.url} target="_blank" className="btn btn-outline-dark">{b.title}</a>
 									</div>
-								) : null}
+								))}
 							</div>
 						</section>
 						
@@ -79,30 +78,27 @@ const Section = p => {
 	}
 
 	if (p.template === "overview") {
-		console.log(p)
+		// console.log(p)
 		return (
 			<section className="overview pt-10">
 				<h2 className="h4 baseline-rule">
 					<span className="pe-4 ff-serif-deco">{formatNumber(p.id)}</span>
-					{p.title}
+					<span className="a">{p.title}</span>
 				</h2>
 				<div className="row gap-5 mt-3 pt-4">
 					{p.columns.map(c => (
 						<div key={c.id} className={c.double_col ? "col-lg" : "col-lg-4"}>
-							<h3 className="h4">{c.title}</h3>
+							<h3 className="h4 a">{c.title}</h3>
 							<p className="pt-2">{c.content}</p>
 						</div>
 					))}
 				</div>
 				<div className="row mt-3 pt-4">
-					<div className="col-auto">
-						<a href={p.url} target="_blank" className="btn btn-outline-dark">view live website</a>
-					</div>
-					{p.github ? (
-						<div className="col-auto">
-							<a href={p.github} target="_blank" className="btn btn-outline-dark">github repository</a>
+					{p.buttons.map(b => (
+						<div key={b.id} className="col-auto">
+							<a href={b.url} target="_blank" className="btn btn-outline-dark a">{b.title}</a>
 						</div>
-					) : null}
+					))}
 				</div>
 			</section>
 		)

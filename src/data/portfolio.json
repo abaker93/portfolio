@@ -2,9 +2,20 @@
 	"portfolio": [
 		{
 			"id": 0,
+			"buttons": [
+				{
+					"id": 0,
+					"title": "view live landing page",
+					"url": "https://little-lemon.annabaker.dev"
+				},
+				{
+					"id": 1,
+					"title": "github repository",
+					"url": "https://github.com/abaker93/little-lemon"
+				}
+			],
 			"featured": true,
 			"featured_img": "little-lemon-featured.jpg",
-			"github": "https://github.com/abaker93/little-lemon",
 			"gradient_colors": [ "#EE9972", "#F4CE14" ],
 			"page": "little-lemon",
 			"tags": [
@@ -21,7 +32,6 @@
 				"long": "Restaurant website development featuring a reservation booking feature.\nUX, UI Design, and Frontend Development."
 			},
 			"title": "little lemon restaurant",
-			"url": "https://little-lemon.annabaker.design",
 			"sections" : [
 				{
 					"id": 0,
@@ -166,6 +176,13 @@
 		},
 		{
 			"id": 1,
+			"buttons": [
+				{
+					"id": 0,
+					"title": "view live website",
+					"url": "https://www.relocationhorizons.com/"
+				}
+			],
 			"featured": true,
 			"featured_img": "relocation-horizons-1.jpg",
 			"gradient_colors": [ "#ECD7A0", "#72A84D" ],
@@ -185,7 +202,6 @@
 				"short": "Corporate website development for a real estate relocation company.",
 				"long": "Corporate website development for a real estate relocation company.\nUX, UI Design and Frontend Development. Design systems."
 			},
-			"url": "https://relocationhorizons.com/",
 			"sections": [
 				{
 					"id": 0,
@@ -396,7 +412,6 @@
 				"long": "Landing page redesign and development for a luxury real estate brand.\nUI Design and Frontend Development."
 			},
 			"title": "hanna luxury",
-			"url": "https://www.howardhanna.com/hanna-luxury",
 			"sections" : [
 				{
 					"id": 0,
@@ -543,7 +558,6 @@
 				"long": "Corporate website development for philanthropy efforts.\nFront-end development and design support."
 			},
 			"title": "children's free care fund",
-			"url": "https://howardhannachildrensfreecarefund.org/",
 			"sections" : [
 				{
 					"id": 0,

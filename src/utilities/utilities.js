@@ -41,7 +41,7 @@ export const convertYear = (date) => {
 export const serifAccent = () => {
 	const queryAccents = document.querySelectorAll(".a");
 
-	console.log(queryAccents)
+	// console.log(queryAccents)
 
 	for (let i = 0; i < queryAccents.length; i++) {
 		const accent = queryAccents[i].innerHTML

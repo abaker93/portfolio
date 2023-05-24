@@ -15588,6 +15588,7 @@ ul:not(.nav):not(.navbar-nav) li::before {
 [data-template=resume] .nav {
   position: sticky;
   top: 150px;
+  z-index: 1;
 }
 [data-template=resume] h3 + div, [data-template=resume] .h3 + div {
   margin-top: 1.5rem;

@@ -53,8 +53,6 @@ const Navbar = () => {
 									) : (
 										<Link
 											className="nav-link"
-											// data-bs-dismiss="offcanvas"
-											// data-bs-target="#navbarNav"
 											to="/#about"
 										>
 											<span>Info</span>
@@ -76,8 +74,6 @@ const Navbar = () => {
 									) : (
 										<Link
 											className="nav-link"
-											// data-bs-dismiss="offcanvas"
-											// data-bs-target="#navbarNav"
 											to="/#portfolio"
 										>
 											<span>Work</span>
@@ -87,7 +83,7 @@ const Navbar = () => {
 									
 								</li>
 								<li className="nav-item mx-sm-2">
-									<button type="button" className="btn btn-outline-dark a" onClick={e => handleClick(e, "contact")}>Contact</button>
+									<Link type="button" className="btn btn-outline-dark a" onClick={e => handleClick(e, "Footer")}>Contact</Link>
 								</li>
 							</ul>
 						</div>

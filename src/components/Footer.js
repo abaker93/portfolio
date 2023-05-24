@@ -6,7 +6,7 @@ const Footer = () => {
 	return (
 		<footer id="Footer" className="mt-5 py-3">
 
-			<div className="container-lg">
+			<div id="contact" className="container-lg">
 				<div className="row my-3">
 					<div className="col">
 						<p className="display-6 baseline-rule a">let's work together!</p>

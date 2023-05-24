@@ -320,6 +320,7 @@ ul:not(.nav):not(.navbar-nav) li {
 	.nav {
 		position: sticky;
 		top: 150px;
+		z-index: 1;
 	}
 
 	h3 + div { margin-top: 1.5rem; }

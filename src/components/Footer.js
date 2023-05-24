@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Arrow, EnvelopePaperHeartBI } from "../assets/icons";
-import Contact from "./Contact";
+import ContactForm from "./ContactForm";
 
 const Footer = () => {
 	return (
@@ -52,7 +52,7 @@ const Footer = () => {
 
 				<div className="row my-6">
 					<div className="col-lg-6 col-md-8">
-						<Contact />
+						<ContactForm />
 					</div>
 				</div>
 			</div>

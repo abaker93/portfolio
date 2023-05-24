@@ -14,18 +14,22 @@ const Home = () => {
 			<main data-template="home">
 				<Hero />
 				<About />
-				<div id="Portfolio" className="container-lg">
+				<div id="portfolio" className="container-lg pt-10">
 					{portfolio.filter(f => f.featured).map(p => (
 						<PortfolioItem key={p.id} {...p} />
 					))}
 				</div>
-				{/* <Contact /> */}
 			</main>
 		</>
 	)
 }
 
 const Hero = () => {
+	const handleClick = (event, id) => {
+		document.getElementById(id).scrollIntoView({behavior: "smooth"})
+	}
+
+
 	return (
 		<div id="Hero">
 			<div className="container-lg">
@@ -46,8 +50,14 @@ const Hero = () => {
 					</div>
 				</h1>
 				<div className="scroll-indicator">
-					<Arrow direction="down" stroke="#302927" />
-					<span className="h5 a">scroll</span>
+					<Link
+						className="link-dark link-underline link-underline-opacity-0"
+						onClick={e => handleClick(e, "about")}
+						href="/#about"
+					>
+						<Arrow direction="down" stroke="#302927" />
+						<span className="h5 a">scroll</span>
+					</Link>
 				</div>
 			</div>
 		</div>
@@ -56,7 +66,7 @@ const Hero = () => {
 
 const About = () => {
 	return (
-		<div id="About" className="container-md py-10">
+		<div id="about" className="container-md pt-10">
 			<div className="row">
 				<div className="col-4 title">
 					<h2 className="display-5 a">anna</h2>
@@ -113,42 +123,6 @@ const PortfolioItem = p => {
 				</div>
 			</div>
 		</div>
-	)
-}
-
-const Contact = () => {
-	return (
-		<div id="Contact" className="container-lg">
-			<div className="row">
-				<div className="col">
-					<form>
-						<div className='form-floating mb-3'>
-							<input type="text" className="form-control" id="nameInput" placeholder="John Smith" />
-							<label htmlFor="nameInput">Your Name</label>
-						</div>
-						<div className='form-floating mb-3'>
-							<input type="email" className="form-control" id="emailInput" placeholder="john.smith@email.com" />
-							<label htmlFor="emailInput">Your Email</label>
-						</div>
-						<div className='form-floating mb-3'>
-							<select className="form-select" defaultValue={0} aria-label="Select the subject of your message">
-								<option value="0">Open this select menu</option>
-								<option value="1">One</option>
-								<option value="2">Two</option>
-								<option value="3">Three</option>
-							</select>
-							<label htmlFor="subjectSelect">Message Subject</label>
-						</div>
-						<div className='form-floating mb-3'>
-							<textarea className="form-control" id="messageTextarea" placeholder="Your message..."></textarea>
-							<label htmlFor="messageTextarea" className="form-label">Your Message</label>
-						</div>
-						<button type="submit" className="btn btn-outline-dark">Submit</button>
-					</form>
-				</div>
-			</div>
-		</div>
-		
 	)
 }
 

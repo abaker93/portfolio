@@ -41,7 +41,7 @@ const Navbar = () => {
 										data-bs-dismiss="offcanvas"
 										data-bs-target="#navbarNav"
 										onClick={e => handleClick(e, "about")}
-										to="/#about"
+										href="/#about"
 									>
 										<span>Info</span>
 										<span className="a">about me</span>

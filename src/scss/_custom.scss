@@ -22,7 +22,7 @@
 
 #root {
 	position: relative;
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 .a > i {
@@ -64,6 +64,7 @@ ul:not(.nav):not(.navbar-nav) li {
 //~~	background  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 #Background {
 	position: absolute;
+	overflow: hidden;
 	top: 0;
 	left: 0;
 	height: 100%;
@@ -318,7 +319,7 @@ ul:not(.nav):not(.navbar-nav) li {
 [data-template=resume] {
 	.nav {
 		position: sticky;
-		top: 100px;
+		top: 150px;
 	}
 
 	h3 + div { margin-top: 1.5rem; }
@@ -368,6 +369,10 @@ ul:not(.nav):not(.navbar-nav) li {
 	.logo-anna-baker-design { padding: 0.55rem; }
 	.logo-mercyhurst { padding: 0.25rem; }
 	.logo-vert-markets { padding: 0.25rem; }
+
+	#industry-experience, #teaching-experience, #education, #skills {
+		scroll-margin-top: 8rem;
+	}
 }
 ////																							
 

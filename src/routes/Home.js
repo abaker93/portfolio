@@ -1,18 +1,34 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Background from "../components/Background";
 import portfolioData from "../data/portfolio.json";
 import Arrow from "../assets/Arrow";
 import { GitHubBI, LinkedInBI } from "../assets/icons";
 
 const Home = () => {
+	const location = useLocation();
+	// console.log(location.hash)
 	const portfolio = portfolioData.portfolio;
+
+	const handleClick = (e, id) => {
+		document.getElementById(id).scrollIntoView({ behavior: "smooth" })
+	}
+
+	useEffect(() => {
+		console.log(location.hash)
+		if (location.hash) {
+			let l = location.hash
+			l = l.replace("#", "")
+			console.log(l)
+			setTimeout(() => document.getElementById(l).scrollIntoView({ behavior: "smooth" }), 1) 
+		}
+	}, [location])
 
 	return (
 		<>
 			<Background />
 			<main data-template="home">
-				<Hero />
+				<Hero handleClick={handleClick}/>
 				<About />
 				<div id="portfolio" className="container-lg pt-10">
 					{portfolio.filter(f => f.featured).map(p => (
@@ -24,12 +40,7 @@ const Home = () => {
 	)
 }
 
-const Hero = () => {
-	const handleClick = (event, id) => {
-		document.getElementById(id).scrollIntoView({behavior: "smooth"})
-	}
-
-
+const Hero = p => {
 	return (
 		<div id="Hero">
 			<div className="container-lg">
@@ -52,7 +63,7 @@ const Hero = () => {
 				<div className="scroll-indicator">
 					<Link
 						className="link-dark link-underline link-underline-opacity-0"
-						onClick={e => handleClick(e, "about")}
+						onClick={e => p.handleClick(e, "about")}
 						href="/#about"
 					>
 						<Arrow direction="down" stroke="#302927" />

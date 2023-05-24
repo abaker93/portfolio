@@ -7,7 +7,7 @@ import { serifAccent } from "../utilities/utilities";
 const Root = () => {
 
   useEffect(() => {
-    serifAccent();
+    setTimeout(() => serifAccent(), 1)
   }, [])
   
   return (

@@ -21,6 +21,7 @@ const Footer = () => {
 							style={{ "--bs-icon-link-transform": "translate3d(0.125rem, -0.125rem, 0)" }}
 							href="https://www.linkedin.com/in/annabakerdesign/"
 							target="_blank"
+							rel="noreferrer"
 						>
 							<Arrow direction="up-right" />
 							LinkedIn
@@ -32,6 +33,7 @@ const Footer = () => {
 							style={{ "--bs-icon-link-transform": "translate3d(0.15rem, -0.15rem, 0)" }}
 							href="https://github.com/abaker93/"
 							target="_blank"
+							rel="noreferrer"
 						>
 							<Arrow direction="up-right" />
 							GitHub
@@ -43,6 +45,7 @@ const Footer = () => {
 							style={{ "--bs-icon-link-transform": "translate3d(0, -0.125rem, 0)" }}
 							href="mailto:hello@annabaker.dev"
 							target="_blank"
+							rel="noreferrer"
 						>
 							<EnvelopePaperHeartBI />
 							hello@annabaker.dev

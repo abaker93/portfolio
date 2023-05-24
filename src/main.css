@@ -15338,7 +15338,6 @@ textarea.form-control-lg {
 
 #root {
   position: relative;
-  overflow: hidden;
 }
 
 .a > i {
@@ -15372,6 +15371,7 @@ ul:not(.nav):not(.navbar-nav) li::before {
 
 #Background {
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   height: 100%;
@@ -15587,7 +15587,7 @@ ul:not(.nav):not(.navbar-nav) li::before {
 
 [data-template=resume] .nav {
   position: sticky;
-  top: 100px;
+  top: 150px;
 }
 [data-template=resume] h3 + div, [data-template=resume] .h3 + div {
   margin-top: 1.5rem;
@@ -15641,6 +15641,9 @@ ul:not(.nav):not(.navbar-nav) li::before {
 }
 [data-template=resume] .logo-vert-markets {
   padding: 0.25rem;
+}
+[data-template=resume] #industry-experience, [data-template=resume] #teaching-experience, [data-template=resume] #education, [data-template=resume] #skills {
+  scroll-margin-top: 8rem;
 }
 
 @keyframes noise {

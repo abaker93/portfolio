@@ -335,18 +335,6 @@
 				{
 					"id": 5,
 					"template": "single_col_img",
-					"title": "wireframe",
-					"img": [
-						{
-							"id": 0,
-							"img": "relocation-horizons-wireframe.png",
-							"alt": "relocation horizons wireframes"
-						}
-					]
-				},
-				{
-					"id": 6,
-					"template": "single_col_img",
 					"title": "homepage",
 					"img": [
 						{
@@ -357,7 +345,7 @@
 					]
 				},
 				{
-					"id": 7,
+					"id": 6,
 					"template": "single_col_img",
 					"title": "interior pages",
 					"img": [
@@ -388,7 +376,156 @@
 			]
 		},
 		{
-			"id": 4,
+			"id": 2,
+			"buttons": [],
+			"featured": true,
+			"featured_img": "hsuite-1.jpg",
+			"gradient_colors": [ "#01A530", "#0C653A" ],
+			"page": "hsuite-intranet",
+			"tags": [
+				"Design",
+				"Development",
+				"Adobe XD",
+				"HTML",
+				"CSS",
+				"JavaScript"
+			],
+			"tagline": {
+				"short": "Corporate intranet design & development for a real estate company.",
+				"long": "Corporate intranet design & development for a real estate company.\nUX, UI Design and Frontend Development. Information management."
+			},
+			"title": "hsuite intranet",
+			"sections" : [
+				{
+					"id": 0,
+					"template": "logo",
+					"title": "logo",
+					"logos": [
+						{
+							"id": 0,
+							"img": "hsuite-logo.svg",
+							"alt": "hsuite logo"
+						}
+					]
+				},
+				{
+					"id": 1,
+					"template": "overview",
+					"title": "overview",
+					"columns": [
+						{
+							"id": 0,
+							"double_col":  false,
+							"title": "what is hsuite?",
+							"content": "HSuite is the intranet used everyday by agents and employees of Howard Hanna. This is their hub for daily operations, single sign-on for external tools, and employment information such as HR and payroll."
+						},
+						{
+							"id": 1,
+							"double_col":  true,
+							"title": "project goal",
+							"content": "The original homepage was cluttered and only featured a few tools & programs specific to agents needs instead of having relevancy to all users. It was also confusing for agents to find any tools that weren’t immediately available on the homepage. Many tools and programs were getting limited usage or completely passed over because they were so hidden within dropdown menus."
+						}
+					]
+				},
+				{
+					"id": 2,
+					"template": "single_col_img",
+					"title": "original homepage",
+					"img": [
+						{
+							"id": 0,
+							"img": "hsuite-original.png",
+							"alt": "original hsuite homepage"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"template": "typography",
+					"title": "typography",
+					"typography": [
+						{
+							"id": 0,
+							"img": "hsuite-type-1.png",
+							"alt": "arial regular and bold"
+						}
+					]
+				},
+				{
+					"id": 4,
+					"template": "color_palette",
+					"title": "color palette",
+					"color_palette": [
+						{
+							"id": 0,
+							"color": "#FFFFFF",
+							"hex": "#4F4F4F",
+							"name": "Warm Gray"
+						},
+						{
+							"id": 1,
+							"color": "#000000",
+							"hex": "#F1ECE5",
+							"name": "Tan"
+						},
+						{
+							"id": 2,
+							"color": "#FFFFFF",
+							"hex": "#0C653A",
+							"name": "HH Green"
+						},
+						{
+							"id": 3,
+							"color": "#000000",
+							"hex": "#FBCE20",
+							"name": "HH Yellow"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"template": "single_col_img",
+					"title": "homepage dashboard",
+					"img": [
+						{
+							"id": 0,
+							"img": "hsuite-home.png",
+							"alt": "hsuite homepage dashboard"
+						}
+					]
+				},
+				{
+					"id": 5,
+					"template": "single_col_img",
+					"title": "interior pages",
+					"img": [
+						{
+							"id": 0,
+							"img": "hsuite-interior.png",
+							"alt": "hsuite interior pages"
+						}
+					]
+				},
+				{
+					"id": 7,
+					"template": "tools",
+					"title": "tools & techniques",
+					"tools": [
+						"Adobe XD",
+						"User Research",
+						"UI/UX Design",
+						"User Journeys",
+						"High Fidelity Prototypes",
+						"Responsive Design",
+						"CSS",
+						"HTML",
+						"JavaScript"
+					]
+				}
+			]
+		},
+		{
+			"id": 3,
 			"buttons": [
 				{
 					"id": 0,
@@ -532,7 +669,7 @@
 			]
 		},
 		{
-			"id": 5,
+			"id": 4,
 			"buttons": [
 				{
 					"id": 0,

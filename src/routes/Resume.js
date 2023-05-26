@@ -134,7 +134,7 @@ const ResumeContainer = () => {
 						<div id="skills" className="row resume-item">
 							<div className="col">
 								<h3 className="h2 baseline-rule-end mb-4 a">skills</h3>
-								<div className="row">
+								<div className="row mb-4">
 									<div className="col-md-6">
 										<div className="row mb-3">
 											<div className="col">
@@ -188,6 +188,26 @@ const ResumeContainer = () => {
 									</div>
 
 								</div>
+
+								<div className="row">
+									<div className="col">
+										<div className="row mb-3">
+											<div className="col">
+												<h4 className="h3 a">personal skills</h4>
+											</div>
+										</div>
+										<div className="row mb-4">
+											<div className="col">
+												{data.skills
+													.filter(f => f.category === "Personal")
+													.map(m => (
+														<div key={m.id} className="chip chip-light chip-sm me-2 mb-1 text-700">{m.name}</div>
+												))}
+											</div>
+										</div>
+									</div>
+								</div>
+
 							</div>
 						</div>
 

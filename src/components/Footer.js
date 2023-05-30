@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 
 const Footer = () => {
 	return (
-		<footer id="Footer" className="mt-5 py-3">
+		<footer id="Footer" className="overflow-x-hidden mt-5 py-3">
 
 			<div id="contact" className="container-lg">
 				<div className="row my-3">

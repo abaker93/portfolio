@@ -1,6 +1,10 @@
 .card-portfolio {
 	align-items: end;
 
+	&:not(:last-child) {
+		margin-bottom: 5rem;
+	}
+
 	&.portfolio-right { flex-direction: row-reverse; }
 
 	.image-container {

@@ -6,10 +6,10 @@ const Footer = () => {
 	return (
 		<footer id="Footer" className="overflow-x-hidden mt-5 py-3">
 
-			<div id="contact" className="container-lg">
+			<div id="contact" className="container-md">
 				<div className="row my-3">
 					<div className="col">
-						<p className="display-6 baseline-rule a">let's work together!</p>
+						<p className="display-6 baseline-rule a">let's create together!</p>
 						<p>Got ideas? Looking for a new team member? Want to meet up for coffee? Drop me a note below <Arrow direction="right-down" className="" /></p>
 					</div>
 				</div>

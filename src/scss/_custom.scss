@@ -81,10 +81,9 @@ ul:not(.nav):not(.navbar-nav) li {
 
 //~~	hero	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 [data-template=home] #Hero {
-	height: 100vh;
 	position: relative;
 
-	.container-lg { height: 100%; }
+	.container-md { height: 100%; }
 }
 
 [data-template=resume] #Hero {
@@ -99,13 +98,13 @@ ul:not(.nav):not(.navbar-nav) li {
 
 .scroll-indicator {
 	position: absolute;
-	bottom: 3.25rem;
-	right: 3.25rem;
+	bottom: 1rem;
+	right: 1rem;
 
 	.arrow.down {
 		position: absolute;
-		bottom: 0.25rem;
-		right: 1.25rem;
+		bottom: 0;
+		right: 0;
 		width: 2.75rem;
 		transform: rotate(-14deg);
 
@@ -133,7 +132,7 @@ ul:not(.nav):not(.navbar-nav) li {
 		display: flex;
 		flex-wrap: wrap;
 		align-content: center;
-		font-size: 20vh;
+		font-size: 20vw;
 
 		> .row {
 			position: relative;
@@ -146,13 +145,13 @@ ul:not(.nav):not(.navbar-nav) li {
 				bottom: 0;
 				left: 0;
 				z-index: -1;
-				font-size: 70vh;
+				font-size: 70vw;
 				font-family: $font-family-serif-decoration;
-				mix-blend-mode: overlay;
+				// mix-blend-mode: overlay;
 				opacity: 0.2;
 			}
 
-			> .col-auto { mix-blend-mode: overlay; }
+			// > .col-auto { mix-blend-mode: overlay; }
 		}
 	}
 
@@ -229,7 +228,6 @@ ul:not(.nav):not(.navbar-nav) li {
 ////																							
 
 
-
 //~~	animations	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 //		scroll arrow
 @keyframes scroll {
@@ -252,4 +250,38 @@ ul:not(.nav):not(.navbar-nav) li {
 		stroke-dashoffset: 0;
 	}
 }
+////																							
+
+
+
+//~~	responsive	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+// X-Small devices (portrait phones, less than 576px)
+@media screen and (max-width: 575px) {}
+
+// Small devices (landscape phones, 576px and up)
+@media screen and (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media screen and (min-width: 768px) {
+	[data-template=home] #Hero { height: 100vh; }
+	
+	.scroll-indicator {
+		bottom: 3.25rem;
+		right: 3.25rem;
+
+		.arrow.down {
+			bottom: 0.25rem;
+			right: 1.25rem;
+		}
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media screen and (min-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media screen and (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media screen and (min-width: 1400px) {}
 ////																							

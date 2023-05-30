@@ -26,11 +26,11 @@ const Home = () => {
 
 	return (
 		<>
-			<Background />
+			{/* <Background /> */}
 			<main data-template="home">
 				<Hero handleClick={handleClick}/>
 				<About />
-				<div id="portfolio" className="container-lg pt-10">
+				<div id="portfolio" className="container-md pt-10 overflow-x-hidden">
 					{portfolio.filter(f => f.featured).map(p => (
 						<PortfolioItem key={p.id} {...p} />
 					))}
@@ -42,8 +42,8 @@ const Home = () => {
 
 const Hero = p => {
 	return (
-		<div id="Hero">
-			<div className="container-lg">
+		<div id="Hero" className="pt-8 pb-5 py-md-0">
+			<div className="container-md">
 				<h1 className="display-1">
 					<div className="row">
 						<div className="col-auto offset-md-1 a">creative</div>
@@ -51,20 +51,19 @@ const Hero = p => {
 						<div className="col-auto offset-md-1">
 							<div className="row">
 								<div className="col-auto a">digital</div>
-								<div className="col-auto d-flex align-items-end">
+								<div className="col-auto d-none d-md-flex align-items-end">
 									<span className="p text-uppercase pb-4">Crafting amazing web experiences.</span>
 								</div>
 							</div>
 						</div>
-						<div className="col-auto offset-md-3 a">designer</div>
-
+						<div className="col-auto offset-md-3 ms-auto ms-md-0 a">designer</div>
 					</div>
 				</h1>
-				<div className="scroll-indicator">
+				<p className="d-md-none text-uppercase text-center">Crafting amazing<br />web experiences.</p>
+				<div className="scroll-indicator d-none d-md-inline ">
 					<Link
 						className="link-dark link-underline link-underline-opacity-0"
 						onClick={e => p.handleClick(e, "about")}
-						href="/#about"
 					>
 						<Arrow direction="down" stroke="#302927" />
 						<span className="h5 a">scroll</span>
@@ -77,24 +76,24 @@ const Hero = p => {
 
 const About = () => {
 	return (
-		<div id="about" className="container-md pt-10">
+		<div id="about" className="container-md pt-0 pt-md-10">
 			<div className="row">
-				<div className="col-4 title">
+				<div className="col-12 col-md-4">
 					<h2 className="display-5 a">anna</h2>
 					<p>(n) /ˈänə/</p>
 				</div>
-				<div className="col-8">
+				<div className="col-12 col-md-8">
 					<p>Hi, I'm Anna, a full stack designer with a passion for creating engaging digital experiences. I have a strong background in design, technology, and user-centered thinking and a track record of delivering user-friendly solutions that meet business goals and enhance user satisfaction. My expertise includes conducting user research, creating wireframes and prototypes, and conducting user testing.</p>
 					<p>I use design programs such as Figma, Adobe XD, Photoshop, and Illustrator to create visually appealing and functional designs.</p>
 					<p>As a developer, I have expertise in HTML, CSS, JavaScript, and frameworks such as React. I create dynamic and responsive user interfaces that are optimized for performance and accessibility. I stay up-to-date with the latest design and development trends to ensure my solutions are scalable and meet industry standards.</p>
 					<p>Currently, I'm also a proud professor of Graphic Design at Mercyhurst University in Erie, Pennsylvania.</p>
-					<div className="mt-5 d-flex justify-content-end">
-						<a className="btn btn-outline-dark me-4 a" href="/resume">Resume</a>
-						<a className="btn btn-icon btn-outline-dark me-4" href="https://www.linkedin.com/in/annabakerdesign/">
+					<div className="mt-5 d-flex flex-column flex-sm-row gap-3 justify-content-end">
+						<a className="btn btn-icon btn-outline-dark me-sm-4 justify-content-center a" href="/resume">Resume</a>
+						<a className="btn btn-icon btn-outline-dark me-sm-4 justify-content-center" href="https://www.linkedin.com/in/annabakerdesign/">
 							<LinkedInBI />
 							<span className="a">linkedin</span>
 						</a>
-						<a className="btn btn-icon btn-outline-dark" href="https://github.com/abaker93/">
+						<a className="btn btn-icon btn-outline-dark justify-content-center" href="https://github.com/abaker93/">
 							<GitHubBI />
 							<span className="a">github</span>
 						</a>
@@ -116,7 +115,7 @@ const PortfolioItem = p => {
 	}
 
 	return (
-		<div className={`row gx-5 mb-8 card-portfolio portfolio-${p.id % 2 === 0 ? "left" : "right"}`}>
+		<div className={`row gx-5 card-portfolio portfolio-${p.id % 2 === 0 ? "left" : "right"}`}>
 			<div className="col-lg-5 image">
 				<figure className="image-container" onMouseMove={e => handleMouseMove(e)} onMouseLeave={() => setTransformOrigin('50% 50%')}>
 					<Link to={`portfolio/${p.page}`}>

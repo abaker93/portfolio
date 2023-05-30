@@ -77,11 +77,18 @@ $display-font-weight:	$font-weight-normal;
 
 
 
+//~~	focus ring variables  ~~~~~~~~~~~~~~~~~~~~//
+$focus-ring-color:      rgba($primary, $focus-ring-opacity);
+$focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color;
+////																							
+
+
+
 //~~	input button variables  ~~~~~~~~~~~~~~~~~~//
 $input-btn-font-family:       $font-family-serif;
 $input-btn-font-size:         $h4-font-size;
-$input-btn-focus-color:       rgba($component-active-bg, $input-btn-focus-color-opacity);
-$input-btn-focus-box-shadow:  0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color;
+$input-btn-focus-color:				$focus-ring-color;
+$input-btn-focus-box-shadow:	$focus-ring-box-shadow;
 ////																							
 
 

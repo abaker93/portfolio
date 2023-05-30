@@ -59,3 +59,11 @@
 	}
 }
 
+.navbar-toggler {
+	border: none;
+	padding: revert;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+	box-shadow: $focus-ring-box-shadow;
+}

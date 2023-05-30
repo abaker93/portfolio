@@ -35,11 +35,11 @@ const Navbar = () => {
 					</button>
 					<div className="offcanvas offcanvas-end" tabIndex="-1" id="navbarNav">
 						<div className="offcanvas-header">
-							<button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							<button type="button" className="btn-close mx-5 mt-5" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 						</div>
 						<div className="offcanvas-body">
-							<ul className="navbar-nav align-items-center ms-auto">
-								<li className="nav-item mx-sm-2">
+							<ul className="navbar-nav align-items-sm-center mx-5 mx-sm-0 ms-sm-auto">
+								<li className="nav-item my-2 my-sm-0 mx-sm-2">
 									{isHome ? (
 										<Link
 											className="nav-link"
@@ -60,7 +60,7 @@ const Navbar = () => {
 										</Link>
 									)}
 								</li>
-								<li className="nav-item mx-sm-2">
+								<li className="nav-item my-2 my-sm-0 mx-sm-2">
 									{isHome ? (
 										<Link
 											className="nav-link"
@@ -82,7 +82,7 @@ const Navbar = () => {
 									)}
 									
 								</li>
-								<li className="nav-item mx-sm-2">
+								<li className="nav-item my-2 my-sm-0 mx-sm-2">
 									<Link type="button" className="btn btn-outline-dark a" onClick={e => handleClick(e, "Footer")}>Contact</Link>
 								</li>
 							</ul>

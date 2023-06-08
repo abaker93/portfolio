@@ -366,11 +366,11 @@ const ResumeEducation = (p) => {
 		<div className="position row gx-3">
 			<div className="col-auto">
 				<button
-					className={`btn btn-toggle-outline-dark${p.present ? "" : " collapsed"}`}
+					className={`btn btn-toggle-outline-dark${p.present || p.id === 1 ? "" : " collapsed"}`}
 					type="button"
 					data-bs-toggle="collapse"
 					data-bs-target={`#details-${p.id}`}
-					aria-expanded={p.present ? "true" : "false"}
+					aria-expanded={p.present || p.id === 1 ? "true" : "false"}
 					aria-controls={`details-${p.id}`}
 				></button>
 			</div>
@@ -378,25 +378,30 @@ const ResumeEducation = (p) => {
 				<div className="row mb-2">
 					<div className="col">
 						<h5 className="h3 m-0 a">{p.area}</h5>
-						<p className="small text-600 m-0">{p.startDate ? (
+						{/* <p className="small text-600 m-0">{p.startDate ? (
 							`${convertMonth(p.startDate)} ${convertYear(p.startDate)} — ${p.present ? "Present" : convertMonth(p.endDate)} ${convertYear(p.endDate)}`
-						) : null}</p>
+						) : null}</p> */}
 					</div>
 				</div>
 				<div className="row">
-					<div id={`details-${p.id}`} className={`col collapse${p.present ? " show" : ""}`} data-bs-parent={`positions-${p.id}`}>
+					<div id={`details-${p.id}`} className={`col collapse${p.present || p.id === 1 ? " show" : ""}`} data-bs-parent={`positions-${p.id}`}>
 						{p.url ? (
-							<Link className="icon-link icon-link-hover" to={p.url} target="_blank">
+							<Link className="icon-link icon-link-hover small" to={p.url} target="_blank">
 								Professional Certificate
 								<CertificateBI />
 							</Link>
 						) : null}
 						{p.score ? (
-							<p className="small">Average Grade Achieved: {p.score}</p>
+							<p className="xsmall fst-italic">average grade achieved: {p.score}</p>
 						) : null}
 						{p.courses.length > 0 ? (
 							<>
-								<h6 className="p"><small><strong>Course Certificates:</strong></small></h6>
+								{/* <Link className="icon-link icon-link-hover" to={p.url}>
+									<small>
+										Course Certificate
+										<CertificateBI />
+									</small>
+								</Link>
 								<ul className="small m-0">
 									{p.courses
 										.sort((a,b) => a.id - b.id)
@@ -409,7 +414,7 @@ const ResumeEducation = (p) => {
 											</Link>
 										</li>
 									))}
-								</ul>
+								</ul> */}
 							</>
 						) : null}
 						{p.minor ? (

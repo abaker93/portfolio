@@ -15570,6 +15570,10 @@ textarea.form-control-lg {
   font-size: 1.25rem !important;
 }
 
+.xsmall {
+  font-size: 0.75rem !important;
+}
+
 .xxsmall {
   font-size: 0.6em !important;
 }

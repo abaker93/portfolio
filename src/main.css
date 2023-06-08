@@ -15320,6 +15320,10 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 0.25rem rgba(91, 58, 115, 0.25);
 }
 
+.offcanvas {
+  height: 100vh;
+}
+
 #Background {
   position: absolute;
   overflow: hidden;
@@ -15704,7 +15708,10 @@ ul:not(.nav):not(.navbar-nav) li::before {
   font-family: swear-display-cilati, sans-serif;
   opacity: 0.2;
 }
-[data-template=home] #About .title p {
+[data-template=home] #about {
+  scroll-margin-top: 6rem;
+}
+[data-template=home] #about .title p {
   font-size: 1.5rem;
 }
 

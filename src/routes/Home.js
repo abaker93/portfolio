@@ -7,7 +7,6 @@ import { GitHubBI, LinkedInBI } from "../assets/icons";
 
 const Home = () => {
 	const location = useLocation();
-	// console.log(location.hash)
 	const portfolio = portfolioData.portfolio;
 
 	const handleClick = (e, id) => {
@@ -15,7 +14,6 @@ const Home = () => {
 	}
 
 	useEffect(() => {
-		console.log(location.hash)
 		if (location.hash) {
 			let l = location.hash
 			l = l.replace("#", "")

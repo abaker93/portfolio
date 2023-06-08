@@ -15,7 +15,10 @@ const Navbar = () => {
 	}, [location])
 
 	const handleClick = (event, id) => {
-		document.getElementById(id).scrollIntoView({behavior: "smooth"})
+		const offcanvas = document.getElementById("navbarNav")
+		offcanvas.addEventListener("hidden.bs.offcanvas", () => document.getElementById(id).scrollIntoView({behavior: "smooth"}))
+		// document.getElementsByClassName("offcanvas").classList.remove("show");
+		// document.getElementsByClassName("offcanvas-backdrop").classList.remove("show");
 	}
 
 	return (
@@ -33,7 +36,7 @@ const Navbar = () => {
 					>
 						<span className="navbar-toggler-icon"></span>
 					</button>
-					<div className="offcanvas offcanvas-end" tabIndex="-1" id="navbarNav">
+					<div className="offcanvas offcanvas-end" data-bs-scroll="true" tabIndex="-1" id="navbarNav">
 						<div className="offcanvas-header">
 							<button type="button" className="btn-close mx-5 mt-5" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 						</div>

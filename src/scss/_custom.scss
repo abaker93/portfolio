@@ -156,7 +156,9 @@ ul:not(.nav):not(.navbar-nav) li {
 		}
 	}
 
-	#About {
+	#about {
+		scroll-margin-top: 6rem;
+
 		.title p {
 			font-size: 1.5rem;
 		}

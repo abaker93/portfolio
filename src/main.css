@@ -15577,7 +15577,7 @@ textarea.form-control-lg {
 }
 
 .xsmall {
-  font-size: 0.75rem !important;
+  font-size: 0.75em !important;
 }
 
 .xxsmall {
@@ -15808,6 +15808,9 @@ ul:not(.nav):not(.navbar-nav) li::before {
 @media screen and (min-width: 768px) {
   [data-template=home] #Hero {
     height: 100vh;
+  }
+  [data-template=home] h1, [data-template=home] .h1 {
+    font-size: 16vw;
   }
   .scroll-indicator {
     bottom: 3.25rem;

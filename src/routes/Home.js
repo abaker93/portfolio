@@ -46,15 +46,15 @@ const Hero = p => {
 					<div className="row">
 						<div className="col-auto offset-md-1 a">creative</div>
 						<div className="col-auto ms-auto a">developer</div>
-						<div className="col-auto offset-md-1">
+						<div className="col-auto offset-lg-1">
 							<div className="row">
 								<div className="col-auto a">digital</div>
-								<div className="col-auto d-none d-md-flex align-items-end">
-									<p className="p tagline text-uppercase pb-4">Crafting amazing web experiences.</p>
+								<div className="col d-none d-md-flex align-items-end">
+									<p className="p tagline text-uppercase m-0 pb-lg-4">Crafting amazing web experiences.</p>
 								</div>
 							</div>
 						</div>
-						<div className="col-auto offset-md-3 ms-auto ms-md-0 a">designer</div>
+						<div className="col-auto offset-md-3 text-align-right text-align-md-left a">designer</div>
 					</div>
 				</h1>
 				<p className="tagline d-md-none text-uppercase text-center small">Crafting amazing<br />web experiences.</p>

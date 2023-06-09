@@ -15237,6 +15237,11 @@ textarea.form-control-lg {
   --bs-chip-border-radius: 50rem;
 }
 
+@media screen and (min-width: 768px) {
+  .chip {
+    --bs-chip-font-size: 0.8rem;
+  }
+}
 textarea {
   height: 150px;
 }
@@ -15353,80 +15358,67 @@ textarea.form-control-lg {
   width: 100%;
   top: 0;
   left: 0;
-  filter: blur(150px);
+  filter: blur(50px);
 }
 
 .bg-circles.index {
   position: fixed;
 }
 
-.bg-circle {
+[class*=bg-circle]:not(.bg-circles) {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: auto;
-  bottom: auto;
-  border-radius: 100%;
-  opacity: 1;
 }
-.bg-circle._1 {
+[class*=bg-circle]:not(.bg-circles)[class$=_1] {
+  inset: -16vh auto auto 16vw;
   width: 35vw;
-  height: 35vw;
-  margin-top: -16vh;
-  margin-left: 16vw;
+  height: 35vh;
   border-radius: 20%;
   background-color: #5B3A73;
   animation: bg-circle-1 20s linear 0s infinite;
 }
-.bg-circle._2 {
+[class*=bg-circle]:not(.bg-circles)[class$=_2] {
+  inset: auto auto 20vh -20vw;
   width: 30vw;
-  height: 30vw;
-  margin-top: 40vh;
-  border-radius: 30%;
+  height: 30vh;
+  border-radius: 100%;
   background-color: #5B3A73;
   opacity: 0.7;
   animation: bg-circle-2 25s linear 0s infinite;
 }
-.bg-circle._3 {
+[class*=bg-circle]:not(.bg-circles)[class$=_3] {
+  inset: -2vh auto auto 52vw;
   width: 60vw;
-  height: 60vw;
-  margin-top: -2vh;
-  margin-left: 52vw;
+  height: 60vh;
+  border-radius: 100%;
   background-color: #FDFDFC;
   animation: bg-circle-3 16s linear 0s infinite;
 }
-.bg-circle._4 {
-  left: auto;
-  right: 0;
+[class*=bg-circle]:not(.bg-circles)[class$=_4] {
+  inset: -20vh -10vw auto auto;
   width: 50vw;
-  height: 50vw;
-  margin-top: -20vh;
-  margin-right: -10vw;
+  height: 50vh;
+  border-radius: 100%;
   background-color: #FE5F55;
   opacity: 0.8;
   animation: bg-circle-4 14s linear 0s infinite;
 }
-.bg-circle._5 {
+[class*=bg-circle]:not(.bg-circles)[class$=_5] {
+  inset: 25vh auto auto 30vw;
   width: 30vw;
-  height: 30vw;
-  margin-top: 25vh;
-  margin-left: 30vw;
+  height: 30vh;
   border-radius: 20%;
   background-color: #5B3A73;
   animation: bg-circle-5 25s linear 0s infinite;
 }
-.bg-circle._6 {
-  left: auto;
-  right: 0;
-  bottom: 0;
+[class*=bg-circle]:not(.bg-circles)[class$=_6] {
+  inset: 35vh -16vw auto auto;
   width: 40vw;
   height: 40vw;
-  margin-top: 35vh;
-  margin-right: -16vw;
+  border-radius: 100%;
   background-color: #FE5F55;
   animation: bg-circle-6 30s linear 0s infinite;
 }
-.bg-circle._7 {
+[class*=bg-circle]:not(.bg-circles)._7 {
   left: auto;
   right: 0;
   top: auto;
@@ -15438,7 +15430,7 @@ textarea.form-control-lg {
   opacity: 0.8;
   animation: bg-circle-2 30s linear 0s infinite;
 }
-.bg-circle._8 {
+[class*=bg-circle]:not(.bg-circles)._8 {
   top: auto;
   bottom: 0;
   width: 30vw;
@@ -15449,7 +15441,7 @@ textarea.form-control-lg {
   opacity: 0.8;
   animation: bg-circle-4 25s linear 0s infinite;
 }
-.bg-circle._9 {
+[class*=bg-circle]:not(.bg-circles)._9 {
   top: auto;
   bottom: 0;
   width: 35vw;
@@ -15460,6 +15452,16 @@ textarea.form-control-lg {
   animation: bg-circle-3 16s linear 0s infinite;
 }
 
+@media screen and (min-width: 768px) {
+  .bg-circles {
+    filter: blur(100px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg-circles {
+    filter: blur(150px);
+  }
+}
 @keyframes noise {
   0% {
     background-position: 0% 0%;
@@ -15706,7 +15708,14 @@ ul:not(.nav):not(.navbar-nav) li::before {
   z-index: -1;
   font-size: 70vw;
   font-family: swear-display-cilati, sans-serif;
+  mix-blend-mode: overlay;
   opacity: 0.2;
+}
+[data-template=home] h1 > .row > .col-auto, [data-template=home] .h1 > .row > .col-auto {
+  mix-blend-mode: overlay;
+}
+[data-template=home] .tagline {
+  mix-blend-mode: overlay;
 }
 [data-template=home] #about {
   scroll-margin-top: 6rem;

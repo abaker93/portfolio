@@ -4,7 +4,8 @@
   --#{$prefix}chip-padding-x: #{$chip-padding-x};
   --#{$prefix}chip-padding-y: #{$chip-padding-y};
   --#{$prefix}chip-font-family: #{$chip-font-family};
-  @include rfs($chip-font-size, --#{$prefix}chip-font-size);
+  --#{$prefix}chip-font-size: #{$chip-font-size-sm};
+  // @include rfs($chip-font-size, --#{$prefix}chip-font-size);
   --#{$prefix}chip-font-weight: #{$chip-font-weight};
   --#{$prefix}chip-line-height: #{$chip-line-height};
   --#{$prefix}chip-color: #{$body-color};
@@ -18,7 +19,8 @@
   display: inline-block;
   padding: calc(var(--#{$prefix}chip-padding-y) * 0.8) var(--#{$prefix}chip-padding-x) var(--#{$prefix}chip-padding-y);
   font-family: var(--#{$prefix}chip-font-family);
-  @include font-size(var(--#{$prefix}chip-font-size));
+  font-size: var(--#{$prefix}chip-font-size);
+  // @include font-size(var(--#{$prefix}chip-font-size));
   font-weight: var(--#{$prefix}chip-font-weight);
   line-height: var(--#{$prefix}chip-line-height);
   color: var(--#{$prefix}chip-color);
@@ -120,3 +122,29 @@
   ); 
 }
 ////																							   
+
+
+
+//~~	responsive	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+// X-Small devices (portrait phones, less than 576px)
+@media screen and (max-width: 575px) {}
+
+// Small devices (landscape phones, 576px and up)
+@media screen and (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media screen and (min-width: 768px) {
+  .chip {
+    --#{$prefix}chip-font-size: #{$chip-font-size};
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media screen and (min-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media screen and (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media screen and (min-width: 1400px) {}
+////																							

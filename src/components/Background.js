@@ -18,16 +18,13 @@ const Background = p => {
 		}
 	}, [location])
 
-	// console.log(isHome)
-	// console.log(location.pathname)
-
 	if (isHome) {
 		return (
 			<div id="Background">
 				<div className="bg-noise" />
 				<div className="bg-circles index">
-					<div className="bg-circle _1"></div>
-					<div className="bg-circle _2"></div>
+					<div className="bg-circle_1"></div>
+					<div className="bg-circle_2"></div>
 					<div className="bg-circle _3"></div>
 					<div className="bg-circle _4"></div>
 					<div className="bg-circle _5"></div>

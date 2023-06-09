@@ -27,79 +27,72 @@
 	width: 100%;
 	top: 0;
 	left: 0;
-	filter: blur(150px);
+	filter: blur(50px);
 }
 
 .bg-circles.index { position: fixed; }
 
-.bg-circle {
+[class*="bg-circle"]:not(.bg-circles) {
 	position: absolute;
-	top: 0;
-	left: 0;
-	right: auto;
-	bottom: auto;
-	border-radius: 100%;
-	opacity: 1;
 
-	&._1 {
+	&[class$="_1"] {
+		inset: -16vh auto auto 16vw;
 		width: 35vw;
-		height: 35vw;
-		margin-top: -16vh;
-		margin-left: 16vw;
+		height: 35vh;
+		
 		border-radius: 20%;
 		background-color: $purple-500;
 		animation: bg-circle-1 20s linear 0s infinite;
 	}
 
-	&._2 {
+	&[class$="_2"] {
+		inset: auto auto 20vh -20vw;
 		width: 30vw;
-		height: 30vw;
-		margin-top: 40vh;
-		border-radius: 30%;
+		height: 30vh;
+		
+		border-radius: 100%;
 		background-color: $purple-500;
 		opacity: 0.7;
 		animation: bg-circle-2 25s linear 0s infinite;
 	}
 
-	&._3 {
+	&[class$="_3"] {
+		inset: -2vh auto auto 52vw;
 		width: 60vw;
-		height: 60vw;
-		margin-top: -2vh;
-		margin-left: 52vw;
+		height: 60vh;
+
+		border-radius: 100%;
 		background-color: $cream-100;
 		animation: bg-circle-3 16s linear 0s infinite;
 	}
 
-	&._4 {
-		left: auto;
-		right: 0;
+	&[class$="_4"] {
+		inset: -20vh -10vw auto auto;
 		width: 50vw;
-		height: 50vw;
-		margin-top: -20vh;
-		margin-right: -10vw;
+		height: 50vh;
+
+		border-radius: 100%;
 		background-color: $red-500;
 		opacity: 0.8;
 		animation: bg-circle-4 14s linear 0s infinite;
 	}
 
-	&._5 {
+	&[class$="_5"] {
+		inset: 25vh auto auto 30vw;
 		width: 30vw;
-		height: 30vw;
-		margin-top: 25vh;
-		margin-left: 30vw;
+		height: 30vh;
+
 		border-radius: 20%;
 		background-color: $purple-500;
 		animation: bg-circle-5 25s linear 0s infinite;
 	}
 
-	&._6 {
-		left: auto;
-		right: 0;
-		bottom: 0;
+	&[class$="_6"] {
+		inset: 35vh -16vw auto auto;
 		width: 40vw;
 		height: 40vw;
-		margin-top: 35vh;
-		margin-right: -16vw;
+
+		border-radius: 100%;
 		background-color: $red-500;
 		animation: bg-circle-6 30s linear 0s infinite;
 	}
@@ -151,22 +144,20 @@
 @media screen and (min-width: 576px) {}
 
 // Medium devices (tablets, 768px and up)
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+	.bg-circles { filter: blur(100px) }
+}
 
 // Large devices (desktops, 992px and up)
 @media screen and (min-width: 992px) {}
 
-// X-Large devices (large desktops, 1200px and up)
-@media screen and (min-width: 1200px) {}
+// X-Large devices (large desktops, 1200px and up)       
+@media screen and (min-width: 1200px) {
+	.bg-circles { filter: blur(150px) }
+}
 
 // XX-Large devices (larger desktops, 1400px and up)
-@media screen and (min-width: 1400px) {
-	.bg-circle {
-		&._1 {
-			
-		}
-	}
-}
+@media screen and (min-width: 1400px) {}
 
 ////																							
 

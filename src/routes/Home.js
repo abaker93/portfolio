@@ -24,7 +24,7 @@ const Home = () => {
 
 	return (
 		<>
-			{/* <Background /> */}
+			<Background />
 			<main data-template="home">
 				<Hero handleClick={handleClick}/>
 				<About />
@@ -50,14 +50,14 @@ const Hero = p => {
 							<div className="row">
 								<div className="col-auto a">digital</div>
 								<div className="col-auto d-none d-md-flex align-items-end">
-									<span className="p text-uppercase pb-4">Crafting amazing web experiences.</span>
+									<p className="p tagline text-uppercase pb-4">Crafting amazing web experiences.</p>
 								</div>
 							</div>
 						</div>
 						<div className="col-auto offset-md-3 ms-auto ms-md-0 a">designer</div>
 					</div>
 				</h1>
-				<p className="d-md-none text-uppercase text-center">Crafting amazing<br />web experiences.</p>
+				<p className="tagline d-md-none text-uppercase text-center small">Crafting amazing<br />web experiences.</p>
 				<div className="scroll-indicator d-none d-md-inline ">
 					<Link
 						className="link-dark link-underline link-underline-opacity-0"

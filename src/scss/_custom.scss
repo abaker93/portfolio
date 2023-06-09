@@ -148,13 +148,15 @@ ul:not(.nav):not(.navbar-nav) li {
 				z-index: -1;
 				font-size: 70vw;
 				font-family: $font-family-serif-decoration;
-				// mix-blend-mode: overlay;
+				mix-blend-mode: overlay;
 				opacity: 0.2;
 			}
 
-			// > .col-auto { mix-blend-mode: overlay; }
+			> .col-auto { mix-blend-mode: overlay; }
 		}
 	}
+
+	.tagline { mix-blend-mode: overlay; }
 
 	#about {
 		scroll-margin-top: 6rem;

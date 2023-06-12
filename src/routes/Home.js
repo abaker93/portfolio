@@ -4,7 +4,6 @@ import Background from "../components/Background";
 import portfolioData from "../data/portfolio.json";
 import Arrow from "../assets/Arrow";
 import { GitHubBI, LinkedInBI } from "../assets/icons";
-import { Offcanvas } from "bootstrap";
 
 const Home = () => {
 	const location = useLocation();
@@ -18,17 +17,7 @@ const Home = () => {
 		if (location.hash) {
 			let l = location.hash
 			l = l.replace("#", "")
-			// console.log(l)
-			const offCanvas = document.getElementById("navbarNav")
-			const backdrop = document.getElementsByClassName("offcanvas-backdrop")
-
-			if (offCanvas.classList.contains("show")) {
-				offCanvas.classList.remove("show")
-				document.getElementById(l).scrollIntoView({behavior: "smooth"})
-			} else {
-				document.getElementById(l).scrollIntoView({behavior: "smooth"})
-			}
-			// setTimeout(() => document.getElementById(l).scrollIntoView({ behavior: "smooth" }), 1) 
+			document.getElementById(l).scrollIntoView({behavior: "smooth"})
 		}
 	}, [location])
 

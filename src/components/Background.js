@@ -16,7 +16,7 @@ const Background = p => {
 			if (p.colors[0]) { setBgColor1(p.colors[0]) }
 			if (p.colors[1]) { setBgColor2(p.colors[1]) }
 		}
-	}, [location])
+	}, [location, p.colors])
 
 	if (isHome) {
 		return (

@@ -17,10 +17,8 @@ const Case = () => {
 	useEffect(() => {
 		getCaseData(page)
 		serifAccent()
-	}, [])
+	}, [page])
 	
-	// console.log(caseData)
-
 	if (caseData !== null) {
 		return (
 			caseData.map(m => (
@@ -43,7 +41,7 @@ const Case = () => {
 							<div className="row gap-3 gap-md-0 d-flex justify-content-center">
 								{m.buttons.map(b => (
 									<div key={b.id} className="col-auto">
-										<a href={b.url} target="_blank" className="btn btn-outline-dark">{b.title}</a>
+										<a href={b.url} target="_blank" rel="noreferrer" className="btn btn-outline-dark">{b.title}</a>
 									</div>
 								))}
 							</div>
@@ -96,7 +94,7 @@ const Section = p => {
 				<div className="row gap-3 gap-md-0 mt-3 pt-4 justify-content-start">
 					{p.buttons.map(b => (
 						<div key={b.id} className="col-auto">
-							<a href={b.url} target="_blank" className="btn btn-outline-dark a">{b.title}</a>
+							<a href={b.url} target="_blank" rel="noreferrer" className="btn btn-outline-dark a">{b.title}</a>
 						</div>
 					))}
 				</div>

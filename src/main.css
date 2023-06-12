@@ -14906,10 +14906,10 @@ textarea.form-control-lg {
   font-weight: var(--bs-chip-font-weight);
   line-height: var(--bs-chip-line-height);
   color: var(--bs-chip-color);
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   text-transform: none;
-  white-space: nowrap;
+  white-space: break-spaces;
   vertical-align: middle;
   user-select: none;
   border: var(--bs-chip-border-width) solid var(--bs-chip-border-color);
@@ -15224,7 +15224,7 @@ textarea.form-control-lg {
 .chip-lg {
   --bs-chip-padding-y: 1.5rem;
   --bs-chip-padding-x: 3rem;
-  --bs-chip-font-size: 1.25rem;
+  --bs-chip-font-size: 0.8rem;
   --bs-chip-font-weight: 600;
   --bs-chip-border-radius: 0.5rem;
 }
@@ -15240,6 +15240,9 @@ textarea.form-control-lg {
 @media screen and (min-width: 768px) {
   .chip {
     --bs-chip-font-size: 0.8rem;
+  }
+  .chip-lg {
+    --bs-chip-font-size: 1.25rem ;
   }
 }
 textarea {
@@ -15563,6 +15566,10 @@ textarea.form-control-lg {
     opacity: 1;
   }
 }
+img {
+  max-width: 100%;
+}
+
 .large {
   font-size: 1.25rem !important;
 }

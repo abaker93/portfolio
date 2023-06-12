@@ -24,7 +24,7 @@ const Case = () => {
 	if (caseData !== null) {
 		return (
 			caseData.map(m => (
-				<main key={m.id} data-template="case">
+				<main key={m.id} data-template="case" className="overflow-x-hidden">
 
 					<Background colors={m.gradient_colors} />
 
@@ -32,7 +32,7 @@ const Case = () => {
 
 						<header className="pt-10">
 							<h1 className="baseline-rule a">{m.title}</h1>
-							<p style={{ whiteSpace: "pre" }}>{m.tagline.long}</p>
+							<p style={{ whiteSpace: "pre-line" }}>{m.tagline.long}</p>
 						</header>
 						
 						{m.sections.map(s => (
@@ -40,7 +40,7 @@ const Case = () => {
 						))}
 
 						<section className="buttons pt-10">
-							<div className="row d-flex justify-content-center">
+							<div className="row gap-3 gap-md-0 d-flex justify-content-center">
 								{m.buttons.map(b => (
 									<div key={b.id} className="col-auto">
 										<a href={b.url} target="_blank" className="btn btn-outline-dark">{b.title}</a>
@@ -69,7 +69,7 @@ const Section = p => {
 
 	if (p.template === "logo") {
 		return (
-			<section className="logo pt-10 d-flex justify-content-center">
+			<section className="logo pt-4 pt-md-10 d-flex justify-content-center">
 				{p.logos.map(l => (
 					<img key={l.id} src={`../images/portfolio/${l.img}`} alt={l.alt} />
 				))}
@@ -80,7 +80,7 @@ const Section = p => {
 	if (p.template === "overview") {
 		// console.log(p)
 		return (
-			<section className="overview pt-10">
+			<section className="overview pt-5 pt-md-10">
 				<h2 className="h4 baseline-rule">
 					<span className="pe-4 ff-serif-deco">{formatNumber(p.id)}</span>
 					<span className="a">{p.title}</span>
@@ -93,7 +93,7 @@ const Section = p => {
 						</div>
 					))}
 				</div>
-				<div className="row mt-3 pt-4">
+				<div className="row gap-3 gap-md-0 mt-3 pt-4 justify-content-start">
 					{p.buttons.map(b => (
 						<div key={b.id} className="col-auto">
 							<a href={b.url} target="_blank" className="btn btn-outline-dark a">{b.title}</a>
@@ -106,14 +106,14 @@ const Section = p => {
 
 	if (p.template === "typography") {
 		return (
-			<section className="typography pt-10">
+			<section className="typography pt-5 pt-md-10">
 				<h2 className="h4 baseline-rule">
 					<span className="pe-4 ff-serif-deco">{formatNumber(p.id)}</span>
 					{p.title}
 				</h2>
-				<div className="row gap-5 mt-3 pt-4">
+				<div className="row gap-3 gap-md-5 mt-3 pt-4">
 					{p.typography.map(t => (
-						<div key={t.id} className="col">
+						<div key={t.id} className="col-12 col-md">
 							<img src={`../images/portfolio/${t.img}`} alt={t.alt} />
 						</div>
 					))}
@@ -124,7 +124,7 @@ const Section = p => {
 
 	if (p.template === "color_palette") {
 		return (
-			<section className="color-palette pt-10">
+			<section className="color-palette pt-5 pt-md-10">
 				<h2 className="h4 baseline-rule">
 					<span className="pe-4 ff-serif-deco">{formatNumber(p.id)}</span>
 					{p.title}
@@ -167,7 +167,7 @@ const Section = p => {
 
 	if (p.template === "single_col_img") {
 		return (
-			<section className="single-col-img pt-10">
+			<section className="single-col-img pt-5 pt-md-10">
 				<h2 className="h4 baseline-rule">
 					<span className="pe-4 ff-serif-deco">{formatNumber(p.id)}</span>
 					{p.title}
@@ -183,7 +183,7 @@ const Section = p => {
 
 	if (p.template === "tools") {
 		return (
-			<section className="tools-techniques pt-10">
+			<section className="tools-techniques pt-5 pt-md-10">
 				<h2 className="h4 baseline-rule">
 					<span className="pe-4 ff-serif-deco">{formatNumber(p.id)}</span>
 					{p.title}

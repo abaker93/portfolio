@@ -4,7 +4,7 @@
   --#{$prefix}chip-padding-x: #{$chip-padding-x};
   --#{$prefix}chip-padding-y: #{$chip-padding-y};
   --#{$prefix}chip-font-family: #{$chip-font-family};
-  --#{$prefix}chip-font-size: #{$chip-font-size-sm};
+  --#{$prefix}chip-font-size: #{$chip-font-size};
   // @include rfs($chip-font-size, --#{$prefix}chip-font-size);
   --#{$prefix}chip-font-weight: #{$chip-font-weight};
   --#{$prefix}chip-line-height: #{$chip-line-height};
@@ -24,7 +24,7 @@
   font-weight: var(--#{$prefix}chip-font-weight);
   line-height: var(--#{$prefix}chip-line-height);
   color: var(--#{$prefix}chip-color);
-  text-align: center;
+  text-align: left;
   text-decoration: if($link-decoration == none, null, none);
 	text-transform: none;
   white-space: $chip-white-space;
@@ -106,7 +106,7 @@
   @include chip-size(
     $chip-padding-y-lg,
     $chip-padding-x-lg,
-    $chip-font-size-lg,
+    $chip-font-size,
     $chip-font-weight-lg,
     $chip-border-radius-lg
   );
@@ -136,6 +136,9 @@
 @media screen and (min-width: 768px) {
   .chip {
     --#{$prefix}chip-font-size: #{$chip-font-size};
+  }
+  .chip-lg {
+    --#{$prefix}chip-font-size: #{$chip-font-size-lg}
   }
 }
 

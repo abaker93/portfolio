@@ -4,7 +4,7 @@ const Policies = () => {
 	return (
 		<>
 			<Background />
-			<main data-template="policy">
+			<main data-template="policy" className="overflow-x-hidden">
 				<div className="container-lg">
 					<div id="Hero" className="pt-10 pb-7">
 						<h1 className="baseline-rule">Privacy Policy</h1>

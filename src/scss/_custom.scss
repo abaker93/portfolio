@@ -279,9 +279,16 @@ ul:not(.nav):not(.navbar-nav) li {
 		#Hero { height: 100vh; }
 
 		h1 {
+			padding-top: 0;
 			font-size: 16vw;
 
-			> .row .col:nth-child(2n) { text-align: left; }
+			> .row {
+				&::before {
+					bottom: -10vh;
+				}
+
+				.col:nth-child(2n) { text-align: left; }
+			}
 		}
 	}
 	
@@ -303,5 +310,13 @@ ul:not(.nav):not(.navbar-nav) li {
 @media screen and (min-width: 1200px) {}
 
 // XX-Large devices (larger desktops, 1400px and up)
-@media screen and (min-width: 1400px) {}
+@media screen and (min-width: 1400px) {
+	[data-template=home] {
+		h1 {
+			font-size: 12rem;
+
+			> .row::before { font-size: 50rem; }
+		}
+	}
+}
 ////																							

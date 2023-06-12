@@ -15818,7 +15818,11 @@ ul:not(.nav):not(.navbar-nav) li::before {
     height: 100vh;
   }
   [data-template=home] h1, [data-template=home] .h1 {
+    padding-top: 0;
     font-size: 16vw;
+  }
+  [data-template=home] h1 > .row::before, [data-template=home] .h1 > .row::before {
+    bottom: -10vh;
   }
   [data-template=home] h1 > .row .col:nth-child(2n), [data-template=home] .h1 > .row .col:nth-child(2n) {
     text-align: left;
@@ -15830,6 +15834,14 @@ ul:not(.nav):not(.navbar-nav) li::before {
   .scroll-indicator .arrow.down {
     bottom: 0.25rem;
     right: 1.25rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  [data-template=home] h1, [data-template=home] .h1 {
+    font-size: 12rem;
+  }
+  [data-template=home] h1 > .row::before, [data-template=home] .h1 > .row::before {
+    font-size: 50rem;
   }
 }
 

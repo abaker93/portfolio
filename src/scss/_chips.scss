@@ -104,8 +104,8 @@
 //~~	chip sizes	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 .chip-lg {
   @include chip-size(
-    $chip-padding-y-lg,
-    $chip-padding-x-lg,
+    calc($chip-padding-y-lg * 0.7),
+    calc($chip-padding-x-lg * 0.7),
     $chip-font-size,
     $chip-font-weight-lg,
     $chip-border-radius-lg
@@ -138,7 +138,9 @@
     --#{$prefix}chip-font-size: #{$chip-font-size};
   }
   .chip-lg {
-    --#{$prefix}chip-font-size: #{$chip-font-size-lg}
+    --#{$prefix}chip-font-size: #{$chip-font-size-lg};
+    --#{$prefix}chip-padding-x: #{$chip-padding-x-lg};
+    --#{$prefix}chip-padding-y: #{$chip-padding-y-lg}
   }
 }
 

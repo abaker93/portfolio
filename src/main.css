@@ -15222,8 +15222,8 @@ textarea.form-control-lg {
 }
 
 .chip-lg {
-  --bs-chip-padding-y: 1.5rem;
-  --bs-chip-padding-x: 3rem;
+  --bs-chip-padding-y: 1.05rem;
+  --bs-chip-padding-x: 2.1rem;
   --bs-chip-font-size: 0.8rem;
   --bs-chip-font-weight: 600;
   --bs-chip-border-radius: 0.5rem;
@@ -15242,7 +15242,9 @@ textarea.form-control-lg {
     --bs-chip-font-size: 0.8rem;
   }
   .chip-lg {
-    --bs-chip-font-size: 1.25rem ;
+    --bs-chip-font-size: 1.25rem;
+    --bs-chip-padding-x: 3rem;
+    --bs-chip-padding-y: 1.5rem ;
   }
 }
 textarea {

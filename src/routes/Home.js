@@ -28,10 +28,12 @@ const Home = () => {
 			<main data-template="home">
 				<Hero handleClick={handleClick}/>
 				<About />
-				<div id="portfolio" className="container-md pt-10 overflow-x-hidden">
-					{portfolio.filter(f => f.featured).map(p => (
-						<PortfolioItem key={p.id} {...p} />
-					))}
+				<div id="portfolio" className="pt-10 overflow-x-hidden">
+					<div className="container-md">
+						{portfolio.filter(f => f.featured).map(p => (
+							<PortfolioItem key={p.id} {...p} />
+						))}
+					</div>
 				</div>
 			</main>
 		</>
@@ -44,9 +46,9 @@ const Hero = p => {
 			<div className="container-md">
 				<h1 className="display-1">
 					<div className="row">
-						<div className="col-auto offset-md-1 a">creative</div>
-						<div className="col-auto ms-auto a">developer</div>
-						<div className="col-auto offset-lg-1">
+						<div className="col col-md-auto offset-md-1 a">creative</div>
+						<div className="col col-md-auto ms-auto a">developer</div>
+						<div className="col col-md-auto offset-lg-1">
 							<div className="row">
 								<div className="col-auto a">digital</div>
 								<div className="col d-none d-md-flex align-items-end">
@@ -54,7 +56,7 @@ const Hero = p => {
 								</div>
 							</div>
 						</div>
-						<div className="col-auto offset-md-3 text-align-right text-align-md-left a">designer</div>
+						<div className="col col-md-auto offset-md-3 a">designer</div>
 					</div>
 				</h1>
 				<p className="tagline d-md-none text-uppercase text-center small">Crafting amazing<br />web experiences.</p>

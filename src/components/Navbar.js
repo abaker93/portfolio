@@ -25,7 +25,7 @@ const Navbar = () => {
 	}
 
 	return (
-		<nav className={`navbar navbar-expand-sm py-4 px-sm-4${scroll ? " scroll" : ""}`}>
+		<nav className={`navbar navbar-expand-md py-4 px-md-4${scroll ? " scroll" : ""}`}>
 			<div className="container-fluid px-3">
 				<Link to="/" className="navbar-brand h4 mb-0 a">anna baker</Link>
 				<button

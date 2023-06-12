@@ -13,7 +13,7 @@ const Resume = () => {
 	return (
 		<>
 			<Background />
-			<main data-template="resume">
+			<main data-template="resume" className="overflow-x-hidden">
 				<div id="Hero" className="pt-10 pb-7">
 					<div className="container-lg">
 						<div className="row align-items-center">
@@ -29,7 +29,7 @@ const Resume = () => {
 						</div>
 					</div>
 				</div>
-				<div id="Summary" className="overflow-x-hidden pb-8">
+				<div id="Summary" className="pb-4 pb-md-8">
 					<div className="container-lg">
 						<div className="row justify-content-center">
 							<div className="col-md-8">
@@ -40,7 +40,7 @@ const Resume = () => {
 					<div className="container-lg">
 						<div className="row justify-content-center">
 							<div className="col-md-8">
-								<p>{summary}</p>
+								<p className="pt-3">{summary}</p>
 							</div>
 						</div>
 					</div>
@@ -69,13 +69,13 @@ const ResumeContainer = () => {
 
 	return (
 		<div id="resume" className="">
-			<div className="container-lg">
+			<div className="container-xxl">
 				<div className="row gx-5">
-					<div className="col-lg-4">
+					<div className="d-none d-md-block col-md-4">
 						<ResumeNav />
 					</div>
 					<div
-						className="col-lg-8"
+						className="col-md-8"
 						data-bs-spy="scroll"
 						data-bs-target="#resume-nav"
 						data-bs-root-margin="0px 0px -40%"
@@ -86,7 +86,8 @@ const ResumeContainer = () => {
 							<div className="col">
 								<div id="industry-experience" className="row mb-3">
 									<div className="col">
-										<h3 className="h2 baseline-rule-end mb-4 a">industry experience</h3>
+										<h3 className="h2 d-md-none baseline-rule mb-4 a">industry experience</h3>
+										<h3 className="h2 d-none d-md-inline baseline-rule-end mb-4 a">industry experience</h3>
 										{industryExperience.map(m => (
 											<div key={m.id} className="experience">
 												<ResumeItemHeader {...m} />
@@ -101,7 +102,8 @@ const ResumeContainer = () => {
 								</div>
 								<div id="teaching-experience" className="row">
 									<div className="col">
-										<h3 className="h2 baseline-rule-end mb-4 a">teaching experience</h3>
+									<h3 className="h2 d-md-none baseline-rule mb-4 a">teaching experience</h3>
+										<h3 className="h2 d-none d-md-inline baseline-rule-end mb-4 a">teaching experience</h3>
 										{teachingExperience.map(m => (
 											<div key={m.id} className="experience">
 												<ResumeItemHeader {...m} />
@@ -119,7 +121,8 @@ const ResumeContainer = () => {
 
 						<div id="education" className="row resume-item">
 							<div className="col">
-								<h3 className="h2 baseline-rule-end mb-4 a">education</h3>
+							<h3 className="h2 d-md-none baseline-rule mb-4 a">education</h3>
+										<h3 className="h2 d-none d-md-inline baseline-rule-end mb-4 a">education</h3>
 								{education.map(m => (
 									<div key={m.id} className="education">
 										<ResumeItemHeader {...m} />
@@ -133,10 +136,11 @@ const ResumeContainer = () => {
 
 						<div id="skills" className="row resume-item">
 							<div className="col">
-								<h3 className="h2 baseline-rule-end mb-4 a">skills</h3>
+							<h3 className="h2 d-md-none baseline-rule mb-4 a">skills</h3>
+										<h3 className="h2 d-none d-md-inline baseline-rule-end mb-4 a">skills</h3>
 								<div className="row mb-4">
 									<div className="col-md-6">
-										<div className="row mb-3">
+										<div className="row mb-md-3">
 											<div className="col">
 												<h4 className="h3 a">development</h4>
 											</div>
@@ -162,7 +166,7 @@ const ResumeContainer = () => {
 									</div>
 
 									<div className="col-md-6">
-										<div className="row mb-3">
+										<div className="row mb-md-3">
 											<div className="col">
 												<h4 className="h3 a">design</h4>
 											</div>
@@ -191,7 +195,7 @@ const ResumeContainer = () => {
 
 								<div className="row">
 									<div className="col">
-										<div className="row mb-3">
+										<div className="row mb-md-3">
 											<div className="col">
 												<h4 className="h3 a">personal skills</h4>
 											</div>

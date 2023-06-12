@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
 	const location = useLocation();
-	const [ isHome, setIsHome ] = useState(false);
+	const [isHome, setIsHome ] = useState(false);
 	const [scroll, setScroll] = useState();
 
 	useEffect(() => {
@@ -15,13 +15,22 @@ const Navbar = () => {
 	}, [location])
 
 	const handleClick = (event, id) => {
-		const offcanvas = document.getElementById("navbarNav")
+		const offCanvas = document.getElementById("navbarNav")
 
-		if (offcanvas.classList.contains("show")) {
-			offcanvas.addEventListener("hidden.bs.offcanvas", () => document.getElementById(id).scrollIntoView({behavior: "smooth"}))
+		if(isHome) {
+			if (offCanvas.classList.contains("show")) {
+				offCanvas.addEventListener("hidden.bs.offcanvas", () => document.getElementById(id).scrollIntoView({behavior: "smooth"}))
+			} else {
+				document.getElementById(id).scrollIntoView({behavior: "smooth"})
+			}
 		} else {
-			document.getElementById(id).scrollIntoView({behavior: "smooth"})
+			if (offCanvas.classList.contains("show")) {
+				offCanvas.addEventListener("hidden.bs.offcanvas", () => document.location.href = `/#${id}`)
+			} else {
+				document.location.href = `/#${id}`
+			}
 		}
+
 	}
 
 	return (
@@ -44,51 +53,30 @@ const Navbar = () => {
 						<button type="button" className="btn-close mx-5 mt-5" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>
 					<div className="offcanvas-body">
-						<ul className="navbar-nav align-items-sm-center mx-5 mx-sm-0 ms-sm-auto">
-							<li className="nav-item my-2 my-sm-0 mx-sm-2">
-								{isHome ? (
-									<Link
-										className="nav-link"
-										data-bs-dismiss="offcanvas"
-										data-bs-target="#navbarNav"
-										onClick={e => handleClick(e, "about")}
-									>
-										<span>Info</span>
-										<span className="a">about me</span>
-									</Link>
-								) : (
-									<Link
-										className="nav-link"
-										to="/#about"
-									>
-										<span>Info</span>
-										<span className="a">about me</span>
-									</Link>
-								)}
+						<ul className="navbar-nav align-items-md-center mx-5 mx-md-0 ms-md-auto">
+							<li className="nav-item my-2 my-md-0 mx-md-2">
+								<Link
+									className="nav-link"
+									data-bs-dismiss="offcanvas"
+									data-bs-target="#navbarNav"
+									onClick={e => handleClick(e, "about")}
+								>
+									<span>Info</span>
+									<span className="a">about me</span>
+								</Link>
 							</li>
-							<li className="nav-item my-2 my-sm-0 mx-sm-2">
-								{isHome ? (
-									<Link
-										className="nav-link"
-										data-bs-dismiss="offcanvas"
-										data-bs-target="#navbarNav"
-										onClick={e => handleClick(e, "portfolio")}
-									>
-										<span>Work</span>
-										<span className="a">some cases</span>
-									</Link>
-								) : (
-									<Link
-										className="nav-link"
-										to="/#portfolio"
-									>
-										<span>Work</span>
-										<span className="a">some cases</span>
-									</Link>
-								)}
-				
+							<li className="nav-item my-2 my-md-0 mx-md-2">
+								<Link
+									className="nav-link"
+									data-bs-dismiss="offcanvas"
+									data-bs-target="#navbarNav"
+									onClick={e => handleClick(e, "portfolio")}
+								>
+									<span>Work</span>
+									<span className="a">some cases</span>
+								</Link>
 							</li>
-							<li className="nav-item my-2 my-sm-0 mx-sm-2">
+							<li className="nav-item my-2 my-md-0 ms-md-2">
 								<Link type="button" className="btn btn-outline-dark a" onClick={e => handleClick(e, "Footer")}>Contact</Link>
 							</li>
 						</ul>

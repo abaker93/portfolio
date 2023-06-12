@@ -25,10 +25,10 @@ const Background = p => {
 				<div className="bg-circles index">
 					<div className="bg-circle_1"></div>
 					<div className="bg-circle_2"></div>
-					<div className="bg-circle _3"></div>
-					<div className="bg-circle _4"></div>
-					<div className="bg-circle _5"></div>
-					<div className="bg-circle _6"></div>
+					<div className="bg-circle_3"></div>
+					<div className="bg-circle_4"></div>
+					<div className="bg-circle_5"></div>
+					<div className="bg-circle_6"></div>
 				</div>
 			</div>
 		)
@@ -38,13 +38,12 @@ const Background = p => {
 		<div id="Background">
 			<div className="bg-noise" />
 			<div className="bg-circles">
-				<div className="bg-circle _1" style={{ backgroundColor: bgColor1 }}></div>
-				<div className="bg-circle _3"></div>
-				<div className="bg-circle _4" style={{ backgroundColor: bgColor2 }}></div>
-				{/* <div className="bg-circle _9" style={{ backgroundColor: "orange" }}></div> */}
-				<div className="bg-circle _7" style={{ backgroundColor: bgColor1 }}></div>
-				<div className="bg-circle _8" style={{ backgroundColor: bgColor2 }}></div>
-				<div className="bg-circle _9"></div>
+				<div className="bg-circle_1" style={{ backgroundColor: bgColor1 }}></div>
+				<div className="bg-circle_3"></div>
+				<div className="bg-circle_4" style={{ backgroundColor: bgColor2 }}></div>
+				<div className="bg-circle_7" style={{ backgroundColor: bgColor1 }}></div>
+				<div className="bg-circle_8" style={{ backgroundColor: bgColor2 }}></div>
+				<div className="bg-circle_9"></div>
 			</div>
 		</div>
 	)	

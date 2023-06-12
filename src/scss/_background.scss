@@ -97,38 +97,32 @@
 		animation: bg-circle-6 30s linear 0s infinite;
 	}
 
-	&._7 {
-		left: auto;
-		right: 0;
-		top: auto;
-		bottom: 0;
+	&[class$="_7"] {
+		inset: auto -8vw -16vh auto;
 		width: 40vw;
-		height: 40vw;
-		margin-top: 35vh;
-		margin-right: -16vw;
+		height: 40vh;
+
+		border-radius: 100%;
 		opacity: 0.8;
 		animation: bg-circle-2 30s linear 0s infinite;
 	}
 
-	&._8 {
-		top: auto;
-		bottom: 0;
+	&[class$="_8"] {
+		inset: auto auto -10vh -10vw;
 		width: 30vw;
-		height: 30vw;
-		margin-bottom: -10vh;
-		margin-left: -10vw;
+		height: 30vh;
+
 		border-radius: 20%;
 		opacity: 0.8;
 		animation: bg-circle-4 25s linear 0s infinite;
 	}
 
-	&._9 {
-		top: auto;
-		bottom: 0;
+	&[class$="_9"] {
+		inset: auto -2vh 0 30vw;
 		width: 35vw;
-		height: 35vw;
-		margin-bottom: -2vh;
-		margin-left: 30vw;
+		height: 35vh;
+
+		border-radius: 100%;
 		background-color: $cream-100;
 		animation: bg-circle-3 16s linear 0s infinite;
 	}
